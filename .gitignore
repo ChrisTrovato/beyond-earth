@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.vercel/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.log
+coverage/
+test-results/
+playwright-report/
+work/
+private/
+*-progress-backup.json
+*-design-log.json

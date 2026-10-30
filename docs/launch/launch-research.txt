@@ -1,0 +1,74 @@
+BEYOND EARTH — LAUNCH RESEARCH / SECOND COLLECTION
+Reviewed 29 October 2026
+Launch URL: https://ditchthescroll.com/beyond-earth/
+
+RECOMMENDATION
+
+Lead with the 26-second film and the post beginning “I made a place where procrastinating can teach you orbital mechanics.” The film shows the website doing something: a lunar descent, a robot target and a control response. The hook invites curiosity, while the visible interactions make the product concrete. This is an editorial recommendation, not a prediction of reach, conversion or learning outcomes.
+
+Use the lander image for an invitation to build, and the paper-arm-to-orbit image for the connection between coursework and a reason to learn it. Pair one item with each post. The video demonstrates; the lander invites a challenge; the robot illustration answers why the math might matter. The three drafts differ in purpose rather than repeating the same inventory.
+
+The recommended lead is 226 weighted characters. The lander draft is 229. The math/robotics draft is 251. Their complete text, exact attachment filenames and descriptions are in posting-guide.txt and on share.html. Character counts use ASCII text plus one valid URL weighted at 23; attachments in official X clients do not consume text characters under the cited documentation.
+
+PRIMARY EXAMPLES RECHECKED
+
+Neal Agarwal — Space Elevator
+https://neal.fun/space-elevator/
+Observed: a single spatial journey makes a large topic navigable. Familiar objects appear as the reader moves through altitude, and short explanations connect them to the setting.
+Applied idea: make the invitation instantly imaginable. Landing a spacecraft or moving a robot is easier to picture than a broad claim about an educational platform. Beyond Earth has its own content and visual identity; the launch is not presented as a Neal.fun collaboration.
+
+Neal Agarwal — The Deep Sea
+https://neal.fun/deep-sea/
+Observed: the page organizes ocean life and human exploration by depth, giving the visitor a clear direction and repeated discoveries.
+Applied idea: curiosity can be a welcoming entrance to serious material. The post can begin with an attractive question; the site's lessons and projects provide somewhere to go next.
+
+Explorable Explanations
+https://explorabl.es/
+Observed: the hub describes its purpose as learning through play and presents subject-based explorations alongside making resources.
+Applied idea: invite a small first interaction rather than demanding commitment to an entire course. “Try a lunar landing” is a concrete entrance to the larger collection.
+
+Bartosz Ciechanowski — Gears (12 February 2020)
+https://ciechanow.ski/gears/
+Observed: readers control speed, time and mechanical relationships through sliders and animated diagrams. The motion is part of the explanation, and the page supplies play/pause controls.
+Applied idea: show a meaningful change in the video. A target, trajectory or response graph reveals interactivity more clearly than a montage of static page titles. The silent film uses the actual activities and labels accelerated playback.
+
+Brilliant — current public homepage
+https://brilliant.org/
+Observed: the current page emphasizes its Koji tutoring experience, a shared interactive canvas, guided practice and progress feedback.
+Applied idea: explain what the learner does and sees. Beyond Earth does not claim Brilliant's tutor, accreditation, assessments or adoption figures. Its launch focuses on its own lessons, labs, games, models and builds.
+
+NASA/JPL — Explore the Solar System With NASA's New-and-Improved 3D Eyes (2 September 2022)
+https://www.jpl.nasa.gov/news/explore-the-solar-system-with-nasas-new-and-improved-3d-eyes/
+Observed: this first-party launch announcement names specific browser actions, including inspecting spacecraft, comparing objects, adjusting views and following missions. It links directly into the experience.
+Applied idea: pair an ambitious setting with a visible action. The Beyond Earth film shows the actual interface. The post does not imply NASA affiliation, live NASA data or operational mission capability.
+
+Nicky Case — “The Evolution of Trust” is out!
+https://blog.ncase.me/the-evolution-of-trust-is-out/
+Observed: the first-party announcement is short, with a project title, a direct link and a clear explanation of its interactive subject. The displayed date is 25 July 2017, but the author explicitly says the post was written later and backdated; it is not treated as verified release timing here.
+Applied idea: a launch can be compact when the premise is concrete. The main post uses one hook, a few tangible activities, a small scope statement and one link.
+
+SOURCE LIMITS
+
+These are observed design and communication patterns, not measured evidence that a particular post format will perform well. No engagement counts, timing tricks, algorithm claims or celebrity endorsements were used. Accessible first-party project announcements were used where available; inaccessible social posts were not treated as evidence. No logged-in feed was read, and no account was accessed or post published.
+
+PRODUCT AND ASSET CHECKS
+
+The coordinated release contains 60 lessons, 18 labs and games, 20 build studies, 10 paths and 30 chapters. The 18 consists of 12 visual labs plus three arcade activities and three design studios. The descriptions do not claim guaranteed mastery, employment outcomes or professional qualification.
+
+Both image files were visually inspected at their actual 1122-by-1402 resolution. Their descriptions include the visible subject, the headline, supporting copy and destination. The illustrations are identified as promotional illustrations, not documentary spacecraft photographs.
+
+The silent film's transcript was matched against the production agent's scene timings and exact headline list: intro 0–3 seconds, landing 3–11, robot 11–15, controller 15–20, closing invitation 20–26. Recorded simulations carry their speed-up labels. The film is presented with controls and preload=metadata, without autoplay, and has a separate downloadable MP4 and readable visual transcript.
+
+PLATFORM DOCUMENTATION
+https://docs.x.com/fundamentals/counting-characters
+X documents a 280-character standard limit, URL weighting of 23 and zero text weight for attachments made through official clients. The drafts use ASCII to keep the local count exact.
+https://help.x.com/en/using-x/add-image-descriptions
+The official instructions describe adding image descriptions through the +ALT control. The supplied image descriptions fit the documented 1,000-character field.
+https://help.x.com/en/using-x/x-videos
+The official instructions describe choosing a local video through the post composer's gallery control and reviewing the preview. The guide keeps publishing as the user's manual action.
+
+
+DELIVERY CHECKS
+The completed film was confirmed by the production agent as a 26-second, 1080-by-1350, 30-fps H.264 MP4 with faststart and no audio. Its final size is 1,997,478 bytes; the poster is 292,348 bytes. The scene order and text match the visual transcript.
+
+Node behavior checks passed for all seven copy buttons, six manual selectors, missing/denied clipboard fallback, opening description disclosures, pending-copy cleanup, and media load/error/hidden-page behavior. The browser-normalized post text has exactly 226, 229 and 251 weighted characters; all three drafts and descriptions match posting-guide.txt. Image alt texts are 361 and 331 characters. HTML IDs are unique and label/ARIA references resolve. The video has controls, preload=metadata and no autoplay. Final browser visual and playback checks are handled during site integration.

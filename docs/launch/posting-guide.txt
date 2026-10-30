@@ -1,0 +1,119 @@
+BEYOND EARTH — LAUNCH STUDIO / SECOND COLLECTION
+
+Website: https://ditchthescroll.com/beyond-earth/
+Copy-and-download page: https://ditchthescroll.com/beyond-earth/share.html
+
+Start with the video post. It shows the actual activities: lunar landing, robot targeting and control response. Use one media item per post. The two image posts provide different reasons to visit; they are separate invitations, not extra attachments needed to understand the film.
+
+All three drafts below are written in the creator's voice. Adjust them if sharing as someone else. They are ASCII text and each uses one URL, counted as 23 characters under X's documented rule. The counts include newlines and remain under 280. Recount if you edit the wording.
+
+
+1. RECOMMENDED FIRST — THE FILM
+
+Pair only with: 03-beyond-earth-in-motion.mp4
+Format: 26 seconds; 1080 × 1350; 30 fps; silent. Actual activities, with sped-up demonstrations labeled.
+Why this pairing: A real demonstration supplies the proof. The post names a surprising reason to try it.
+Weighted post length: 226 / 280
+
+I made a place where procrastinating can teach you orbital mechanics.
+
+Land a spacecraft. Move a robot arm. Make the math do something.
+
+60 lessons. 18 labs & games. 20 build studies.
+
+Free. No account.
+https://ditchthescroll.com/beyond-earth/
+
+VIDEO DESCRIPTION (421 characters)
+A silent, 26-second film showing Beyond Earth in use. A lunar lander descends with live telemetry, a two-joint robot arm aims at a target, and a control-response graph changes beside a moving cart. Recorded simulations are labeled when sped up. The closing screen reads: Beyond Earth. The future needs builders. 60 lessons. 18 labs & games. 20 build studies. Free to explore. No account. ditchthescroll.com/beyond-earth/.
+
+
+2. THE INVITATION — BUILD SOMETHING
+
+Pair only with: 01-build-something.png
+Format: Portrait PNG, 1122 × 1402.
+Why this pairing: The lander gives the invitation a concrete challenge and a sense of scale.
+Weighted post length: 229 / 280
+
+Your next obsession should build something.
+
+Try a lunar landing. Design a robot. Keep a settlement running.
+
+I made Beyond Earth for people who want their curiosity to turn into skills.
+
+Free. No account.
+https://ditchthescroll.com/beyond-earth/
+
+IMAGE ALT TEXT (361 characters)
+Beyond Earth promotional illustration of a gold-and-silver lunar lander firing its engine above a rocky Moon surface, with dust rising below and Earth in the dark sky. Text: "Your next obsession should build something." Supporting text: "Land a spacecraft. Move a robot. Learn why the math matters." Footer: "Beyond Earth" and "ditchthescroll.com/beyond-earth".
+
+
+3. THE CONNECTION — MAKE THE MATH MEAN SOMETHING
+
+Pair only with: 02-make-the-math-mean-something.png
+Format: Portrait PNG, 1122 × 1402.
+Why this pairing: The paper arm and orbital machine connect coursework to a practical beginning.
+Weighted post length: 251 / 280
+
+What if the equation on your page could move a robot?
+
+I made Beyond Earth to connect the math you learn with the things you want to build.
+
+Play with the physics. Follow a learning path. Make something real.
+
+Free. No account.
+https://ditchthescroll.com/beyond-earth/
+
+IMAGE ALT TEXT (331 characters)
+Beyond Earth promotional illustration connecting a cardboard robot arm on a notebook to a large metallic robot arm and orbital station above Earth. Text: "Make the math mean something." Supporting text: "Play with the physics. Build the intuition. Make something real." Footer: "Beyond Earth" and "ditchthescroll.com/beyond-earth".
+
+
+MANUAL POSTING ON X
+
+1. Download the one MP4 or PNG paired with your chosen draft from the launch studio.
+2. Open X's post composer yourself and paste the post. Copying the text does not attach the media.
+3. Use the media/gallery control to select the downloaded file. Preview the uploaded image or video before posting.
+4. For either PNG, choose +ALT on the attached image, paste its supplied image description and save it. For the silent film, the launch studio supplies a visual transcript and a description you can use as accompanying text where the platform supports it; this guide does not assume that the image ALT control is available for videos.
+5. Check the words, link, attachment and image description. Publish only when you are ready.
+
+This kit does not post, upload, open your account or request credentials. Copy buttons use the clipboard; if that is unavailable, Select text opens the relevant description and selects it for manual copying.
+
+VISUAL TRANSCRIPT OF THE SILENT FILM
+
+0:00–0:03 — Actual Beyond Earth homepage.
+Headline: Your next obsession should build something.
+Supporting text: Trade one more scroll for one useful idea.
+
+0:03–0:11 — Recorded lunar descent and telemetry.
+Headline: Land it.
+Supporting text: Make the physics work for you. Thrust. Velocity. Fuel.
+Label: GUIDANCE EXAMPLE / SPED UP.
+
+0:11–0:15 — Robot geometry interface, target solutions and obstacle.
+Headline: Find the angle.
+Supporting text: Two joints. A real target. Try it. Miss it. Understand it.
+
+0:15–0:20 — Recorded control-response graph and moving cart.
+Headline: Make it settle.
+Supporting text: Change one thing. Understand more. A fast response can still be a messy response. Find the reason. Try a better design.
+Label: RECORDED SIMULATION / SPED UP.
+
+0:20–0:26 — Closing invitation.
+BEYOND EARTH. The future needs builders.
+60 LESSONS. 18 LABS & GAMES. 20 BUILD STUDIES.
+ditchthescroll.com/beyond-earth/
+FREE TO EXPLORE. NO ACCOUNT.
+
+Persistent footer: DITCH THE SCROLL. FOLLOW THE CONNECTION.
+The film has no narration, music or other audio.
+
+PRODUCT FACTS FOR LONGER CAPTIONS
+
+60 guided lessons; 18 labs and games (12 existing visual labs, 3 arcade activities, 3 design studios); 20 build studies; 10 learning paths; a 30-chapter book; 3 settlement-builder challenges. Free to explore; no account required. Journey progress is stored in the browser, with export/import available. Clearing browser data can remove that local progress. The launch describes educational models and activities, not professional spacecraft qualification or guaranteed learning outcomes.
+
+PRIMARY PLATFORM REFERENCES, CHECKED 29 OCTOBER 2026
+https://docs.x.com/fundamentals/counting-characters
+https://help.x.com/en/using-x/add-image-descriptions
+https://help.x.com/en/using-x/x-videos
+
+Further creative research and the reasons for these pairings are in launch-research.txt.

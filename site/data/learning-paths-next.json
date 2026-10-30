@@ -1,0 +1,50 @@
+[
+  {
+    "id": "trustworthy-autonomy",
+    "title": "Make an autonomous machine worth trusting",
+    "kicker": "FROM A MEASUREMENT TO A JUSTIFIED ACTION",
+    "description": "Follow a sensor reading through sampling, filtering, state logic, feedback, and navigation. Each stop asks what the machine knows, how old that knowledge is, and what evidence supports its next action. Finish with a paper or spreadsheet experiment that exposes a failure instead of hiding it.",
+    "missionIds": [
+      "functions-as-machine-behavior",
+      "algorithmic-thinking",
+      "sampling-and-aliasing",
+      "smoothing-a-noisy-signal",
+      "state-machines-and-interlocks",
+      "feedback-and-control",
+      "feedback-with-a-delayed-measurement",
+      "actuator-limits-and-windup",
+      "vectors-for-a-moving-tool",
+      "dead-reckoning-in-a-current",
+      "sonar-time-and-range",
+      "false-alarms-and-base-rates",
+      "requirements-that-can-be-tested"
+    ],
+    "destination": "Build an autonomy experiment with visible assumptions.",
+    "projectIdea": "Choose the delayed-feedback board, signal-filter bench, or current-navigation map. Keep the complete state or measurement history, deliberately introduce one known error, and show which observation detects it. End with a short requirement-to-evidence table."
+  },
+  {
+    "id": "mission-decisions",
+    "title": "Turn a mission idea into evidence",
+    "kicker": "TRAJECTORIES, INTERFACES, AND THE DECISION TO PROCEED",
+    "description": "Begin with quantities and motion, then connect a transfer or landing calculation to the interfaces, tests, and tradeoffs around it. Learn to separate a calculated possibility from a verified requirement, and a high preference score from a feasible design.",
+    "missionIds": [
+      "units-that-catch-mistakes",
+      "acceleration-and-newton",
+      "orbits-are-falling-paths",
+      "orbital-transfers",
+      "transfer-time-and-phasing",
+      "landing-with-a-thrust-margin",
+      "engineering-drawings",
+      "datums-and-hole-patterns",
+      "thermal-expansion-and-fit",
+      "uncertainty-of-a-mean",
+      "requirements-that-can-be-tested",
+      "constraints-before-scores",
+      "expected-value-of-a-test",
+      "writing-a-decision-memo"
+    ],
+    "destination": "Write a review that someone else can reproduce.",
+    "projectIdea": "Build the transfer-window map or landing-profile workbook, then review it using the acceptance-review approach. State what the model establishes, preserve a failed case, and propose the next test that could change your decision."
+  }
+]
+

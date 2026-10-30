@@ -1,0 +1,312 @@
+{
+  "version": 1,
+  "title": "Voices from the frontier",
+  "description": "Eight 90-second opening excerpts. One useful next step.",
+  "verified": "2026-10-29",
+  "reels": [
+    {
+      "id": "chris-hadfield",
+      "speaker": "Chris Hadfield",
+      "role": "Astronaut",
+      "topic": "Preparation",
+      "headline": "Confidence has a practice session.",
+      "title": "What I learned from going blind in space | Chris Hadfield | TED",
+      "youtubeId": "Zo62S0ulqhA",
+      "channel": "TED",
+      "channelUrl": "https://www.youtube.com/@TED",
+      "sourceUrl": "https://www.ted.com/talks/chris_hadfield_what_i_learned_from_going_blind_in_space",
+      "published": "2014-03-19",
+      "durationSeconds": 1102,
+      "accent": "cyan",
+      "takeaway": "Preparation can make an intimidating situation more manageable. Rehearsing what might go wrong is part of learning to do something difficult.",
+      "prompt": "Choose one failure. Trace what you would notice and what you would do next.",
+      "lesson": {
+        "title": "Understand a shared failure",
+        "href": "#lesson/reliability-and-shared-failures"
+      },
+      "project": {
+        "title": "Draw a failure map",
+        "href": "#projects/failure-map"
+      },
+      "verification": {
+        "oembedHttp": 200,
+        "embedHttp": 200,
+        "playabilityStatus": "OK",
+        "playableInEmbed": true,
+        "captionTracksPresent": true
+      },
+      "excerpt": {
+        "start": 0,
+        "end": 90,
+        "label": "Opening 90 seconds",
+        "selection": "Opening excerpt, not a selected highlight."
+      }
+    },
+    {
+      "id": "mae-jemison",
+      "speaker": "Mae Jemison",
+      "role": "Astronaut, physician and engineer",
+      "topic": "A wider education",
+      "headline": "Bring your whole imagination.",
+      "title": "Mae Jemison on teaching arts and sciences together",
+      "youtubeId": "6Vy0ncmUvUw",
+      "channel": "TED",
+      "channelUrl": "https://www.youtube.com/@TED",
+      "sourceUrl": "https://www.ted.com/talks/mae_jemison_teach_arts_and_sciences_together",
+      "published": "2009-05-05",
+      "durationSeconds": 978,
+      "accent": "lilac",
+      "takeaway": "Your writing, art and science classes can develop different parts of the same imagination. A technical idea becomes more useful when you can explain why it matters.",
+      "prompt": "Give one engineering choice a clear explanation that someone outside the field can understand.",
+      "lesson": {
+        "title": "Write the paragraph that changes the drawing",
+        "href": "#lesson/writing-a-decision-memo"
+      },
+      "project": {
+        "title": "Make a decision memo",
+        "href": "#projects/decision-memo"
+      },
+      "verification": {
+        "oembedHttp": 200,
+        "embedHttp": 200,
+        "playabilityStatus": "OK",
+        "playableInEmbed": true,
+        "captionTracksPresent": true
+      },
+      "excerpt": {
+        "start": 0,
+        "end": 90,
+        "label": "Opening 90 seconds",
+        "selection": "Opening excerpt, not a selected highlight."
+      }
+    },
+    {
+      "id": "adam-steltzner",
+      "speaker": "Adam Steltzner & the JPL team",
+      "role": "Entry, descent and landing engineers",
+      "topic": "Making the impossible work",
+      "headline": "Big leaps are made of small decisions.",
+      "title": "7 Minutes of Terror: The Challenges of Getting to Mars",
+      "youtubeId": "Ki_Af_o9Q9s",
+      "channel": "NASA Jet Propulsion Laboratory",
+      "channelUrl": "https://www.youtube.com/@NASAJPL",
+      "sourceUrl": "https://www.jpl.nasa.gov/videos/curiositys-seven-minutes-of-terror/",
+      "published": "2012-06-22",
+      "durationSeconds": 308,
+      "accent": "gold",
+      "takeaway": "An audacious landing becomes a sequence of jobs, measurements and handoffs. Every part has to work with the parts around it.",
+      "prompt": "Draw the handoff between two subsystems. Name what each one needs from the other.",
+      "lesson": {
+        "title": "Find the gap between two finished parts",
+        "href": "#lesson/teamwork-at-the-interface"
+      },
+      "project": {
+        "title": "Build a docking guide",
+        "href": "#projects/docking-guide"
+      },
+      "verification": {
+        "oembedHttp": 200,
+        "embedHttp": 200,
+        "playabilityStatus": "OK",
+        "playableInEmbed": true,
+        "captionTracksPresent": true
+      },
+      "excerpt": {
+        "start": 0,
+        "end": 90,
+        "label": "Opening 90 seconds",
+        "selection": "Opening excerpt, not a selected highlight."
+      }
+    },
+    {
+      "id": "gwynne-shotwell",
+      "speaker": "Gwynne Shotwell",
+      "role": "Engineer and SpaceX executive",
+      "topic": "The people who build",
+      "headline": "The mission needs your skills.",
+      "title": "Engineering America: Gwynne Shotwell at TEDxChapmanU",
+      "youtubeId": "THQPNDNulVc",
+      "channel": "TEDx Talks",
+      "channelUrl": "https://www.youtube.com/@TEDx",
+      "sourceUrl": "https://www.youtube.com/watch?v=THQPNDNulVc",
+      "published": "2013-06-14",
+      "durationSeconds": 1079,
+      "accent": "cyan",
+      "takeaway": "A big mission needs people who can calculate, build, communicate and solve the next concrete problem. Coursework can be a place to begin developing those abilities.",
+      "prompt": "Pick one skill from this semester and give it a small, physical job.",
+      "lesson": {
+        "title": "Make the shape unambiguous",
+        "href": "#lesson/engineering-drawings"
+      },
+      "project": {
+        "title": "Build a service bay from cardboard",
+        "href": "#projects/service-bay"
+      },
+      "verification": {
+        "oembedHttp": 200,
+        "embedHttp": 200,
+        "playabilityStatus": "OK",
+        "playableInEmbed": true,
+        "captionTracksPresent": true
+      },
+      "excerpt": {
+        "start": 0,
+        "end": 90,
+        "label": "Opening 90 seconds",
+        "selection": "Opening excerpt, not a selected highlight."
+      }
+    },
+    {
+      "id": "peter-beck",
+      "speaker": "Peter Beck",
+      "role": "Rocket Lab founder",
+      "topic": "Start with a useful scale",
+      "headline": "Small can open a very large door.",
+      "title": "Small rockets are the next space revolution | Peter Beck",
+      "youtubeId": "DhnBn_c9f8Q",
+      "channel": "TED",
+      "channelUrl": "https://www.youtube.com/@TED",
+      "sourceUrl": "https://www.ted.com/talks/peter_beck_small_rockets_are_the_next_space_revolution",
+      "published": "2019-12-09",
+      "durationSeconds": 693,
+      "accent": "gold",
+      "takeaway": "A smaller machine can serve a different need. Start by identifying the job, then choose a scale you can build, measure and improve.",
+      "prompt": "Ask which modest test would remove the most uncertainty from your next design.",
+      "lesson": {
+        "title": "Spend the next hour where it teaches most",
+        "href": "#lesson/economics-of-the-next-test"
+      },
+      "project": {
+        "title": "Design a small test rig",
+        "href": "#projects/test-rig"
+      },
+      "verification": {
+        "oembedHttp": 200,
+        "embedHttp": 200,
+        "playabilityStatus": "OK",
+        "playableInEmbed": true,
+        "captionTracksPresent": true
+      },
+      "excerpt": {
+        "start": 0,
+        "end": 90,
+        "label": "Opening 90 seconds",
+        "selection": "Opening excerpt, not a selected highlight."
+      }
+    },
+    {
+      "id": "vijay-kumar",
+      "speaker": "Vijay Kumar",
+      "role": "Robotics researcher",
+      "topic": "Mathematics into motion",
+      "headline": "The movement starts with an idea.",
+      "title": "Robots that fly ... and cooperate | Vijay Kumar",
+      "youtubeId": "4ErEBkj_3PY",
+      "channel": "TED",
+      "channelUrl": "https://www.youtube.com/@TED",
+      "sourceUrl": "https://www.ted.com/talks/vijay_kumar_robots_that_fly_and_cooperate",
+      "published": "2012-03-01",
+      "durationSeconds": 1007,
+      "accent": "lilac",
+      "takeaway": "Spectacular motion has quiet foundations: geometry, sensing and feedback. You can start investigating those ideas with two links on a sheet of paper.",
+      "prompt": "Predict an arm's endpoint, build its pose and compare the measurement with the prediction.",
+      "lesson": {
+        "title": "Place the fingertip with two joints",
+        "href": "#lesson/robot-kinematics-from-two-links"
+      },
+      "project": {
+        "title": "Build a paper robot arm",
+        "href": "#projects/paper-arm"
+      },
+      "verification": {
+        "oembedHttp": 200,
+        "embedHttp": 200,
+        "playabilityStatus": "OK",
+        "playableInEmbed": true,
+        "captionTracksPresent": true
+      },
+      "excerpt": {
+        "start": 0,
+        "end": 90,
+        "label": "Opening 90 seconds",
+        "selection": "Opening excerpt, not a selected highlight."
+      }
+    },
+    {
+      "id": "sylvia-earle",
+      "speaker": "Sylvia Earle",
+      "role": "Ocean explorer and scientist",
+      "topic": "A world worth caring for",
+      "headline": "Exploration comes with responsibility.",
+      "title": "TED Prize wish: Protect our oceans - Sylvia Earle",
+      "youtubeId": "pS-sfUHJaXI",
+      "channel": "TED-Ed",
+      "channelUrl": "https://www.youtube.com/@TEDEd",
+      "sourceUrl": "https://ed.ted.com/lessons/sylvia-earle-s-ted-prize-wish-to-protect-our-oceans",
+      "published": "2012-12-21",
+      "durationSeconds": 1092,
+      "accent": "cyan",
+      "takeaway": "Exploration and care belong together. Understanding an environment can change what you choose to build there, and how you decide whether it should be built.",
+      "prompt": "Name one consequence your design could have beyond its immediate technical job.",
+      "lesson": {
+        "title": "Understand the pressure of the deep",
+        "href": "#lesson/hydrostatic-pressure"
+      },
+      "project": {
+        "title": "Explain a design decision and its consequences",
+        "href": "#projects/decision-memo"
+      },
+      "verification": {
+        "oembedHttp": 200,
+        "embedHttp": 200,
+        "playabilityStatus": "OK",
+        "playableInEmbed": true,
+        "captionTracksPresent": true
+      },
+      "excerpt": {
+        "start": 0,
+        "end": 90,
+        "label": "Opening 90 seconds",
+        "selection": "Opening excerpt, not a selected highlight."
+      }
+    },
+    {
+      "id": "demis-hassabis",
+      "speaker": "Demis Hassabis",
+      "role": "Google DeepMind cofounder",
+      "topic": "Keep asking better questions",
+      "headline": "A model can become a way to discover.",
+      "title": "How AI Is Unlocking the Secrets of Nature and the Universe | Demis Hassabis | TED",
+      "youtubeId": "0_M_syPuFos",
+      "channel": "TED",
+      "channelUrl": "https://www.youtube.com/@TED",
+      "sourceUrl": "https://www.ted.com/talks/demis_hassabis_how_ai_is_unlocking_the_secrets_of_nature_and_the_universe",
+      "published": "2024-04-29",
+      "durationSeconds": 1534,
+      "accent": "gold",
+      "takeaway": "A model can help people ask new scientific questions. Build the habit of testing predictions and noticing what the available evidence does not establish.",
+      "prompt": "Write down a prediction before measuring, then keep the result even if it surprises you.",
+      "lesson": {
+        "title": "Change one thing you can explain",
+        "href": "#lesson/test-design-and-confounding"
+      },
+      "project": {
+        "title": "Make a measurement study",
+        "href": "#projects/measurement-study"
+      },
+      "verification": {
+        "oembedHttp": 200,
+        "embedHttp": 200,
+        "playabilityStatus": "OK",
+        "playableInEmbed": true,
+        "captionTracksPresent": true
+      },
+      "excerpt": {
+        "start": 0,
+        "end": 90,
+        "label": "Opening 90 seconds",
+        "selection": "Opening excerpt, not a selected highlight."
+      }
+    }
+  ]
+}

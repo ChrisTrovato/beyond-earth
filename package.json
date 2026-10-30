@@ -1,0 +1,13 @@
+{
+  "name": "beyond-earth",
+  "version": "4.0.0",
+  "private": true,
+  "description": "Interactive engineering learning playground",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node scripts/check.cjs"
+  }
+}

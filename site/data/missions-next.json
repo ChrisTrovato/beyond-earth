@@ -1,0 +1,1426 @@
+[
+  {
+    "id": "transfer-time-and-phasing",
+    "title": "Arrive where the destination will be",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "Reaching the right orbit is not the same as meeting something moving along it.",
+    "objective": "Use orbital-period ratios to connect transfer time with a target’s starting position.",
+    "prerequisites": [
+      "Ratios and powers",
+      "Angles around a circle",
+      "The idea of a transfer ellipse"
+    ],
+    "explain": [
+      "A transfer has both a shape and a clock. A spacecraft can cross the destination’s circular orbit while the destination is elsewhere. To arrange a meeting in a simple model, first calculate the travel time, then work backward from the target’s required arrival position. A drawing that shows only the two orbit circles hides this timing problem.",
+      "For orbits around the same central body, period grows with semimajor axis to the power 3/2. An outward Hohmann transfer follows half an ellipse, so its coast takes half that ellipse’s period. The target continues moving throughout the coast. Its angular travel is the fraction of its own period that elapsed, multiplied by 360 degrees.",
+      "Use a deliberately ideal model here: circular endpoints moving in the same direction, a shared plane, two-body gravity, and instantaneous changes in velocity. The meeting point is 180 degrees around the central body from departure. The target must initially lead by 180 degrees minus its angular travel during the coast. This is a timing condition; matching position alone still leaves the velocity-matching part of rendezvous."
+    ],
+    "steps": [
+      {
+        "title": "Find the transfer size",
+        "body": "If the outer radius is twice the inner radius, the ellipse’s semimajor axis is 1.5 times the inner radius.",
+        "math": "aₜ = (r₁ + r₂)/2"
+      },
+      {
+        "title": "Calculate both clocks",
+        "body": "Scale the inner circular period to obtain the ellipse period and the outer circular period. Halve only the ellipse period.",
+        "math": "Tₜ/T₁ = (aₜ/r₁)^(3/2); tcoast = Tₜ/2"
+      },
+      {
+        "title": "Back up the target",
+        "body": "Find how far the target travels during the coast, then subtract that angle from 180 degrees.",
+        "math": "Initial lead = 180° − 360°(tcoast/T₂)"
+      }
+    ],
+    "example": {
+      "setup": "In an invented orbital timing exercise, the inner circular period is 100 minutes and the outer radius is twice the inner radius.",
+      "worked": [
+        "Outer period: 100 × 2^(3/2) ≈ 282.84 min.",
+        "Transfer-ellipse period: 100 × 1.5^(3/2) ≈ 183.71 min.",
+        "Coast time is about 91.86 min.",
+        "The target travels 360 × 91.86/282.84 ≈ 116.9°.",
+        "It must therefore begin about 63.1° ahead of the departure point."
+      ],
+      "answer": "The ideal departure geometry needs approximately 63.1 degrees of target lead."
+    },
+    "practice": {
+      "question": "Suppose the target instead starts 20° ahead, with all periods unchanged. Where is it when the spacecraft reaches the far end of the transfer?",
+      "choices": [
+        "At 180°, because the outer radius is correct",
+        "About 43.1° short of the meeting point",
+        "About 63.1° beyond the meeting point",
+        "At the departure point"
+      ],
+      "correctIndex": 1,
+      "explanation": "The target moves about 116.9°, reaching 136.9° from the departure direction. The transfer endpoint is at 180°, so the target remains about 43.1° short.",
+      "hint": "Add the actual initial angle to the target’s travel angle."
+    },
+    "transfer": {
+      "title": "Add time to the geometry",
+      "body": "This habit also helps with a robot meeting a moving conveyor tray: a reachable position is useful only when the object is there.",
+      "action": "Draw departure and arrival on separate sheets. Mark both objects’ positions and label the elapsed time."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "04",
+        "label": "Orbital environments"
+      },
+      {
+        "chapter": "14",
+        "label": "Different worlds and trajectories"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Kepler’s laws and orbital periods",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/13-5-keplers-laws-of-planetary-motion"
+      }
+    ]
+  },
+  {
+    "id": "landing-with-a-thrust-margin",
+    "title": "Thrust must do more than hold the weight",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "A descending vehicle can have upward thrust and still hit the surface while moving downward.",
+    "objective": "Calculate net acceleration, stopping time, and altitude used by a simplified vertical braking segment.",
+    "prerequisites": [
+      "Newton’s second law",
+      "Signed velocity",
+      "Squaring a number"
+    ],
+    "explain": [
+      "Choose upward as positive. Gravity acts downward, while the selected thrust acts upward. Their difference determines acceleration. If thrust equals weight, acceleration is zero: an already descending vehicle continues descending at the same velocity. Holding weight is different from removing downward speed.",
+      "With constant mass, gravity, and vertical thrust, net acceleration is constant. The stopping time follows from the velocity change divided by acceleration. The downward distance used before velocity reaches zero can be found from the squared-speed relation. These two calculations answer different questions: how long the braking lasts and whether there is enough altitude.",
+      "The model represents one segment of an invented descent. It omits mass loss, attitude changes, terrain, throttle response, sensors, and horizontal motion. Its useful lesson is the margin between thrust and weight. A modest change in mass can strongly change that margin, even when the thrust value itself is unchanged. Stopping above the ground also does not finish a landing."
+    ],
+    "steps": [
+      {
+        "title": "Calculate the excess force",
+        "body": "Subtract weight from upward thrust and divide by mass. Keep the sign so you know whether downward speed can decrease.",
+        "math": "a = T/m − g"
+      },
+      {
+        "title": "Find when downward velocity reaches zero",
+        "body": "For an initial downward speed v₀ expressed as a positive magnitude, divide by the upward acceleration. This stopping expression requires a > 0.",
+        "math": "tstop = v₀/a"
+      },
+      {
+        "title": "Compare distance with altitude",
+        "body": "The selected constant-acceleration model uses this much downward travel before stopping.",
+        "math": "dstop = v₀²/(2a)"
+      }
+    ],
+    "example": {
+      "setup": "An illustrative lunar descent segment starts 80 m above a flat surface, descending at 12 m/s. Use mass 200 kg, upward thrust 600 N, and g = 1.62 m/s².",
+      "worked": [
+        "Thrust acceleration is 600/200 = 3.00 m/s² upward.",
+        "Net acceleration is 3.00 − 1.62 = 1.38 m/s² upward.",
+        "Stopping time is 12/1.38 ≈ 8.70 s.",
+        "Downward stopping distance is 144/(2 × 1.38) ≈ 52.2 m.",
+        "The vehicle reaches zero vertical velocity about 27.8 m above the selected surface."
+      ],
+      "answer": "Under these assumptions, the braking segment stops the descent before contact."
+    },
+    "practice": {
+      "question": "Mass is instead 250 kg, while thrust, initial speed, gravity, and starting altitude stay the same. What does the same model predict?",
+      "choices": [
+        "The vehicle stops in less than 52.2 m",
+        "It stops exactly at the surface",
+        "It needs about 92.3 m, exceeding the available altitude",
+        "Its acceleration is zero because thrust is unchanged"
+      ],
+      "correctIndex": 2,
+      "explanation": "Net upward acceleration becomes 600/250 − 1.62 = 0.78 m/s². The required distance is 144/1.56 ≈ 92.3 m. The 80 m segment is too short under the stated model.",
+      "hint": "Recalculate excess acceleration before comparing distances."
+    },
+    "transfer": {
+      "title": "Investigate the margin",
+      "body": "The difference between two large opposing quantities can control the outcome. Reporting thrust alone would conceal the effect of added mass.",
+      "action": "Tabulate stopping distance for three selected masses. Explain why the curve steepens as thrust approaches weight."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "04",
+        "label": "Gravity and motion"
+      },
+      {
+        "chapter": "05",
+        "label": "From delivered cargo to capability"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Motion with constant acceleration",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/3-4-motion-with-constant-acceleration"
+      }
+    ]
+  },
+  {
+    "id": "feedback-with-a-delayed-measurement",
+    "title": "The controller is correcting yesterday’s error",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 20,
+    "hook": "A sensible correction can be wrong by the time it acts.",
+    "objective": "Trace a discrete feedback model and show how an old measurement changes its response.",
+    "prerequisites": [
+      "Signed arithmetic",
+      "A feedback error",
+      "Step-by-step tables"
+    ],
+    "explain": [
+      "A controller needs information about the system, but that information has an age. A measurement may wait for transmission, processing, or the next update. During the wait, the system can keep changing. The controller then acts on an error that no longer describes the present position.",
+      "Consider an ideal paper model in which a correction immediately changes position. With a current measurement, its update is xₙ₊₁ = xₙ + K(r − xₙ). A one-sample measurement delay changes the last term to xₙ₋₁. The controller’s arithmetic still looks reasonable; the time index is what changes the behavior. We will supply both starting values so the delayed recurrence is fully defined.",
+      "A delayed loop can overshoot even when its current-measurement counterpart approaches smoothly. This does not prove that every delayed controller is unstable, or that reducing gain always solves a practical problem. It shows why timing belongs inside the model. Measurement age, actuator response, and update interval need to be described alongside the gain."
+    ],
+    "steps": [
+      {
+        "title": "Write the stored measurement",
+        "body": "Use one column for actual model position and another for the older position available to the controller."
+      },
+      {
+        "title": "Calculate the signed correction",
+        "body": "Subtract the available measurement from the reference, then multiply by the dimensionless gain.",
+        "math": "Correction at n = K(r − xₙ₋₁)"
+      },
+      {
+        "title": "Update the actual position",
+        "body": "Add that correction to the current position, not to the old measured position.",
+        "math": "xₙ₊₁ = xₙ + K(r − xₙ₋₁)"
+      }
+    ],
+    "example": {
+      "setup": "Use reference r = 10 mm, gain K = 0.8, and starting values x₋₁ = x₀ = 0 in this invented discrete model.",
+      "worked": [
+        "First update uses the old 0 mm measurement: x₁ = 0 + 0.8(10 − 0) = 8 mm.",
+        "Second update still uses x₀ = 0: x₂ = 8 + 8 = 16 mm.",
+        "Third update uses x₁ = 8: x₃ = 16 + 0.8(10 − 8) = 17.6 mm.",
+        "The controller adds another positive correction after the actual position has already crossed the reference."
+      ],
+      "answer": "The first three positions are 8, 16, and 17.6 mm, exposing the effect of measurement age."
+    },
+    "practice": {
+      "question": "At actual position x₂ = 16 mm, suppose the controller receives a fresh 16 mm measurement before the next update. With the same gain, what is the next position?",
+      "choices": [
+        "17.6 mm",
+        "24 mm",
+        "10 mm",
+        "11.2 mm"
+      ],
+      "correctIndex": 3,
+      "explanation": "A fresh measurement gives error 10 − 16 = −6 mm. The correction is −4.8 mm, so the next position is 16 − 4.8 = 11.2 mm.",
+      "hint": "The reference did not change; the information used in the correction did."
+    },
+    "transfer": {
+      "title": "Timestamp the evidence",
+      "body": "A number without its acquisition time can mislead a moving system. The same issue appears in plots that combine measurements from different moments.",
+      "action": "Continue the delayed table for six updates and compare it with the current-measurement rule. Label the time index on every column."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "15",
+        "label": "What the robot observes"
+      },
+      {
+        "chapter": "28",
+        "label": "Controls and dynamic systems"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MIT OpenCourseWare · Feedback control introduction",
+        "url": "https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/d2d138e9053e153f601a27a6c6cc3b4d_MIT16_30F10_lec01.pdf"
+      }
+    ]
+  },
+  {
+    "id": "actuator-limits-and-windup",
+    "title": "The command keeps growing. The actuator cannot.",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "Software can ask for more than the machine can deliver.",
+    "objective": "Separate a stored integral command from an actuator’s limited output.",
+    "prerequisites": [
+      "Adding signed quantities",
+      "Feedback error",
+      "A stated update rule"
+    ],
+    "explain": [
+      "An actuator has limits: a valve can open only so far, a motor has a bounded command range, and a display slider cannot move beyond its endpoint. Saturation means the requested output exceeds such a limit. The realized output then differs from what an unconstrained controller calculated.",
+      "Integral action accumulates error over time. In a discrete teaching model, the stored command I increases by a selected gain times each measured error. If the machine cannot respond but error remains positive, I can keep growing while the actuator output stays capped. This stored excess is called windup. Removing the original error does not automatically erase the accumulated command.",
+      "Anti-windup methods make the controller account for the limit. Some conditionally stop integration; others feed the difference between requested and delivered action back into the controller. The appropriate method depends on the system. Here the goal is simpler: keep a separate record of requested command, delivered command, and stored state so the hidden accumulation becomes visible."
+    ],
+    "steps": [
+      {
+        "title": "Name the stored state",
+        "body": "Let I be the accumulated command. Start it at zero. For this paper exercise, each update adds 0.5 command units per millimeter of measured error.",
+        "math": "Inew = Iold + 0.5e"
+      },
+      {
+        "title": "Apply the output limit",
+        "body": "The selected actuator can deliver only commands between −2 and +2 units. Clip the output after calculating I.",
+        "math": "u = min(2, max(−2, Inew))"
+      },
+      {
+        "title": "Keep both numbers",
+        "body": "Do not overwrite I with the clipped result unless that is explicitly the anti-windup rule being studied."
+      }
+    ],
+    "example": {
+      "setup": "A fictional mechanism is blocked for three updates while the error stays +2 mm. Use the stated integral update and output limits.",
+      "worked": [
+        "Update 1: I = 1 command unit, and output u = 1.",
+        "Update 2: I = 2, and output u = 2.",
+        "Update 3: I = 3, but output remains capped at 2.",
+        "If the next measured error is zero, the update adds zero: I stays 3 and output stays 2."
+      ],
+      "answer": "Zero new error does not remove the stored command; the unconstrained integrator has accumulated beyond the actuator limit."
+    },
+    "practice": {
+      "question": "After I reaches 3, one update has error −1 mm. What are I and the delivered output under the unchanged rule?",
+      "choices": [
+        "I = 2.5; output = 2",
+        "I = −0.5; output = −0.5",
+        "I = 0; output = 0",
+        "I = 3; output = 3"
+      ],
+      "correctIndex": 0,
+      "explanation": "The negative error subtracts 0.5, leaving I = 2.5. That is still above the +2 output limit, so the delivered command remains 2.",
+      "hint": "A small negative correction reduces accumulated state; it does not necessarily bring it back inside the limit."
+    },
+    "transfer": {
+      "title": "Model what the machine actually receives",
+      "body": "A logged requested command is not proof of delivered action. Recording saturation helps explain why an apparently correct controller responds slowly after a constraint is removed.",
+      "action": "Add a second table that prevents further positive accumulation when the upper limit is reached. Compare its stored state with the original rule."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "15",
+        "label": "Commands and observed completion"
+      },
+      {
+        "chapter": "28",
+        "label": "Control methods"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MIT OpenCourseWare · Actuator saturation and anti-windup",
+        "url": "https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/8c33eb306938cac6cd73e701a86a5b32_MIT16_30F10_lec23.pdf"
+      }
+    ]
+  },
+  {
+    "id": "sampling-and-aliasing",
+    "title": "The wheel appears to turn backward",
+    "subject": "Engineering",
+    "level": "Foundation",
+    "minutes": 18,
+    "hook": "Regular snapshots can tell a convincing but incorrect motion story.",
+    "objective": "Explain how distinct motions can produce the same sampled observations.",
+    "prerequisites": [
+      "Fractions of a turn",
+      "Frequency as cycles per second",
+      "Regular time intervals"
+    ],
+    "explain": [
+      "A sampled signal records selected moments instead of the complete motion between them. Imagine a disk with one visible mark. If it rotates almost one full turn between snapshots, the mark appears to move only a small distance in the opposite direction. The sampled images do not record the turns that happened between exposures.",
+      "Aliasing occurs when different continuous motions produce indistinguishable samples. It is not simply noisy data: perfectly precise samples can still support the wrong interpretation if the sampling scheme discards the information needed to distinguish the possibilities. More decimal places in each recorded angle do not reveal the missing revolutions.",
+      "For a band-limited sinusoidal signal, the ideal sampling theorem requires a sample rate above twice its highest frequency to avoid this ambiguity in reconstruction. Practical systems also need a suitable filter before sampling and room for nonideal behavior. A single marked wheel provides an intuitive demonstration, but a complicated rotating image can contain more spatial and temporal detail than its shaft speed alone suggests."
+    ],
+    "steps": [
+      {
+        "title": "Calculate movement per sample",
+        "body": "Divide rotation frequency by sample frequency to find turns occurring between observations.",
+        "math": "Turns per sample = frotation/fsample"
+      },
+      {
+        "title": "Separate complete turns from visible displacement",
+        "body": "A mark returns to the same orientation after a whole revolution, so snapshots retain only the remainder."
+      },
+      {
+        "title": "Compare plausible explanations",
+        "body": "Ask whether a different forward or backward motion would put the mark at the same observed positions."
+      }
+    ],
+    "example": {
+      "setup": "In a synthetic animation, a disk turns forward at 9 revolutions per second and is sampled 10 times per second. The disk has one distinguishable mark.",
+      "worked": [
+        "The disk moves 9/10 of a turn between samples.",
+        "That is 324° forward.",
+        "The same ending orientation is reached by moving 36° backward.",
+        "At ten samples per second, this shorter apparent motion corresponds to one backward revolution per second.",
+        "The snapshots alone cannot tell which of these two motions happened between them."
+      ],
+      "answer": "A 9 Hz forward rotation can appear as a 1 Hz backward rotation under this sampling setup."
+    },
+    "practice": {
+      "question": "The sample rate is changed to exactly 9 samples per second while rotation remains 9 revolutions per second. What happens to the mark in the ideal snapshots?",
+      "choices": [
+        "It appears to rotate forward at 18 Hz",
+        "It becomes a more accurate 9 Hz trace",
+        "It appears at the same orientation each time",
+        "It must appear to rotate backward at 9 Hz"
+      ],
+      "correctIndex": 2,
+      "explanation": "Exactly one full turn occurs between samples. Each observation sees the same mark orientation, so the disk can appear stationary even though it is rotating.",
+      "hint": "Divide the rotation frequency by the new sampling frequency."
+    },
+    "transfer": {
+      "title": "Question a clean-looking trace",
+      "body": "The same principle affects vibration measurements and digitized sensor signals. Sampling must be designed around the variation that needs to remain observable.",
+      "action": "Draw twelve sample positions for the example. Then label one alternative continuous motion that passes through exactly those positions."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "17",
+        "label": "Measurement and instruments"
+      },
+      {
+        "chapter": "28",
+        "label": "Signals and dynamic systems"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MIT OpenCourseWare · Sampling and aliasing",
+        "url": "https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/resources/lecture-16-sampling/"
+      }
+    ]
+  },
+  {
+    "id": "smoothing-a-noisy-signal",
+    "title": "A smoother trace can be a later answer",
+    "subject": "Engineering",
+    "level": "Foundation",
+    "minutes": 18,
+    "hook": "Averaging quiets the display, but it can also hide the start of a real change.",
+    "objective": "Compute a trailing moving average and compare smoothing with response delay.",
+    "prerequisites": [
+      "An arithmetic mean",
+      "Ordered data",
+      "A threshold"
+    ],
+    "explain": [
+      "A moving average replaces a reading with the average of a small window of readings. A trailing three-sample average uses the current value and the previous two. Moving the window forward drops the oldest value and adds the newest. The output is a new time series, not a correction to the original measurements.",
+      "When a signal changes abruptly, old values remain in the window for a while. The average therefore moves toward the new level gradually. This can be useful when short fluctuations distract from a trend. It can be costly when the timing of a change matters. The choice of window is part of the measurement method and belongs in the record.",
+      "Smoothing does not prove that removed variation was noise. A genuine short event may be reduced or erased by the same operation. Preserve raw readings, define whether the filter uses past or future samples, and decide how missing data are handled. A centered average that uses future observations cannot be available immediately in a live stream."
+    ],
+    "steps": [
+      {
+        "title": "Specify the window",
+        "body": "Use a trailing window of three complete numeric samples. Produce no average until three samples are available.",
+        "math": "yₙ = (xₙ + xₙ₋₁ + xₙ₋₂)/3"
+      },
+      {
+        "title": "Slide by one sample",
+        "body": "Keep the output attached to the time of the newest sample in the window."
+      },
+      {
+        "title": "Compare an event in both records",
+        "body": "Apply the same chosen threshold to the raw values and the filtered values, then compare the first crossing times."
+      }
+    ],
+    "example": {
+      "setup": "A fictional one-second sensor stream reads 10, 10, 10, 16, 16, 16 units at times 0 through 5 s. Treat the jump as a real signal change.",
+      "worked": [
+        "At 2 s, the first available average is (10 + 10 + 10)/3 = 10.",
+        "At 3 s, the average is (10 + 10 + 16)/3 = 12.",
+        "At 4 s, it is (10 + 16 + 16)/3 = 14.",
+        "At 5 s, it reaches 16.",
+        "A threshold of at least 14 is crossed by the raw stream at 3 s and the smoothed stream at 4 s."
+      ],
+      "answer": "This filter delays the selected threshold crossing by one second."
+    },
+    "practice": {
+      "question": "A second stream is 10, 10, 19, 10, 10. Which trailing three-sample outputs does it produce?",
+      "choices": [
+        "10, 19, 10",
+        "13, 13, 13",
+        "10, 13, 10",
+        "19, 19, 19"
+      ],
+      "correctIndex": 1,
+      "explanation": "Each complete three-value window includes the single 19 and two 10s, giving 39/3 = 13. The filter spreads one spike across three output times.",
+      "hint": "Write out the three windows rather than averaging all five samples."
+    },
+    "transfer": {
+      "title": "Keep the processing visible",
+      "body": "A plot label should reveal the window length and timing convention. Otherwise two people can disagree about a machine simply because they are viewing differently processed data.",
+      "action": "Plot raw and averaged values on the same axes. Write one question for which smoothing helps and one for which it obscures evidence."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "17",
+        "label": "Measurement records"
+      },
+      {
+        "chapter": "19",
+        "label": "Separating a signal from an explanation"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NIST · Single moving average",
+        "url": "https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc421.htm"
+      }
+    ]
+  },
+  {
+    "id": "state-machines-and-interlocks",
+    "title": "Make the permitted next action explicit",
+    "subject": "Engineering",
+    "level": "Foundation",
+    "minutes": 20,
+    "hook": "A button press means different things depending on what the machine is already doing.",
+    "objective": "Trace states, events, and guarded transitions in a small fictional mechanism.",
+    "prerequisites": [
+      "If–then reasoning",
+      "A sequence of actions",
+      "The difference between a command and a measurement"
+    ],
+    "explain": [
+      "A state machine describes a system using a finite set of states and rules for moving between them. A command such as start does not have one universal effect. Its meaning depends on the current state and any conditions required for the transition. Writing those rules down exposes cases that a happy-path demonstration can miss.",
+      "A guard is a condition that must be satisfied before a transition is allowed. A position-confirmed signal might permit an action, while an incomplete alignment keeps the system waiting. The state should represent what the chosen model knows, not merely what it has commanded. Sending an extend command is not the same event as receiving an extended confirmation.",
+      "Consider a harmless paper model with RETRACTED, EXTENDING, EXTENDED, and FAULT states. A timeout can mean the expected confirmation did not arrive within the selected interval. It need not identify the cause. A fault policy must also say what happens next: stop accepting motion commands, preserve the event, and require a defined reset. This is a logic exercise, not a validated interlock for real equipment."
+    ],
+    "steps": [
+      {
+        "title": "Define the states and observations",
+        "body": "Use distinct names for a commanded action and a confirmed configuration. Start in RETRACTED."
+      },
+      {
+        "title": "Write the transition rules",
+        "body": "An extend request enters EXTENDING only when alignment is confirmed. An extended confirmation enters EXTENDED. A three-second timeout without confirmation enters FAULT."
+      },
+      {
+        "title": "Resolve competing events",
+        "body": "For this exercise, a fault has priority over motion requests. Reset returns to RETRACTED only when a retracted confirmation is present."
+      }
+    ],
+    "example": {
+      "setup": "Trace an invented paper mechanism. At time 0, alignment is confirmed and extend is requested. No extended confirmation arrives during the next three seconds.",
+      "worked": [
+        "The accepted request moves the state from RETRACTED to EXTENDING.",
+        "The state stays EXTENDING while waiting; the command alone does not establish completion.",
+        "At 3 s, the timeout condition moves the state to FAULT.",
+        "Another extend request leaves it in FAULT under the selected policy.",
+        "A reset request without retracted confirmation also leaves it in FAULT."
+      ],
+      "answer": "The model preserves the difference between attempted motion, confirmed completion, and unresolved failure."
+    },
+    "practice": {
+      "question": "The model is in FAULT. A reset request and a retracted confirmation arrive together. What state follows under the stated rules?",
+      "choices": [
+        "EXTENDING, because reset repeats the last command",
+        "EXTENDED, because the timeout has ended",
+        "FAULT forever; state machines cannot recover",
+        "RETRACTED, because the reset guard is satisfied"
+      ],
+      "correctIndex": 3,
+      "explanation": "The specified reset transition requires retracted confirmation. With that condition present, the model returns to RETRACTED. It does not automatically repeat the failed motion.",
+      "hint": "Use the explicit reset guard rather than inferring what the operator intended."
+    },
+    "transfer": {
+      "title": "Test the awkward sequence",
+      "body": "Repeated commands, missing confirmations, and simultaneous events often reveal more than one successful run. A transition table gives collaborators something precise to challenge.",
+      "action": "Draw the four states and trace one successful sequence and one timeout sequence. Name one ambiguous event ordering the specification still needs to resolve."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "15",
+        "label": "Recognizing completed work"
+      },
+      {
+        "chapter": "19",
+        "label": "Faults and evidence"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MIT OpenCourseWare · Finite state machines",
+        "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c6/"
+      }
+    ]
+  },
+  {
+    "id": "uncertainty-of-a-mean",
+    "title": "More readings can sharpen the average, not the ruler",
+    "subject": "Mathematics",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "A narrow interval can describe repeatability while leaving a shared measurement bias untouched.",
+    "objective": "Calculate an estimated standard error and interpret a confidence interval under stated assumptions.",
+    "prerequisites": [
+      "A mean",
+      "Square roots",
+      "The idea of sample spread"
+    ],
+    "explain": [
+      "Repeated observations vary. Their sample standard deviation s describes the spread of individual readings. The estimated standard error s/√n describes the sampling variability of their mean under an independent, stable sampling model. These quantities have the same units but answer different questions. A larger sample can make the mean more repeatable without making individual readings less scattered.",
+      "A confidence interval adds a selected multiplier to this standard error. For normally distributed independent observations with unknown variance, a Student t multiplier accounts for estimating spread from the sample. You do not need to derive its table to use a supplied value carefully. The assumptions and confidence level belong beside the result.",
+      "A 95 percent confidence procedure produces intervals that cover the fixed population mean in 95 percent of repeated samples under its model. It does not claim that 95 percent of future individual readings lie inside the reported interval. It also does not remove calibration error, an inconsistent measurement definition, or correlated readings copied from the same event."
+    ],
+    "steps": [
+      {
+        "title": "Separate the two spreads",
+        "body": "Record the sample size, sample mean, and supplied sample standard deviation. Keep the standard deviation attached to individual readings.",
+        "math": "Estimated standard error = s/√n"
+      },
+      {
+        "title": "Apply the stated multiplier",
+        "body": "For this exercise, use a two-sided 95 percent t multiplier of 2.064 for 24 degrees of freedom.",
+        "math": "Half-width = t × s/√n"
+      },
+      {
+        "title": "State what the interval concerns",
+        "body": "Report the process mean under the stated sampling assumptions, and keep possible systematic error as a separate question."
+      }
+    ],
+    "example": {
+      "setup": "A synthetic set of 25 independent removal-time trials has mean 20.0 s and sample standard deviation 2.0 s. Assume a stable, approximately normal population for the interval calculation.",
+      "worked": [
+        "The estimated standard error is 2.0/√25 = 0.40 s.",
+        "The supplied t multiplier gives half-width 2.064 × 0.40 = 0.8256 s.",
+        "The endpoints are 20.0 − 0.8256 and 20.0 + 0.8256 s.",
+        "Rounded to hundredths, the interval is 19.17–20.83 s."
+      ],
+      "answer": "The selected method gives a 95 percent confidence interval of approximately 19.17–20.83 s for the process mean."
+    },
+    "practice": {
+      "question": "A second independent sample has 100 trials and the same sample standard deviation of 2.0 s. What happens to the estimated standard error?",
+      "choices": [
+        "It becomes 0.20 s; individual-reading spread need not change",
+        "It becomes 0.02 s because sample size quadrupled",
+        "It remains 2.0 s",
+        "It becomes zero because 100 readings establish the true mean"
+      ],
+      "correctIndex": 0,
+      "explanation": "The square root of sample size rises from 5 to 10, so s/√n falls from 0.40 to 0.20 s. The individual sample spread was explicitly held at 2.0 s.",
+      "hint": "Sample size enters under a square root, and the question asks about the mean."
+    },
+    "transfer": {
+      "title": "Match the uncertainty to the decision",
+      "body": "Estimating average task duration is different from predicting the next slow trial or verifying a dimensional limit. Choose a statistic that fits the actual claim.",
+      "action": "Write three labels: individual spread, uncertainty of the mean, and possible bias. Put one possible source of error under each."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "17",
+        "label": "Measurement and uncertainty"
+      },
+      {
+        "chapter": "25",
+        "label": "Repeatable project evidence"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NIST · Confidence limits for a mean",
+        "url": "https://www.itl.nist.gov/div898/software/dataplot/refman1/auxillar/conflimi.htm"
+      }
+    ]
+  },
+  {
+    "id": "false-alarms-and-base-rates",
+    "title": "An alarm is evidence, not a verdict",
+    "subject": "Mathematics",
+    "level": "Next step",
+    "minutes": 20,
+    "hook": "A detector can catch most faults while most of its alarms still come from healthy items.",
+    "objective": "Use a count table to distinguish detection rate from the probability that an alert indicates a fault.",
+    "prerequisites": [
+      "Percentages",
+      "Counts in a table",
+      "A fraction as a probability"
+    ],
+    "explain": [
+      "A detection rate asks what fraction of faulty items trigger an alert. The question after an alert is different: what fraction of alerted items are faulty? The denominators changed. Confusing those two probabilities can make a screening system sound more decisive than it is.",
+      "The base rate is how common the fault is in the population being checked. When faults are rare, there may be many more healthy items available to produce false alerts. A small false-positive percentage applied to that large group can create more alerts than the detector obtains from the relatively small faulty group.",
+      "A count table makes the relationship inspectable without memorizing Bayes’ theorem. Split the population into faulty and healthy, then split each group into alerted and not alerted. Add the alerted column before calculating its faulty fraction. The selected percentages here are an invented sensor model, not measured performance for a real product."
+    ],
+    "steps": [
+      {
+        "title": "Choose a population size",
+        "body": "Use a convenient count large enough to avoid fractions in the expected-count table."
+      },
+      {
+        "title": "Apply each rate to its own group",
+        "body": "Apply detection rate to faulty items and false-positive rate to healthy items. Neither is a percentage of the entire population."
+      },
+      {
+        "title": "Use the alerted population as the denominator",
+        "body": "The desired fraction is true alerts divided by all alerts.",
+        "math": "P(fault | alert) = true alerts / (true alerts + false alerts)"
+      }
+    ],
+    "example": {
+      "setup": "In a fictional batch of 10,000 items, 1 percent are faulty. The detector alerts on 90 percent of faults and 5 percent of healthy items. Calculate expected counts.",
+      "worked": [
+        "There are 100 faulty items and 9,900 healthy items.",
+        "Expected true alerts: 0.90 × 100 = 90.",
+        "Expected false alerts: 0.05 × 9,900 = 495.",
+        "Total expected alerts: 90 + 495 = 585.",
+        "The faulty fraction among alerts is 90/585 ≈ 15.4 percent."
+      ],
+      "answer": "Under the selected model, only about 15.4 percent of alerts identify a faulty item."
+    },
+    "practice": {
+      "question": "Keep the fault prevalence and detection rate unchanged, but reduce the false-positive rate to 1 percent. What faulty fraction is expected among alerts?",
+      "choices": [
+        "90 percent",
+        "1 percent",
+        "About 47.6 percent",
+        "About 99 percent"
+      ],
+      "correctIndex": 2,
+      "explanation": "True alerts remain 90. False alerts become 0.01 × 9,900 = 99. The fraction is 90/(90 + 99) ≈ 47.6 percent.",
+      "hint": "Rebuild the alerted column; improving one rate does not change the population’s base rate."
+    },
+    "transfer": {
+      "title": "Plan what happens after the alarm",
+      "body": "An alert can justify another observation rather than an immediate diagnosis. The cost of missed faults and unnecessary interventions also matters when choosing a threshold.",
+      "action": "Draw the full four-cell table, including missed faults and correct nonalerts. Write one additional check that could help distinguish the alerted items."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "15",
+        "label": "Recognition and uncertain evidence"
+      },
+      {
+        "chapter": "19",
+        "label": "Diagnosis through competing explanations"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Contingency tables and conditional probabilities",
+        "url": "https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables"
+      }
+    ]
+  },
+  {
+    "id": "reliability-through-two-paths",
+    "title": "Calculate the service, not the number of spares",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "Two working branches still depend on whatever both branches need.",
+    "objective": "Calculate a simple reliability model and show how a shared dependency limits redundancy.",
+    "prerequisites": [
+      "Probabilities between zero and one",
+      "Multiplication",
+      "Independent events"
+    ],
+    "explain": [
+      "Reliability must refer to a defined function over a defined interval and operating condition. A component value such as 0.90 is incomplete without that scope. For this exercise, each number means the probability of performing the assigned function for the same selected interval, with no repair during it.",
+      "In a series reliability model, every required component must work, so independent success probabilities multiply. In an independent parallel model, one fully capable branch is enough. It is often easier to calculate the probability that all branches fail, then subtract from one. This is a logical model; the lines in the diagram need not be literal electrical wiring.",
+      "Parallel reliability does not grant unlimited capacity or eliminate common causes. Each surviving branch must perform the full required task. Shared power, software, environment, or control may still disable both. Independence is an assumption to justify, not a reward for drawing the boxes far apart. Keep the shared dependency visible in the calculation."
+    ],
+    "steps": [
+      {
+        "title": "Define successful service",
+        "body": "Assume either branch alone can perform the required function throughout the same interval."
+      },
+      {
+        "title": "Calculate parallel success",
+        "body": "Multiply independent branch failure probabilities and subtract their joint failure from one.",
+        "math": "Rparallel = 1 − (1 − R₁)(1 − R₂)"
+      },
+      {
+        "title": "Include the shared controller",
+        "body": "For the selected independent-controller model, multiply branch-system success by controller success.",
+        "math": "Rservice = Rcontroller × Rparallel"
+      }
+    ],
+    "example": {
+      "setup": "A fictional service has two independent full-capacity branches with reliabilities 0.90 and 0.80. Both require a shared controller with reliability 0.95, independent of branch failures.",
+      "worked": [
+        "If both branches were required in series, their success probability would be 0.90 × 0.80 = 0.72.",
+        "For one-out-of-two service, joint branch failure is 0.10 × 0.20 = 0.02.",
+        "Parallel branch success is therefore 0.98.",
+        "Including the controller gives 0.95 × 0.98 = 0.931."
+      ],
+      "answer": "The selected complete-service model has reliability 0.931, not 0.98."
+    },
+    "practice": {
+      "question": "The controller reliability improves to 0.99 while branch values and all assumptions stay unchanged. What is the new complete-service reliability?",
+      "choices": [
+        "0.99",
+        "0.9702",
+        "0.98",
+        "0.72"
+      ],
+      "correctIndex": 1,
+      "explanation": "The parallel branches still give 0.98. The shared controller remains required, so service success is 0.99 × 0.98 = 0.9702.",
+      "hint": "Improving a shared component does not remove it from the success logic."
+    },
+    "transfer": {
+      "title": "Challenge the independence assumption",
+      "body": "A common environmental event or shared software command may invalidate the product calculation. A dependency review belongs beside the numerical result.",
+      "action": "Add a shared power source to the diagram. State which probability would be needed and describe one common cause the simple multiplication model does not yet represent."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "19",
+        "label": "Reliability and recovery"
+      },
+      {
+        "chapter": "20",
+        "label": "Shared services and bottlenecks"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NIST · Parallel reliability model",
+        "url": "https://www.itl.nist.gov/div898/handbook/apr/section1/apr183.htm"
+      },
+      {
+        "label": "NIST · Series reliability model",
+        "url": "https://www.itl.nist.gov/div898/handbook/apr/section1/apr182.htm"
+      }
+    ]
+  },
+  {
+    "id": "datums-and-hole-patterns",
+    "title": "The same coordinates need the same origin",
+    "subject": "Engineering",
+    "level": "Foundation",
+    "minutes": 20,
+    "hook": "Two parts can agree on every distance and still disagree about where the holes belong.",
+    "objective": "Use a common reference to locate a hole pattern and calculate its possible spacing variation.",
+    "prerequisites": [
+      "Coordinates",
+      "Adding tolerances",
+      "A dimensioned sketch"
+    ],
+    "explain": [
+      "A reference tells another person where a dimension begins and which direction it follows. In a simple two-dimensional drawing, a named left edge and bottom edge can define an origin and axes. The corresponding inspection method must use those same references. A coordinate is not a complete manufacturing instruction if its reference is unclear.",
+      "Dimensioning two features from a common reference makes their intended positions explicit, but the distance between them still has variation. If each coordinate can vary independently within a stated limit, the smallest spacing combines the second hole’s low limit with the first hole’s high limit. The largest spacing uses the opposite combination.",
+      "A chain of dimensions answers a different set of questions: each feature may be located relative to the previous one. Choosing the references should follow the function and inspection method. This lesson uses ordinary coordinate dimensions, not a complete geometric-dimensioning standard. Real datum systems also address how a three-dimensional part is located and oriented."
+    ],
+    "steps": [
+      {
+        "title": "Name the references",
+        "body": "Draw a plate with its left edge as x = 0 and bottom edge as y = 0. Mark both positive directions."
+      },
+      {
+        "title": "Locate the centers",
+        "body": "Specify x and y for each hole center from the named edges. Keep hole size separate from center location."
+      },
+      {
+        "title": "Check the functional spacing",
+        "body": "Write the center-to-center spacing as a difference, then combine the appropriate limits.",
+        "math": "Spacing = x₂ − x₁"
+      }
+    ],
+    "example": {
+      "setup": "A fictional plate has two holes on the same y coordinate. Their x coordinates are 20.0 ± 0.2 mm and 50.0 ± 0.2 mm from the left reference edge. Treat both permitted limits independently.",
+      "worked": [
+        "Nominal spacing is 50.0 − 20.0 = 30.0 mm.",
+        "Minimum spacing is 49.8 − 20.2 = 29.6 mm.",
+        "Maximum spacing is 50.2 − 19.8 = 30.4 mm.",
+        "Each hole’s ±0.2 mm location limit allows a ±0.4 mm worst-case change in their relative spacing."
+      ],
+      "answer": "The stated coordinate limits permit a center spacing from 29.6 to 30.4 mm."
+    },
+    "practice": {
+      "question": "An inspector uses a ruler whose chosen origin is shifted 1.0 mm to the right, without changing the physical holes. Which statement is correct?",
+      "choices": [
+        "Both reported x coordinates increase by 1.0 mm",
+        "The measured spacing increases by 2.0 mm",
+        "Both reported x coordinates decrease by 1.0 mm, while their difference stays the same",
+        "Only the second hole’s coordinate changes"
+      ],
+      "correctIndex": 2,
+      "explanation": "Coordinates measured from the shifted origin are each 1.0 mm smaller. Subtracting them cancels the shared shift, so the center spacing remains unchanged.",
+      "hint": "Write each new coordinate as its old value minus the same reference offset."
+    },
+    "transfer": {
+      "title": "Make design and inspection share a language",
+      "body": "A CAD model, drawing, and inspection record should agree on the features that establish position. A beautiful model can still leave that relationship ambiguous.",
+      "action": "Sketch the same hole pattern using a common origin and then using a chain. Identify which dimension directly controls the function you care about."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "16",
+        "label": "Interfaces and clearances"
+      },
+      {
+        "chapter": "17",
+        "label": "References and metrology"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MIT OpenCourseWare · Engineering drawing and dimensioning",
+        "url": "https://ocw.mit.edu/courses/2-007-design-and-manufacturing-i-spring-2009/pages/related-resources/drawing_and_sketching/"
+      }
+    ]
+  },
+  {
+    "id": "thermal-expansion-and-fit",
+    "title": "The gap has a temperature",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 20,
+    "hook": "A room-temperature fit does not describe the same assembly after its parts expand differently.",
+    "objective": "Calculate how differential linear expansion changes a simple clearance.",
+    "prerequisites": [
+      "Length units",
+      "Scientific notation",
+      "A difference between dimensions"
+    ],
+    "explain": [
+      "A dimension belongs to a temperature as well as a reference. Over a modest temperature interval, the selected linear-expansion model is ΔL = αL₀ΔT. The coefficient α measures fractional length change per degree. A temperature difference of one degree Celsius has the same size as one kelvin, so either difference unit works when used consistently.",
+      "Two neighboring parts can change by different amounts because their lengths, coefficients, or temperature changes differ. A clearance formed by an opening minus an inserted part changes by the opening’s expansion minus the part’s expansion. Heating both does not automatically make the gap close. The geometry and coefficients determine the sign.",
+      "The calculation assumes freely expanding dimensions and approximately constant coefficients over the stated interval. Constraints can produce stress instead of the free motion predicted here, and real temperature gradients complicate the shape. Tolerances and thermal changes are separate contributions that should eventually be combined in a complete interface study."
+    ],
+    "steps": [
+      {
+        "title": "Record the initial fit",
+        "body": "Choose a reference temperature and subtract the inserted length from the opening length.",
+        "math": "G₀ = O₀ − P₀"
+      },
+      {
+        "title": "Expand each dimension separately",
+        "body": "Use its own coefficient and temperature change. Do not apply one material’s coefficient to the entire assembly.",
+        "math": "ΔO = αO O₀ ΔT; ΔP = αP P₀ ΔT"
+      },
+      {
+        "title": "Recalculate the gap",
+        "body": "Add the opening’s change and subtract the inserted part’s change.",
+        "math": "Gnew = G₀ + ΔO − ΔP"
+      }
+    ],
+    "example": {
+      "setup": "An invented unconstrained fit has a 100.00 mm opening and a 99.90 mm inserted part. Use selected coefficients 23 × 10⁻⁶/K and 12 × 10⁻⁶/K respectively, and heat both by 50 K.",
+      "worked": [
+        "Initial clearance is 0.10 mm.",
+        "The opening grows by 23 × 10⁻⁶ × 100.00 × 50 = 0.115 mm.",
+        "The inserted part grows by 12 × 10⁻⁶ × 99.90 × 50 = 0.05994 mm.",
+        "New clearance is 0.10 + 0.115 − 0.05994 = 0.15506 mm."
+      ],
+      "answer": "The selected fit opens to about 0.155 mm when heated."
+    },
+    "practice": {
+      "question": "Starting again at the reference temperature, cool both parts by 50 K under the same free-expansion model. What is the new clearance?",
+      "choices": [
+        "About 0.045 mm",
+        "About 0.155 mm",
+        "Exactly 0.100 mm",
+        "About −0.155 mm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Both length changes reverse sign. The gap becomes 0.10 − 0.115 + 0.05994 = 0.04494 mm. It shrinks but remains positive in this selected nominal calculation.",
+      "hint": "Use a negative temperature change and preserve the subtraction in the clearance equation."
+    },
+    "transfer": {
+      "title": "Add environment to the drawing",
+      "body": "Interfaces that connect a warm machine to a cold structure need a defined temperature state. A single nominal clearance cannot tell the whole story.",
+      "action": "Plot the calculated gap against temperature change from −50 to +50 K. Then list the tolerance and constraint information missing from this first model."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "11",
+        "label": "Thermal interfaces"
+      },
+      {
+        "chapter": "16",
+        "label": "Clearance through changing conditions"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Linear thermal expansion",
+        "url": "https://openstax.org/books/university-physics-volume-2/pages/1-3-thermal-expansion"
+      }
+    ]
+  },
+  {
+    "id": "dead-reckoning-in-a-current",
+    "title": "Your heading is not your track",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "A vehicle points east. Ten minutes later, it is also 180 metres north.",
+    "objective": "Add vehicle and water velocities, then show how an uncertain current becomes a position error.",
+    "prerequisites": [
+      "Signed coordinates",
+      "Distance = speed × time",
+      "Right-triangle geometry"
+    ],
+    "explain": [
+      "Imagine a small underwater vehicle represented by an arrow on a map. Its propulsor produces motion relative to the surrounding water. The water is also moving relative to the map. The vehicle's velocity over the ground is the vector sum of those two velocities. A compass can describe the direction the vehicle points without revealing its actual path over the ground.",
+      "Use an east-positive x axis and a north-positive y axis. For this exercise, assume a flat local map, constant velocities, and no turning transient. A vehicle moving through water at (1.2, 0) m/s in a current of (0, 0.3) m/s has a ground velocity of (1.2, 0.3) m/s. The current does not reduce the east component in this selected case; it adds a north component. Calling the result simply '1.5 m/s east' would discard direction.",
+      "Dead reckoning means propagating a previous position using estimated motion. The arithmetic may be exact while the estimate drifts because a velocity or starting position is wrong. An independent position observation can reveal accumulated error. Repeating the same uncertain current estimate more frequently does not automatically make it correct. This distinction is central to an autonomous machine that must decide how confidently it knows where it is."
+    ],
+    "steps": [
+      {
+        "title": "Add components in one frame",
+        "body": "Keep both velocity arrows expressed in east/north coordinates before adding them.",
+        "math": "vground = vwater-relative + vcurrent = (1.2, 0.3) m/s"
+      },
+      {
+        "title": "Accumulate displacement",
+        "body": "Ten minutes is 600 seconds. Multiply each component by the same elapsed time.",
+        "math": "Δx = 1.2 × 600 = 720 m; Δy = 0.3 × 600 = 180 m"
+      },
+      {
+        "title": "Separate distance and direction",
+        "body": "Use the right triangle formed by the two displacements. Round only after evaluating it.",
+        "math": "|Δr| = √(720² + 180²) ≈ 742 m; angle = arctan(180/720) ≈ 14.0° north of east"
+      }
+    ],
+    "example": {
+      "setup": "The same paper vehicle must track due east while maintaining a through-water speed of 1.2 m/s. Assume the northward current remains exactly 0.3 m/s.",
+      "worked": [
+        "Give the vehicle a southward through-water component of −0.3 m/s so the north/south ground components cancel.",
+        "The remaining east component is √(1.2² − 0.3²) = √1.35 ≈ 1.162 m/s.",
+        "In 600 s the eastward displacement is approximately 697 m. Correcting the track changes forward progress."
+      ],
+      "answer": "Point somewhat south of east; the calculated ground track is east at about 1.162 m/s under these assumptions."
+    },
+    "practice": {
+      "question": "A planner uses the correct eastward velocity but underestimates the northward current by 0.05 m/s. With no position corrections for 600 s, how large is the resulting north/south prediction error?",
+      "choices": [
+        "0.05 m",
+        "12 m",
+        "300 m",
+        "30 m"
+      ],
+      "correctIndex": 3,
+      "explanation": "The unmodeled velocity component accumulates for the whole interval: 0.05 m/s × 600 s = 30 m. A small rate error can create a significant position error.",
+      "hint": "Multiply the error in velocity, rather than the entire current, by elapsed time."
+    },
+    "transfer": {
+      "title": "Draw an uncertainty corridor",
+      "body": "Mark the predicted endpoint and an alternative endpoint for a slightly different current. This makes the consequence of an environmental estimate visible.",
+      "action": "Use two current estimates differing by 0.02 m/s and calculate how far apart the endpoints become after 5, 10, and 20 minutes."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "15",
+        "label": "Robotics and autonomous work"
+      },
+      {
+        "chapter": "28",
+        "label": "Research directions, including ocean systems"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Relative motion in two dimensions",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/4-5-relative-motion-in-one-and-two-dimensions"
+      }
+    ]
+  },
+  {
+    "id": "sonar-time-and-range",
+    "title": "An echo makes a round trip",
+    "subject": "Engineering",
+    "level": "Foundation",
+    "minutes": 18,
+    "hook": "A sonar clock measures a journey out and back. The map needs only the outward distance.",
+    "objective": "Convert echo time into slant range and distinguish range, depth, and model error.",
+    "prerequisites": [
+      "Unit conversion",
+      "Multiplication and division",
+      "Basic right triangles"
+    ],
+    "explain": [
+      "An active sonar sends a sound pulse and listens for a returning echo. In the simplest model, the sound travels along the same straight path outward and back at a constant speed. If a target is R metres away and sound speed is c metres per second, the elapsed time is 2R/c. Solving for range gives R = ct/2. The factor of two represents two legs of travel, not an arbitrary correction.",
+      "For this lesson, select c = 1,500 m/s as the model input. Actual sound propagation depends on water conditions, and curved paths or multiple reflecting surfaces can complicate interpretation. A sensor does not directly return a perfectly labeled object distance merely because its clock is precise. Timing, assumed propagation speed, echo selection, and geometry each contribute to the final estimate.",
+      "Range is distance along the modeled sound path. It is not automatically depth below a vehicle. A downward-looking beam tilted away from vertical measures a slant distance. If its angle from vertical is θ in a flat-bottom model, the vertical separation is R cos θ. Confusing the angle reference or replacing slant range with depth can produce an error much larger than a timing increment."
+    ],
+    "steps": [
+      {
+        "title": "Convert the clock reading",
+        "body": "An 80 ms echo time is 0.080 s. Use seconds with a sound speed expressed in metres per second.",
+        "math": "80 ms × (1 s / 1,000 ms) = 0.080 s"
+      },
+      {
+        "title": "Calculate one-way range",
+        "body": "The full sound path is 120 m, but only half of that is the sensor-to-target distance.",
+        "math": "R = 1,500 m/s × 0.080 s / 2 = 60 m"
+      },
+      {
+        "title": "Ask which assumption matters",
+        "body": "A selected 2 ms timing bias changes the range by 1.5 m. A selected speed error changes every range in proportion to elapsed time.",
+        "math": "ΔRtiming = 1,500 × 0.002 / 2 = 1.5 m"
+      }
+    ],
+    "example": {
+      "setup": "An echo takes 0.080 s. The calculation uses 1,500 m/s, but a hypothetical uniform water column actually has a sound speed of 1,480 m/s.",
+      "worked": [
+        "Using the selected calculation speed gives 1,500 × 0.080 / 2 = 60.0 m.",
+        "Under the stated actual-speed model, the target is 1,480 × 0.080 / 2 = 59.2 m away.",
+        "The range estimate is 0.8 m too large even with a perfect timing measurement."
+      ],
+      "answer": "A precise clock cannot remove error from the propagation-speed assumption."
+    },
+    "practice": {
+      "question": "A beam is 30° from vertical and returns an echo after 0.120 s. Use c = 1,500 m/s, a straight path, and cos 30° ≈ 0.866. What vertical separation does this imply?",
+      "choices": [
+        "About 77.9 m",
+        "90 m",
+        "About 103.9 m",
+        "180 m"
+      ],
+      "correctIndex": 0,
+      "explanation": "The slant range is 1,500 × 0.120 / 2 = 90 m. Its vertical component is 90 × 0.866 ≈ 77.9 m. The angle is measured from vertical.",
+      "hint": "Calculate the one-way slant range first, then project it onto the vertical direction."
+    },
+    "transfer": {
+      "title": "Make the measurement geometry visible",
+      "body": "A range sensor's drawing should show the sensor position, beam direction, echo path, and quantity the system actually needs.",
+      "action": "Draw two beams with equal 60 m slant range: one vertical and one 30° from vertical. Label their different vertical separations."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "17",
+        "label": "Inspection and evidence"
+      },
+      {
+        "chapter": "28",
+        "label": "Ocean and autonomy research"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NOAA · How active sonar measures range",
+        "url": "https://oceanservice.noaa.gov/facts/sonar.html"
+      }
+    ]
+  },
+  {
+    "id": "requirements-that-can-be-tested",
+    "title": "Replace 'easy to use' with an observable claim",
+    "subject": "Humanities",
+    "level": "Foundation",
+    "minutes": 20,
+    "hook": "A drawer feels easy to remove. What evidence would make that sentence useful to another team?",
+    "objective": "Write a bounded requirement, choose a matching verification method, and judge results without moving the criterion.",
+    "prerequisites": [
+      "Reading a small data table",
+      "Comparing numbers with a limit"
+    ],
+    "explain": [
+      "A requirement tells a team what must be true. A useful one identifies the thing being evaluated, the operating condition, the measurable outcome, and the threshold. 'The drawer should be easy to service' expresses an intention. 'In the specified tabletop procedure, the drawer shall be removed within 15 seconds in each of five trials' establishes an observable claim. It still needs a procedure defining the start, finish, setup, and permitted actions.",
+      "Verification asks whether the stated requirement was met. Validation asks whether meeting it serves the underlying need. A drawer might pass a removal-time test yet be difficult to carry, easy to confuse with another component, or impossible to reconnect. Writing precise requirements therefore does not eliminate judgment. It gives judgment a place to attach to evidence instead of leaving everything inside the adjective 'easy.'",
+      "A common mistake is substituting a convenient statistic for the statistic the requirement specified. An average can hide one unacceptable trial. Conversely, a requirement about a mean should not silently become a rule about every individual result. Decide the acceptance rule before inspecting the data. If a test exposes a poorly chosen requirement, revise it openly and preserve the earlier result rather than rewriting the record to manufacture a pass."
+    ],
+    "steps": [
+      {
+        "title": "Name one operation",
+        "body": "Choose removal of a lightweight cardboard drawer. Specify the starting position, allowed tools, and the point at which the drawer counts as fully removed."
+      },
+      {
+        "title": "Write the acceptance rule",
+        "body": "For this exercise, require five completed trials, each at or below 15 s. State how jams or incomplete attempts are recorded instead of discarding them.",
+        "math": "Acceptance: all five recorded times ≤ 15 s"
+      },
+      {
+        "title": "Match evidence to the rule",
+        "body": "Record individual trial times and compare the maximum with the limit. A mean is useful additional information but does not replace the selected criterion.",
+        "math": "All-trial time criterion ⇔ maximum recorded time ≤ 15 s"
+      }
+    ],
+    "example": {
+      "setup": "The five completed trials take 10, 12, 11, 16, and 11 seconds. These are invented results for the selected procedure.",
+      "worked": [
+        "Add the times: 10 + 12 + 11 + 16 + 11 = 60 s. The mean is 60/5 = 12 s.",
+        "The maximum is 16 s, which exceeds the 15 s limit.",
+        "The specified five-trial acceptance rule fails. The record can still show that four trials met the limit and identify what happened during the fifth."
+      ],
+      "answer": "Report a failed acceptance test with the complete table, then investigate the slow trial or reconsider the requirement through an explicit review."
+    },
+    "practice": {
+      "question": "After a redesign, four trials take 11, 11, 12, and 12 s. The team stops there because they look good. Under the same five-trial rule, which conclusion is justified?",
+      "choices": [
+        "Pass, because the mean is below 15 s",
+        "The required evidence is incomplete",
+        "Fail, because every time must be identical",
+        "Pass, because the worst recorded time is 12 s"
+      ],
+      "correctIndex": 1,
+      "explanation": "Four favorable trials do not complete a rule requiring five. The observed times are encouraging, but the specified verification procedure has not finished.",
+      "hint": "Check the amount of required evidence as well as the numerical limit."
+    },
+    "transfer": {
+      "title": "Build a requirement-to-evidence table",
+      "body": "Each claim should point to an inspection, analysis, demonstration, or test that can actually evaluate it under stated conditions.",
+      "action": "Write three requirements for a paper mechanism. For each, name the method, recorded measurement, acceptance limit, and one condition the test does not cover."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "06",
+        "label": "Requirements and verification"
+      },
+      {
+        "chapter": "17",
+        "label": "Test and measurement evidence"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NASA · Writing and verifying requirements",
+        "url": "https://www.nasa.gov/reference/system-engineering-handbook-appendix/"
+      }
+    ]
+  },
+  {
+    "id": "expected-value-of-a-test",
+    "title": "A test is valuable when it can change the decision",
+    "subject": "Humanities",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "You can pay to learn more. First calculate what that information could possibly save.",
+    "objective": "Compare expected losses and calculate an ideal upper bound on the value of information.",
+    "prerequisites": [
+      "Probabilities as fractions",
+      "Weighted averages"
+    ],
+    "explain": [
+      "A test consumes resources, but it can prevent an expensive decision made under uncertainty. To examine this trade, describe what is uncertain, what actions are available, and what each outcome would cost. Expected loss is a probability-weighted average across the model's outcomes. It is not a promise about the cost of any one real attempt. A rare severe outcome and a frequent small one can have the same mean while demanding very different judgment.",
+      "Use fictional cost units so the arithmetic stays separate from any real purchasing decision. Option A costs 10 units to use. It has a selected 30% probability of an additional 100-unit loss. Option B costs 25 units and has no additional loss in this deliberately simplified model. Without new information, their expected costs are 40 and 25 units. Minimizing that expected cost selects B.",
+      "Now imagine a perfect test that tells you whether A will incur the loss, before you choose an option. Perfect information is an ideal benchmark, not a description of normal experiments. You would choose A when it is favorable and B otherwise. The maximum possible benefit of this information is the difference between the best decision before knowing and the expected best decision after knowing. Real test errors, delays, and implementation costs usually reduce that benefit."
+    ],
+    "steps": [
+      {
+        "title": "Evaluate the decision without a test",
+        "body": "Include the initial cost regardless of outcome. Add the probability-weighted extra loss.",
+        "math": "E[cost A] = 10 + 0.30 × 100 = 40; E[cost B] = 25"
+      },
+      {
+        "title": "Evaluate the ideal informed policy",
+        "body": "A is favorable 70% of the time, so use it then. In the remaining 30%, use B.",
+        "math": "E[cost with perfect information, before test cost] = 0.70 × 10 + 0.30 × 25 = 14.5"
+      },
+      {
+        "title": "Calculate the information ceiling",
+        "body": "Compare the informed policy with the best available uninformed action, B. Do not compare it only with the worse option A.",
+        "math": "Maximum expected benefit of perfect information = 25 − 14.5 = 10.5 units"
+      }
+    ],
+    "example": {
+      "setup": "A hypothetical perfect test costs 4 units, and its result arrives in time to choose A or B. All outcomes and costs follow the selected model.",
+      "worked": [
+        "The informed action policy has expected cost 14.5 units.",
+        "Adding the test gives 14.5 + 4 = 18.5 units.",
+        "Relative to choosing B immediately for 25, the expected saving is 6.5 units."
+      ],
+      "answer": "The 4-unit perfect test is worthwhile under this expected-cost model. That conclusion relies on its accuracy, timing, and the available fallback."
+    },
+    "practice": {
+      "question": "The same perfect test instead costs 12 units. Which action minimizes modeled expected cost?",
+      "choices": [
+        "Test, because more information always helps",
+        "Choose A immediately for an expected 10 units",
+        "Test, because 12 is below A's 40-unit expected cost",
+        "Choose B immediately for 25 units"
+      ],
+      "correctIndex": 3,
+      "explanation": "Testing gives 14.5 + 12 = 26.5 units, more than B's 25. The information's ideal benefit is only 10.5 units before paying for it.",
+      "hint": "Add the test cost to the expected cost of the actions you will take after its result."
+    },
+    "transfer": {
+      "title": "Ask what result would change the choice",
+      "body": "A test whose possible results never alter the selected action may have little immediate decision value, even if it produces interesting data.",
+      "action": "For one paper design choice, draw two possible test outcomes and the action you would take after each. Identify the assumptions you would need to estimate value."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "06",
+        "label": "Uncertainty and trade studies"
+      },
+      {
+        "chapter": "21",
+        "label": "Lifecycle decisions"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NASA · Decision analysis",
+        "url": "https://www.nasa.gov/reference/6-8-decision-analysis/"
+      }
+    ]
+  },
+  {
+    "id": "constraints-before-scores",
+    "title": "The highest score can still describe an unusable design",
+    "subject": "Humanities",
+    "level": "Foundation",
+    "minutes": 20,
+    "hook": "A beautiful trade table awards first place to a component that does not fit.",
+    "objective": "Separate required constraints from preferences and show how a weighted score can conceal a decisive failure.",
+    "prerequisites": [
+      "Decimals and weighted averages",
+      "Reading measured limits"
+    ],
+    "explain": [
+      "Design comparisons often combine several preferences into one score. A lightweight option might score well on mass but poorly on cost; another might reverse those advantages. Weighted scoring can make a discussion explicit, provided the scoring scales and weights are justified. It does not make the answer objective merely because a spreadsheet contains arithmetic.",
+      "A constraint asks whether an option is acceptable at all. A preference asks which acceptable option is more desirable. For a selected assembly exercise, suppose at least 2.0 mm of total installation clearance is required. An option with only 1.5 mm cannot compensate by being inexpensive or attractive. Giving clearance a small weight would allow unrelated strengths to hide the failure. Apply the required boundary before ranking options, or explicitly reopen the boundary through a legitimate design decision.",
+      "Unknown is also different from pass. If a clearance has not been measured or calculated, the team does not have evidence that the option meets the constraint. It may remain a candidate for investigation without becoming an approved choice. Ethical judgment appears in these ordinary distinctions: whose needs define the constraints, who bears the consequences of failure, and who can challenge a scoring scale that quietly favors one option."
+    ],
+    "steps": [
+      {
+        "title": "Write the feasibility rule",
+        "body": "Use a selected minimum clearance of 2.0 mm. State the measurement condition and whether the numbers already include the tolerances you intend to evaluate.",
+        "math": "Feasible for this exercise: demonstrated clearance ≥ 2.0 mm"
+      },
+      {
+        "title": "Score preferences transparently",
+        "body": "For this exercise only, use cost-desirability and convenience scores on the same supplied 0–10 scale, where higher is better. Weight them 60% and 40%.",
+        "math": "Preference score = 0.60 × cost score + 0.40 × convenience score"
+      },
+      {
+        "title": "Apply the constraint before ranking",
+        "body": "Report an option's constraint status separately from its preference score. Preserve both so reviewers can see why an apparently strong option was rejected."
+      }
+    ],
+    "example": {
+      "setup": "Option A has 1.5 mm clearance and preference scores 10 for cost and 7 for convenience. Option B has 2.2 mm clearance and scores 7 and 8. Treat these as complete values for this teaching comparison.",
+      "worked": [
+        "A's weighted score is 0.60 × 10 + 0.40 × 7 = 8.8.",
+        "B's weighted score is 0.60 × 7 + 0.40 × 8 = 7.4.",
+        "A fails the 2.0 mm clearance constraint. B passes and is the only feasible option in this pair."
+      ],
+      "answer": "Select B from the stated pair, or redesign A and verify its new clearance before comparing again."
+    },
+    "practice": {
+      "question": "A revised option has a preference score of 9.2, but its clearance is listed as 'not measured.' What is the defensible next step?",
+      "choices": [
+        "Approve it because 9.2 exceeds both earlier scores",
+        "Assign an average clearance and approve it",
+        "Keep feasibility unresolved and obtain clearance evidence",
+        "Treat the missing clearance as exactly 2.0 mm"
+      ],
+      "correctIndex": 2,
+      "explanation": "A strong preference score cannot fill a gap in required evidence. The revised option can be investigated without being represented as verified.",
+      "hint": "A question mark is a statement about knowledge, not a favorable physical dimension."
+    },
+    "transfer": {
+      "title": "Expose the judgment inside the table",
+      "body": "The selected weights, scoring anchors, and constraint definitions should be visible enough for another person to disagree with them productively.",
+      "action": "Compare two everyday design options. List two nonnegotiable requirements and two preferences, then write whose needs each one represents."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "06",
+        "label": "Trade studies and requirements"
+      },
+      {
+        "chapter": "18",
+        "label": "Designing for ordinary operations"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NASA · Decision analysis",
+        "url": "https://www.nasa.gov/reference/6-8-decision-analysis/"
+      }
+    ]
+  },
+  {
+    "id": "data-minimization-by-design",
+    "title": "Keep the information the task actually needs",
+    "subject": "Humanities",
+    "level": "Foundation",
+    "minutes": 20,
+    "hook": "A workshop needs to show whether a station is available. Does it need a history of everyone who used it?",
+    "objective": "Translate a service purpose into a limited data design and identify what aggregation preserves or loses.",
+    "prerequisites": [
+      "Multiplication",
+      "Averages",
+      "Distinguishing a goal from a feature"
+    ],
+    "explain": [
+      "A digital system can collect far more detail than its immediate task requires. Begin by naming the task. A fictional workshop display may need only the current state 'free' or 'occupied.' A historical log of individual visits answers a different question. Data minimization means limiting collection, retention, and use to what serves a defined purpose. It is a design decision about information flow, not just a smaller database.",
+      "Consider a synthetic system that records one observation each second for 30 complete days. It creates 2,592,000 records. If the only historical requirement is an occupancy total for each 15-minute block, there are just 2,880 blocks in that period. That reduction is substantial, but a record count alone does not establish privacy. A time series can reveal patterns, especially when a space has very few users. Consider who can access it, how long it remains, and what other information could be combined with it.",
+      "Aggregation also removes capabilities. A count of visits and a sum of their waiting times can support an average wait. They cannot reconstruct the longest wait or explain an individual event. Losing that detail may be appropriate when it is unnecessary. If a new purpose requires more detail, assess that purpose explicitly instead of retaining everything indefinitely in case someone eventually finds a use for it."
+    ],
+    "steps": [
+      {
+        "title": "Write the smallest service question",
+        "body": "For a live availability display, ask whether the station is free now. Overwriting the current state may serve this purpose without keeping a visit history."
+      },
+      {
+        "title": "Count the proposed historical records",
+        "body": "For the separate occupancy-planning example, compare one-second observations with 15-minute blocks across exactly 30 days.",
+        "math": "Seconds: 30 × 24 × 60 × 60 = 2,592,000; blocks: 30 × 24 × 4 = 2,880"
+      },
+      {
+        "title": "Describe the retained capability",
+        "body": "The block count is 900 times smaller. State what each block stores and when it expires; do not infer anonymity from that numerical reduction.",
+        "math": "2,592,000 / 2,880 = 900"
+      }
+    ],
+    "example": {
+      "setup": "A synthetic queue study retains only two totals for a session: 12 completed visits and 36 minutes of combined waiting time. It stores no individual visit record.",
+      "worked": [
+        "The mean waiting time is total wait divided by completed visits: 36/12 = 3 minutes.",
+        "Many different lists of individual waits share those totals.",
+        "The totals cannot establish the maximum wait or whether one visitor experienced a much longer delay."
+      ],
+      "answer": "The summary supports the specified average while withholding individual detail; it cannot answer every future question."
+    },
+    "practice": {
+      "question": "Another session records 10 completed visits and 50 minutes of total waiting. Which claim follows from these two values alone?",
+      "choices": [
+        "The mean wait was 5 minutes",
+        "Every visitor waited exactly 5 minutes",
+        "No visitor waited more than 5 minutes",
+        "The longest wait was 50 minutes"
+      ],
+      "correctIndex": 0,
+      "explanation": "Total wait divided by visit count gives the mean. The individual distribution and maximum are not recoverable from those two totals.",
+      "hint": "Ask which quantity is determined uniquely by a sum and a count."
+    },
+    "transfer": {
+      "title": "Draw the data lifecycle",
+      "body": "A responsible design names what enters, what gets transformed, who can read it, and when each stored form is removed. Removing names alone does not answer all of those questions.",
+      "action": "Sketch a fictional availability display using invented observations. Label the minimum current state, any justified aggregate, access rules, and a chosen deletion interval."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "15",
+        "label": "Information for autonomous systems"
+      },
+      {
+        "chapter": "12",
+        "label": "Privacy and inhabited spaces"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NIST · Data minimization",
+        "url": "https://csrc.nist.gov/glossary/term/minimization"
+      }
+    ]
+  }
+]
+

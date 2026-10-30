@@ -1,0 +1,1445 @@
+[
+  {
+    "id": "fractions-scientific-notation",
+    "title": "Small gaps, large distances",
+    "subject": "Mathematics",
+    "level": "Foundation",
+    "minutes": 15,
+    "hook": "A clearance disappears inside a row of zeros. Fractions and scientific notation help you keep its size visible.",
+    "objective": "Combine fractional dimensions and express a small remaining clearance in consistent units.",
+    "prerequisites": [
+      "Adding fractions",
+      "Decimal place value"
+    ],
+    "explain": [
+      "A drawing can describe the same length as a fraction, a decimal, or a power of ten. These forms are different ways to carry a quantity through a calculation. Before combining dimensions, make their units match. Then choose the numerical form that makes the operation easiest to inspect.",
+      "Fractions need a common denominator when they are added. The denominator describes the size of each piece; the numerator counts those pieces. Adding eighths to quarters becomes straightforward after each quarter is represented as two eighths. Converting everything to decimals also works, provided the conversion preserves enough precision.",
+      "Scientific notation writes a number as a coefficient multiplied by a power of ten. A negative exponent does not make a positive length negative; it indicates a fraction of the unit. Moving from millimeters to meters changes the exponent as well as the unit label. That distinction matters when a small gap is compared with a model built in meters."
+    ],
+    "steps": [
+      {
+        "title": "Use a shared denominator",
+        "body": "Express the three selected thicknesses in eighths before adding them.",
+        "math": "3/8 mm + 1/4 mm + 1/8 mm = (3 + 2 + 1)/8 mm"
+      },
+      {
+        "title": "Subtract the stack from the opening",
+        "body": "The remaining clearance is a difference between two lengths. Keep both in millimeters while subtracting.",
+        "math": "Clearance = opening − combined thickness"
+      },
+      {
+        "title": "Convert the result, not just its label",
+        "body": "One millimeter is 10⁻³ meter. Multiply the numerical value by that factor and normalize the scientific notation.",
+        "math": "0.05 mm = 0.05 × 10⁻³ m = 5 × 10⁻⁵ m"
+      }
+    ],
+    "example": {
+      "setup": "A tabletop spacing exercise has a 0.80 mm opening and three layers whose thicknesses are 3/8 mm, 1/4 mm, and 1/8 mm. Treat these selected values as exact for the arithmetic.",
+      "worked": [
+        "The thickness sum is 6/8 mm = 3/4 mm = 0.75 mm.",
+        "Remaining clearance is 0.80 − 0.75 = 0.05 mm.",
+        "In meters, the stack is 7.5 × 10⁻⁴ m and the opening is 8.0 × 10⁻⁴ m.",
+        "Their difference is 0.5 × 10⁻⁴ m = 5 × 10⁻⁵ m."
+      ],
+      "answer": "The selected stack leaves 0.05 mm of clearance."
+    },
+    "practice": {
+      "question": "Replace the 1/8 mm layer with a 3/16 mm layer. What is the new clearance?",
+      "choices": [
+        "0.0125 mm of interference",
+        "0.1125 mm",
+        "0.05 mm",
+        "0.0625 mm"
+      ],
+      "correctIndex": 0,
+      "explanation": "The replacement adds 3/16 − 2/16 = 1/16 mm, or 0.0625 mm. Subtracting that from the previous 0.05 mm gives −0.0125 mm: the stack is larger than the opening.",
+      "hint": "Calculate the change in thickness first, then apply it to the old clearance."
+    },
+    "transfer": {
+      "title": "Make small quantities readable",
+      "body": "Scientific notation helps compare gaps, sensor signals, and large travel distances without losing track of zeros. Fractions remain useful when the geometry or measurement naturally divides into equal parts.",
+      "action": "Write one dimension as a fraction, a decimal, and scientific notation. Convert its unit and verify that all four descriptions still represent the same length."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "17",
+        "label": "Measurement in the workshop"
+      },
+      {
+        "chapter": "23",
+        "label": "Mathematical foundations"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Exponents and scientific notation",
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/1-2-exponents-and-scientific-notation"
+      }
+    ]
+  },
+  {
+    "id": "exponents-logarithms",
+    "title": "Count the steps hiding in an exponent",
+    "subject": "Mathematics",
+    "level": "Next step",
+    "minutes": 18,
+    "hook": "An adjustment removes half the remaining error each time. How many adjustments are enough?",
+    "objective": "Model repeated multiplication and use a logarithm to find the required number of repetitions.",
+    "prerequisites": [
+      "Powers",
+      "Functions",
+      "Calculator logarithms"
+    ],
+    "explain": [
+      "Some processes change by a fixed amount per step; others change by a fixed fraction of what remains. The second pattern is multiplicative. If an error halves on every iteration, the first correction is large and later corrections become smaller. Subtracting the same amount each time would describe a different process.",
+      "An exponent counts repeated multiplication. In Eₙ = E₀qⁿ, E₀ is the starting error, q is the fraction retained each step, and n is the number of steps. When q lies between zero and one, the model decays toward zero. The logarithm reverses that relationship: it asks which exponent produces a specified ratio.",
+      "The ratio inside a logarithm must be dimensionless, so compare error with error in the same unit. After solving for n, remember whether the process permits fractional steps. An iteration count usually needs rounding upward to satisfy a threshold. The formula also remains a model: a measurement floor or a persistent disturbance can prevent indefinite improvement."
+    ],
+    "steps": [
+      {
+        "title": "Distinguish fraction removed from fraction retained",
+        "body": "Removing 50 percent leaves q = 0.50. Removing 20 percent leaves q = 0.80, not 0.20.",
+        "math": "Eₙ = E₀ qⁿ"
+      },
+      {
+        "title": "Find the crossing point",
+        "body": "Set the target equal to the model, divide by the starting error, and take logarithms using the same base.",
+        "math": "n = log(Etarget/E₀) / log(q)"
+      },
+      {
+        "title": "Check neighboring whole steps",
+        "body": "Evaluate the integer just below and just above the crossing point. This confirms both the rounding and the direction of the threshold."
+      }
+    ],
+    "example": {
+      "setup": "An invented alignment algorithm begins with 8 mm of error and halves the remaining error each iteration. Find the first iteration at or below 0.10 mm.",
+      "worked": [
+        "The required ratio is 0.10/8 = 0.0125.",
+        "The crossing point is log(0.0125)/log(0.5) ≈ 6.322 iterations.",
+        "After six iterations, the model gives 8/64 = 0.125 mm.",
+        "After seven, it gives 8/128 = 0.0625 mm."
+      ],
+      "answer": "Seven complete iterations are required in this model."
+    },
+    "practice": {
+      "question": "A revised model includes a persistent error floor: Eₙ = max(0.08 mm, 8 mm × 0.5ⁿ). Can more iterations bring this modeled error below 0.05 mm?",
+      "choices": [
+        "Yes, after seven iterations",
+        "Yes, because every exponential eventually becomes negative",
+        "No, the 0.08 mm floor prevents it",
+        "Only if logarithms use base ten"
+      ],
+      "correctIndex": 2,
+      "explanation": "The maximum operation keeps the modeled error at or above 0.08 mm. Repeating the same correction cannot overcome the added floor; something about the process must change.",
+      "hint": "Inspect both arguments of the maximum, not only the exponential term."
+    },
+    "transfer": {
+      "title": "Recognize diminishing corrections",
+      "body": "Repeated calibration, numerical algorithms, and recovery processes can display multiplicative behavior. A ratio model helps distinguish a slow approach to a target from a process that has reached another limit.",
+      "action": "Tabulate the first eight iterations. Plot the values on ordinary axes, then explain why equal horizontal steps produce unequal vertical drops."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "23",
+        "label": "Functions and changing systems"
+      },
+      {
+        "chapter": "19",
+        "label": "Looking for the cause of a persistent error"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Logarithmic functions",
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/6-3-logarithmic-functions"
+      }
+    ]
+  },
+  {
+    "id": "quadratics-and-stopping-distance",
+    "title": "Why twice as fast needs more room",
+    "subject": "Mathematics",
+    "level": "Next step",
+    "minutes": 20,
+    "hook": "A cart’s speed increases modestly. The distance needed to stop grows much faster.",
+    "objective": "Interpret a quadratic relationship and select a physically meaningful root.",
+    "prerequisites": [
+      "Algebra",
+      "Square roots",
+      "Functions"
+    ],
+    "explain": [
+      "A quadratic contains a squared variable. Its output therefore need not scale proportionally with its input. In a simple stopping model, the distance during constant deceleration is v²/(2a), where a is the positive magnitude of the deceleration. Doubling speed quadruples that part of the distance when a stays fixed.",
+      "A delay adds a different contribution. If the cart continues at speed v for a delay t before braking, it travels vt during that interval. Total modeled stopping distance becomes a linear term plus a quadratic term. Keeping these terms separate shows which change affects which part of the motion.",
+      "Solving a quadratic can produce two mathematical roots. The physical definition of the variable determines which roots belong to the question. A negative root may be valid algebraically but inappropriate when v was defined as a nonnegative speed. The curve also describes only the selected constant-deceleration model, not every mechanism’s behavior."
+    ],
+    "steps": [
+      {
+        "title": "Separate the two phases",
+        "body": "Write a distance for the delay and another for the deceleration. Add distances rather than mixing time and distance in one sum.",
+        "math": "d = vt + v²/(2a)"
+      },
+      {
+        "title": "Put the limit into the equation",
+        "body": "For a given available distance, set the expression equal to that limit. The positive crossing marks the largest permitted speed within this model."
+      },
+      {
+        "title": "Check a candidate speed",
+        "body": "Substitute the chosen root into the original distance expression. A graph should show whether a larger speed increases or decreases the result."
+      }
+    ],
+    "example": {
+      "setup": "For a fictional motion-planning exercise, use a 0.50 s delay and a constant deceleration magnitude of 0.50 m/s². Find the modeled distance at 2 m/s and 3 m/s.",
+      "worked": [
+        "The model becomes d = 0.50v + v² when v is in m/s and d in meters.",
+        "At 2 m/s, delay distance is 1.0 m and braking distance is 4.0 m.",
+        "Total distance is 5.0 m.",
+        "At 3 m/s, the two terms are 1.5 m and 9.0 m, totaling 10.5 m.",
+        "A 50 percent speed increase has more than doubled the total distance."
+      ],
+      "answer": "The selected model requires 5.0 m at 2 m/s and 10.5 m at 3 m/s."
+    },
+    "practice": {
+      "question": "Keep speed at 2 m/s and delay at 0.50 s, but double the deceleration magnitude to 1.0 m/s². What distance does the model predict?",
+      "choices": [
+        "2.0 m",
+        "3.0 m",
+        "2.5 m",
+        "5.0 m"
+      ],
+      "correctIndex": 1,
+      "explanation": "The delay contribution remains 2 × 0.50 = 1.0 m. The braking contribution becomes 2²/(2 × 1.0) = 2.0 m. Their sum is 3.0 m; only the braking part was halved.",
+      "hint": "The delay term contains no deceleration variable."
+    },
+    "transfer": {
+      "title": "Look for a squared dependence",
+      "body": "Quadratic relationships appear in kinetic energy, bending geometry, and many fitted models. Identifying the squared variable helps you avoid intuitive but incorrect proportional comparisons.",
+      "action": "Plot the stopping model at 0, 1, 2, and 3 m/s. Draw a 6 m limit and estimate the positive speed where the curve crosses it."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "15",
+        "label": "Motion near other hardware"
+      },
+      {
+        "chapter": "23",
+        "label": "Algebra and physical models"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Quadratic functions",
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/5-1-quadratic-functions"
+      }
+    ]
+  },
+  {
+    "id": "systems-of-equations",
+    "title": "Two unknowns, two useful measurements",
+    "subject": "Mathematics",
+    "level": "Next step",
+    "minutes": 20,
+    "hook": "You can measure the station’s total demand but cannot meter its two device types separately.",
+    "objective": "Build and solve two independent linear equations, then check the result against the observations.",
+    "prerequisites": [
+      "Solving a linear equation",
+      "Substitution",
+      "Units of power"
+    ],
+    "explain": [
+      "A single total can hide several unknown contributions. If two fans and one pump consume 54 W, many combinations of fan and pump power could explain it. A second operating configuration can provide another equation. The useful information comes from changing the mixture, not merely writing the first observation again.",
+      "Solving a system means finding values that satisfy every equation at once. Elimination combines equations to remove one unknown. Substitution expresses one unknown in terms of another and inserts that expression elsewhere. Both methods preserve the same relationships when their arithmetic is carried out consistently.",
+      "Two equations do not guarantee a unique solution. One may be a multiple of the other, adding no independent information. Inconsistent observations may also fail to intersect under the chosen model. Before blaming arithmetic, ask whether device demand changed with operating conditions or whether measurement error matters."
+    ],
+    "steps": [
+      {
+        "title": "Define the unknown contributions",
+        "body": "Let f represent watts per fan and p watts per pump. State that these are steady demands at the same voltage and operating condition."
+      },
+      {
+        "title": "Eliminate one variable",
+        "body": "Multiply one equation so a selected coefficient matches the other, then subtract the equations.",
+        "math": "2f + p = 54; f + 2p = 72"
+      },
+      {
+        "title": "Check both original totals",
+        "body": "A solution should reproduce every measured configuration, not only the last equation used. Keep units attached to the final values."
+      }
+    ],
+    "example": {
+      "setup": "In an invented test station, two identical fans plus one pump draw 54 W. One fan plus two identical pumps draw 72 W. Assume each device type’s power remains constant across these configurations.",
+      "worked": [
+        "Multiply the second equation by two: 2f + 4p = 144.",
+        "Subtract the first equation: 3p = 90, so p = 30 W.",
+        "Substitute into 2f + p = 54: 2f = 24, so f = 12 W.",
+        "Check the second observation: 12 + 2 × 30 = 72 W."
+      ],
+      "answer": "The model assigns 12 W to each fan and 30 W to each pump."
+    },
+    "practice": {
+      "question": "Instead, the second observation had been four fans plus two pumps drawing 108 W. Would that uniquely identify both device powers?",
+      "choices": [
+        "Yes, because four devices give more information",
+        "Yes, each device must draw 18 W",
+        "No, because linear equations cannot describe power",
+        "No, it is just twice the first equation"
+      ],
+      "correctIndex": 3,
+      "explanation": "The new equation 4f + 2p = 108 is exactly twice 2f + p = 54. It confirms the same relationship but does not separate the two unknown contributions.",
+      "hint": "Divide every term of the new equation by two."
+    },
+    "transfer": {
+      "title": "Design a measurement that separates causes",
+      "body": "Choosing another measurement is often more useful than collecting more copies of the same one. Systems of equations make the idea of independent information concrete.",
+      "action": "Invent a third operating configuration using the calculated device powers. Then explain what a large discrepancy between its predicted and observed demand would make you investigate."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "10",
+        "label": "Electrical demand by operating mode"
+      },
+      {
+        "chapter": "23",
+        "label": "Several quantities connected at once"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Systems of two linear equations",
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/11-1-systems-of-linear-equations-two-variables"
+      }
+    ]
+  },
+  {
+    "id": "force-vectors-and-equilibrium",
+    "title": "Make the arrows balance",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 20,
+    "hook": "Two pulls point in different directions. Adding their magnitudes would invent a force that is not there.",
+    "objective": "Find a resultant force and the force that cancels it in a two-dimensional model.",
+    "prerequisites": [
+      "Vector components",
+      "Signed numbers",
+      "Pythagorean theorem"
+    ],
+    "explain": [
+      "Force is a vector: its direction matters along with its magnitude. Begin by choosing a system boundary and drawing the external forces acting on that system. A force from a support, cable, or neighboring part belongs on the diagram because it describes an interaction across that boundary.",
+      "Add the horizontal components together and the vertical components together. The magnitude of the resultant follows from the perpendicular component triangle. Adding the magnitudes of angled forces instead would discard information about their directions. Opposing components can cancel while other components remain.",
+      "Zero net force means zero acceleration for a constant-mass body in an inertial frame. It does not by itself mean zero velocity. A separate torque check is also needed for an extended object that could rotate. The point-object model is useful precisely because it lets you isolate the translational balance first."
+    ],
+    "steps": [
+      {
+        "title": "Choose positive directions",
+        "body": "Let right be positive x and upward be positive y. Express every force in newtons in this same frame."
+      },
+      {
+        "title": "Add the components",
+        "body": "Keep the signs that represent direction. Each axis supplies its own scalar equation.",
+        "math": "Fnet,x = ΣFₓ; Fnet,y = ΣFᵧ"
+      },
+      {
+        "title": "Construct the balancing force",
+        "body": "To cancel the resultant, reverse both of its components. Reversing only one component leaves an uncompensated force.",
+        "math": "Fbalance = −Fnet"
+      }
+    ],
+    "example": {
+      "setup": "A fictional planar fixture is represented as a point. One pull is (30, 0) N and another is (−12, 16) N. Find the resultant and a third force that balances them.",
+      "worked": [
+        "Horizontal sum: 30 − 12 = 18 N.",
+        "Vertical sum: 0 + 16 = 16 N.",
+        "Resultant magnitude: √(18² + 16²) ≈ 24.1 N.",
+        "The balancing force is (−18, −16) N.",
+        "Checking all three forces gives zero on both axes."
+      ],
+      "answer": "The resultant is (18, 16) N; the balancing force is (−18, −16) N."
+    },
+    "practice": {
+      "question": "A cart is already moving steadily when its external forces become balanced. In the ideal constant-mass model, what follows?",
+      "choices": [
+        "Its velocity must instantly become zero",
+        "Its mass becomes zero",
+        "Its acceleration is zero, so its current velocity remains constant",
+        "Only its horizontal velocity can remain constant"
+      ],
+      "correctIndex": 2,
+      "explanation": "Balanced external forces give zero net acceleration. Motion can continue at constant velocity; rest is one possible constant-velocity state, not the only one.",
+      "hint": "Newton’s law connects net force to change in velocity, not to velocity itself."
+    },
+    "transfer": {
+      "title": "Draw the interactions before the equation",
+      "body": "A clear force diagram prevents hidden supports or duplicated forces from entering an analysis. For a real bracket, you would then add the moment balance and investigate the load path through the material.",
+      "action": "Sketch a book resting on a desk and a simplified suspended load. Name the object that supplies each external force and check which arrows belong to the chosen system."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "07",
+        "label": "Loads carried by a wall"
+      },
+      {
+        "chapter": "16",
+        "label": "Forces through mechanisms"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Common forces and force diagrams",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/5-6-common-forces"
+      }
+    ]
+  },
+  {
+    "id": "acceleration-and-newton",
+    "title": "Mass changes what a push can do",
+    "subject": "Engineering",
+    "level": "Foundation",
+    "minutes": 18,
+    "hook": "The same net push moves a loaded cart differently from an empty one.",
+    "objective": "Use net force and mass to calculate acceleration and the resulting change in velocity.",
+    "prerequisites": [
+      "Signed arithmetic",
+      "Rates",
+      "Force versus mass"
+    ],
+    "explain": [
+      "Acceleration measures how velocity changes with time. It can change speed, direction, or both. For a constant-mass body, Newton’s second law relates that change to the net external force. The word net matters: an actuator’s force is not necessarily the same as the force left after resistance and other interactions are included.",
+      "Mass measures inertia in this relationship. Weight is the gravitational force on the mass in a particular environment. A cargo item weighs less on the Moon, but its mass does not shrink merely because local gravity is weaker. Given the same net force, its translational acceleration remains the same.",
+      "A force model becomes a motion model when you apply it over time. Constant acceleration makes the arithmetic simple, but that condition must belong to the exercise. If resistance or actuator force changes with speed, the acceleration changes too, and a more detailed model is needed."
+    ],
+    "steps": [
+      {
+        "title": "Calculate the net force",
+        "body": "Choose a positive direction, then add all external force components along it. Subtract a resistance only because it acts in the opposing direction.",
+        "math": "Fnet = Fpush − Fresistance"
+      },
+      {
+        "title": "Divide by mass",
+        "body": "Use mass in kilograms. A newton is a kilogram-meter per second squared, so the resulting acceleration has units of meters per second squared.",
+        "math": "a = Fnet/m"
+      },
+      {
+        "title": "Accumulate the velocity change",
+        "body": "For a constant acceleration over a known time, add aΔt to the starting velocity.",
+        "math": "vfinal = vinitial + aΔt"
+      }
+    ],
+    "example": {
+      "setup": "A fictional 60 kg cart experiences a 90 N forward push and 30 N of opposing resistance. Both forces remain constant for two seconds. Its initial velocity is 0.50 m/s forward.",
+      "worked": [
+        "Net force is 90 − 30 = 60 N forward.",
+        "Acceleration is 60 N / 60 kg = 1.0 m/s².",
+        "The velocity change over two seconds is 1.0 × 2 = 2.0 m/s.",
+        "Final velocity is 0.50 + 2.0 = 2.50 m/s forward."
+      ],
+      "answer": "The selected force model accelerates the cart at 1.0 m/s² to 2.50 m/s."
+    },
+    "practice": {
+      "question": "Mass doubles to 120 kg while both stated forces, initial velocity, and duration stay unchanged. What is the new final velocity?",
+      "choices": [
+        "1.50 m/s",
+        "1.25 m/s",
+        "2.50 m/s",
+        "5.00 m/s"
+      ],
+      "correctIndex": 0,
+      "explanation": "The same 60 N net force now gives 0.50 m/s². Over two seconds, velocity increases by 1.0 m/s, reaching 1.50 m/s. The starting velocity does not halve.",
+      "hint": "Recalculate acceleration first, then add the change to the original starting velocity."
+    },
+    "transfer": {
+      "title": "Separate mass, weight, and resistance",
+      "body": "Low gravity can reduce some support and traction forces without eliminating inertia. That distinction helps explain why moving large cargo in space still requires controlled forces and planned motion.",
+      "action": "Write two sentences about the same cargo item on Earth and the Moon: one describing what happens to its weight, and one describing its mass and response to a fixed net force."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "04",
+        "label": "Gravity and inertia across environments"
+      },
+      {
+        "chapter": "05",
+        "label": "Moving delivered cargo"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Newton’s second law",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/5-3-newtons-second-law"
+      }
+    ]
+  },
+  {
+    "id": "integration-work-from-force",
+    "title": "Add the work as the force changes",
+    "subject": "Mathematics",
+    "level": "Stretch",
+    "minutes": 22,
+    "hook": "The tray gets harder to pull as it moves. One force reading cannot describe the whole task.",
+    "objective": "Calculate work from a force-versus-position relationship and check it with geometric area.",
+    "prerequisites": [
+      "Definite integrals",
+      "Area of rectangles and triangles",
+      "Force and displacement"
+    ],
+    "explain": [
+      "Mechanical work depends on force acting through displacement. When a force stays parallel to motion and constant in magnitude, multiplying force by distance is enough. A changing force requires a more careful sum: divide the path into small segments, estimate the work on each, and accumulate the contributions.",
+      "The definite integral of force with respect to position performs that accumulation. The units reveal the connection: newtons multiplied by meters give joules. This differs from integrating power over time, although both can calculate energy transfer. Choosing the horizontal axis determines which rate-like relationship you are accumulating.",
+      "A force-position area describes work done by the selected force. It does not automatically tell you where every joule ends up. Some energy may be stored elastically, some may become heat through friction, and some may change motion. Keep the work calculation separate from the energy destinations until you define the system."
+    ],
+    "steps": [
+      {
+        "title": "Define the path coordinate",
+        "body": "Measure x along the straight motion, starting at the chosen initial position. Use the force component parallel to that motion.",
+        "math": "W = ∫ F(x) dx"
+      },
+      {
+        "title": "Integrate each term",
+        "body": "For a constant term plus a term proportional to x, the antiderivative contains a linear term and a quadratic term.",
+        "math": "∫(F₀ + kx) dx = F₀x + ½kx²"
+      },
+      {
+        "title": "Check the graph",
+        "body": "A linearly rising force makes a rectangle plus a triangle on the force-position plot. Their areas should agree with the integral."
+      }
+    ],
+    "example": {
+      "setup": "In a fictional slow tray-pull study, the required forward force is F(x) = 10 N + (40 N/m)x from x = 0 to 0.50 m. Find the work done by that applied force.",
+      "worked": [
+        "Initial force is 10 N and final force is 10 + 40 × 0.50 = 30 N.",
+        "Integrate: W = [10x + 20x²] from 0 to 0.50.",
+        "Substitute: W = 5 + 5 = 10 J.",
+        "The graph gives a 10 N × 0.50 m rectangle plus a triangle of height 20 N and width 0.50 m.",
+        "Their areas are 5 J and 5 J, confirming the result."
+      ],
+      "answer": "The applied force does 10 J of work over the selected half-meter travel."
+    },
+    "practice": {
+      "question": "With the same force law, how much work is done over only the first 0.25 m?",
+      "choices": [
+        "2.5 J",
+        "5.0 J",
+        "7.5 J",
+        "3.75 J"
+      ],
+      "correctIndex": 3,
+      "explanation": "Evaluate 10x + 20x² at x = 0.25: 2.5 + 1.25 = 3.75 J. Half the travel does not mean half the total work because the force is lower in the first half.",
+      "hint": "Use the actual upper limit rather than scaling the completed integral by distance alone."
+    },
+    "transfer": {
+      "title": "Choose the plot that answers the question",
+      "body": "Force against position reveals work; force against time reveals impulse. The same vertical quantity produces a different physical result when the horizontal quantity changes.",
+      "action": "Sketch the force-position line and shade the first quarter-meter. Explain where the extra work in the second quarter-meter comes from."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "16",
+        "label": "Work through a mechanism"
+      },
+      {
+        "chapter": "23",
+        "label": "Integration with a physical meaning"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Physical applications of integration",
+        "url": "https://openstax.org/books/calculus-volume-1/pages/6-5-physical-applications"
+      }
+    ]
+  },
+  {
+    "id": "complex-numbers-and-ac",
+    "title": "Keep track of signals that arrive out of step",
+    "subject": "Mathematics",
+    "level": "Stretch",
+    "minutes": 25,
+    "hook": "Two repeating signals have the same frequency but reach their peaks at different times.",
+    "objective": "Use complex components to combine same-frequency signals while preserving phase information.",
+    "prerequisites": [
+      "Vector components",
+      "Trigonometry",
+      "Squares and square roots"
+    ],
+    "explain": [
+      "A real number can describe a signal’s amplitude, but amplitude alone loses the timing relationship between repeating signals. A complex number supplies two perpendicular components. In engineering notation, j satisfies j² = −1. The imaginary component is a mathematical bookkeeping direction, not a claim that part of the measured signal is unreal.",
+      "For sinusoids at the same frequency, a phasor represents magnitude and phase relative to a shared time reference. Add real components to real components and imaginary components to imaginary components. The magnitude of the result follows the same perpendicular-component geometry used for ordinary vectors.",
+      "Phasors can only be combined directly when their conventions match. Do not mix peak and RMS amplitudes, different reference phases, or different frequencies in one simple sum. A larger sum of individual magnitudes does not guarantee a larger combined signal, because phase differences can produce partial or complete cancellation."
+    ],
+    "steps": [
+      {
+        "title": "Choose a common convention",
+        "body": "Use RMS voltage phasors at one shared frequency and reference phase. Write each as a real component plus j times an imaginary component.",
+        "math": "V = a + jb"
+      },
+      {
+        "title": "Add corresponding components",
+        "body": "Keep the two kinds of component separate during addition. The symbol j remains attached to the quadrature component.",
+        "math": "(a + jb) + (c + jd) = (a + c) + j(b + d)"
+      },
+      {
+        "title": "Recover magnitude and phase",
+        "body": "Use the component triangle for magnitude. Determine the angle with attention to the quadrant.",
+        "math": "|V| = √(a² + b²); phase = atan2(b, a)"
+      }
+    ],
+    "example": {
+      "setup": "An invented signal calculation adds two same-frequency RMS voltage phasors: V₁ = 3 + j4 V and V₂ = 4 − j1 V. Both use the same phase reference.",
+      "worked": [
+        "Real components add to 3 + 4 = 7 V.",
+        "Imaginary components add to 4 − 1 = 3 V.",
+        "The combined phasor is 7 + j3 V.",
+        "Its magnitude is √(7² + 3²) = √58 ≈ 7.62 V RMS.",
+        "Its phase is arctan(3/7) ≈ 23.2 degrees in the first quadrant."
+      ],
+      "answer": "The combined signal is represented by 7 + j3 V, with magnitude about 7.62 V RMS."
+    },
+    "practice": {
+      "question": "Two same-frequency signals are each 5 V RMS but are exactly 180 degrees apart. What is the magnitude of their ideal sum?",
+      "choices": [
+        "10 V RMS",
+        "0 V RMS",
+        "About 7.07 V RMS",
+        "5 V RMS"
+      ],
+      "correctIndex": 1,
+      "explanation": "Choose one as +5 V on the real axis. The other is −5 V at the opposite phase. Their components cancel, so the ideal sum is zero.",
+      "hint": "Draw two equal phasor arrows pointing in opposite directions."
+    },
+    "transfer": {
+      "title": "See timing as part of a quantity",
+      "body": "Phase relationships appear in alternating-current circuits, vibration, sensing, and frequency-response models. Complex arithmetic keeps that timing information attached while calculations proceed.",
+      "action": "Draw the two worked phasors and their sum on a complex plane. Then rotate the second phasor and describe why adding magnitudes would miss the changing result."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "23",
+        "label": "Vectors, signals, and mathematical tools"
+      },
+      {
+        "chapter": "28",
+        "label": "Controls and dynamic systems"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Complex numbers",
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/2-4-complex-numbers"
+      },
+      {
+        "label": "OpenStax · AC circuits and phasors",
+        "url": "https://openstax.org/books/university-physics-volume-2/pages/15-3-rlc-series-circuits-with-ac"
+      }
+    ]
+  },
+  {
+    "id": "gear-ratios-and-speed",
+    "title": "Trade rotation for torque",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 20,
+    "hook": "A small gear turns a larger one. The output slows down, and the available turning moment changes.",
+    "objective": "Calculate speed and ideal torque ratios without mistaking gearing for a source of power.",
+    "prerequisites": [
+      "Ratios",
+      "Torque",
+      "Rotational speed"
+    ],
+    "explain": [
+      "Meshing gears connect their motion through the teeth at their pitch circles. If the driven gear has more teeth than the driver, it turns fewer revolutions while the driver completes a given motion. The tooth-count ratio makes the speed relationship easy to calculate without measuring every angle separately.",
+      "In an ideal lossless pair, power is conserved, so reducing angular speed increases torque by the inverse speed ratio. Gearing changes how the power is delivered; it does not create additional power. Real losses reduce the output below that ideal result, and allowable tooth loads remain a separate design question.",
+      "Direction matters too. Two externally meshing gears rotate in opposite directions. Adding an idler creates another reversal while its tooth count cancels from the overall speed ratio between the first and last gears. A compound train, with multiple gears fixed to common shafts, has a different arrangement whose stage ratios multiply."
+    ],
+    "steps": [
+      {
+        "title": "Identify driver and driven gear",
+        "body": "Record tooth counts for the input and output. Avoid calling a ratio simply three-to-one without stating which quantity it compares.",
+        "math": "ωout/ωin = Nin/Nout"
+      },
+      {
+        "title": "Apply the ideal torque relation",
+        "body": "For the lossless steady model, torque rises in the inverse proportion to speed.",
+        "math": "τout/τin = Nout/Nin"
+      },
+      {
+        "title": "Include a stated efficiency",
+        "body": "If an overall efficiency is supplied, multiply the ideal output torque by it at the calculated output speed.",
+        "math": "τout = η τin(Nout/Nin)"
+      }
+    ],
+    "example": {
+      "setup": "A fictional external gear pair uses a 20-tooth driver and 60-tooth driven gear. Input is 300 rpm at 0.20 N·m. Compare ideal output with an assumed 85 percent efficiency.",
+      "worked": [
+        "Speed ratio is 20/60 = 1/3, so output speed is 100 rpm.",
+        "Ideal torque ratio is 60/20 = 3, giving 0.60 N·m.",
+        "With η = 0.85, output torque is 0.85 × 0.60 = 0.51 N·m.",
+        "The external gear pair reverses rotational direction.",
+        "The lower torque than the ideal value represents power lost within the selected boundary."
+      ],
+      "answer": "Output is 100 rpm in the opposite direction, with ideal torque 0.60 N·m or 0.51 N·m under the efficiency assumption."
+    },
+    "practice": {
+      "question": "Insert a 40-tooth external idler between the same 20-tooth input and 60-tooth output. Ignoring losses, what happens to output speed and direction?",
+      "choices": [
+        "It remains 100 rpm and turns in the same direction as the input",
+        "It becomes 50 rpm in the opposite direction",
+        "It becomes 600 rpm in the same direction",
+        "It remains 100 rpm in the opposite direction"
+      ],
+      "correctIndex": 0,
+      "explanation": "The speed ratios multiply to (20/40)(40/60) = 1/3. The idler count cancels. Two external meshes create two direction reversals, so the final output matches the input’s direction.",
+      "hint": "Treat each mesh separately, including its reversal."
+    },
+    "transfer": {
+      "title": "Explain the trade before choosing a motor",
+      "body": "A mechanism’s speed and torque requirements belong together. A high reduction may improve torque while making motion too slow or changing other practical features such as backlash.",
+      "action": "Sketch a gear pair and an idler train. Label input and output tooth counts, speed arrows, and ideal torque ratios."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "16",
+        "label": "Mechanisms that carry the civilization"
+      },
+      {
+        "chapter": "25",
+        "label": "A measured mechanism study"
+      }
+    ],
+    "sources": [
+      {
+        "label": "UC San Diego · Gear-ratio teaching notes",
+        "url": "https://mae3.eng.ucsd.edu/machine-design/gear-ratios"
+      }
+    ]
+  },
+  {
+    "id": "tolerance-stack",
+    "title": "The parts fit separately. The stack does not.",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "Every part meets its own size limits, yet the assembly can still lose its clearance.",
+    "objective": "Calculate a worst-case dimensional stack and distinguish bounds from probability.",
+    "prerequisites": [
+      "Signed arithmetic",
+      "Length units",
+      "Nominal dimensions"
+    ],
+    "explain": [
+      "A nominal dimension describes a selected target size. A tolerance defines permitted variation around or between limits. When several dimensions combine to make a functional gap, their variations combine too. Checking each part independently does not establish that the assembled clearance remains acceptable.",
+      "A worst-case stack chooses the allowed combination that minimizes or maximizes the quantity of interest. For a gap formed by an opening minus two parts, the smallest gap uses the smallest opening and largest parts. This direct construction is often clearer than memorizing a sign rule without drawing the assembly.",
+      "Worst-case bounds do not describe how likely an extreme assembly is. Statistical estimates require information about distributions, centering, dependence, and the process. A plus-or-minus tolerance is not automatically a standard deviation. Begin by finding the allowable extremes, then ask what additional evidence would justify a probability statement."
+    ],
+    "steps": [
+      {
+        "title": "Write the functional dimension",
+        "body": "Define the clearance as an equation and show which lengths add and which subtract.",
+        "math": "G = O − A − B"
+      },
+      {
+        "title": "Choose the limits that minimize the gap",
+        "body": "Use the lower opening limit and upper component limits. For the maximum gap, reverse those choices.",
+        "math": "Gmin = Omin − Amax − Bmax"
+      },
+      {
+        "title": "Check the nominal result separately",
+        "body": "Calculate the nominal gap to understand the design center, then compare it with the two extreme results."
+      }
+    ],
+    "example": {
+      "setup": "In a fictional small assembly, opening O is 30.00 ± 0.10 mm. Part A is 10.00 ± 0.05 mm and part B is 19.70 ± 0.08 mm. All dimensions lie on the same line.",
+      "worked": [
+        "Nominal clearance is 30.00 − 10.00 − 19.70 = 0.30 mm.",
+        "Minimum clearance is 29.90 − 10.05 − 19.78 = 0.07 mm.",
+        "Maximum clearance is 30.10 − 9.95 − 19.62 = 0.53 mm.",
+        "The nominal result can therefore be written as a 0.30 mm center with a worst-case half-range of 0.23 mm."
+      ],
+      "answer": "The stated dimensional limits permit a gap from 0.07 mm to 0.53 mm."
+    },
+    "practice": {
+      "question": "Add a gasket of 0.10 ± 0.02 mm to the subtracting stack. What is the new minimum clearance?",
+      "choices": [
+        "0.05 mm",
+        "0.07 mm",
+        "−0.05 mm",
+        "0.20 mm"
+      ],
+      "correctIndex": 2,
+      "explanation": "The smallest previous gap was 0.07 mm. Subtract the gasket’s largest permitted thickness, 0.12 mm, to obtain −0.05 mm. An allowed combination can now produce interference.",
+      "hint": "The gasket’s maximum thickness controls the minimum gap."
+    },
+    "transfer": {
+      "title": "Follow the dimension that makes the function work",
+      "body": "An assembly can tolerate variation in one direction while being sensitive in another. A short dimension chain helps reveal where changing a nominal size, tolerance, or reference could improve the functional result.",
+      "action": "Draw a three-part stack using paper rectangles. Mark the reference surfaces and calculate both extremes before proposing one change."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "16",
+        "label": "Clearance and mechanism interfaces"
+      },
+      {
+        "chapter": "17",
+        "label": "Inspection and measurement"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Delve · Tolerance-stack instruction guide",
+        "url": "https://cms.delve.com/assets/documents/Tolerance-Stack-Analysis-Instructions-20240229.pdf"
+      }
+    ]
+  },
+  {
+    "id": "stress-and-load-paths",
+    "title": "A small cross-section carries a large consequence",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "The same force passes through a wide region and then a narrow one. The material does not experience them equally.",
+    "objective": "Calculate average axial stress and elastic extension while keeping the model’s geometry visible.",
+    "prerequisites": [
+      "Force",
+      "Area",
+      "Unit conversion",
+      "Algebra"
+    ],
+    "explain": [
+      "Stress describes internal force intensity. In a simple straight bar carrying a centered axial load, average normal stress is force divided by cross-sectional area. The word average matters: holes, corners, bending, and load introduction can create local conditions that this single value does not represent.",
+      "Strain describes deformation relative to original length. In a selected linear elastic range, stress equals Young’s modulus times strain. Combining those relations gives extension FL/(EA). Force, length, area, and material stiffness therefore affect deformation in different ways.",
+      "Strength and stiffness are separate questions. A member may deform too much for alignment even when its stress is below a relevant strength limit. Conversely, a small calculated extension does not prove adequate fatigue life or local strength. A useful first calculation identifies its load path and assumptions so later checks know what remains unresolved."
+    ],
+    "steps": [
+      {
+        "title": "Calculate the cross-sectional area",
+        "body": "Use the area perpendicular to the axial force. Remember that a square millimeter is 10⁻⁶ square meter.",
+        "math": "σ = F/A"
+      },
+      {
+        "title": "Relate stress to strain",
+        "body": "For the stated linear elastic model, divide stress by Young’s modulus. The resulting strain is dimensionless.",
+        "math": "ε = σ/E"
+      },
+      {
+        "title": "Recover the extension",
+        "body": "Multiply strain by the original length, or use the combined expression directly.",
+        "math": "ΔL = εL = FL/(EA)"
+      }
+    ],
+    "example": {
+      "setup": "A fictional uniform bar carries 600 N through an area of 30 mm². Its length is 0.10 m and its selected elastic modulus is 70 GPa. Assume centered axial loading and linear elasticity.",
+      "worked": [
+        "Area is 30 × 10⁻⁶ m².",
+        "Average stress is 600/(30 × 10⁻⁶) = 20 × 10⁶ Pa, or 20 MPa.",
+        "Strain is 20 × 10⁶ / (70 × 10⁹) ≈ 2.86 × 10⁻⁴.",
+        "Extension is 0.10 × 2.86 × 10⁻⁴ ≈ 2.86 × 10⁻⁵ m.",
+        "That equals about 0.0286 mm, or 28.6 micrometers."
+      ],
+      "answer": "Average axial stress is 20 MPa and modeled extension is about 0.0286 mm."
+    },
+    "practice": {
+      "question": "Area and length both double while force and material stay unchanged. What happens to average stress and extension?",
+      "choices": [
+        "Both halve",
+        "Stress stays the same; extension doubles",
+        "Both stay the same",
+        "Stress halves; extension stays the same"
+      ],
+      "correctIndex": 3,
+      "explanation": "Stress F/A halves when area doubles. Extension FL/(EA) stays unchanged because both length and area double. A geometry change can improve one result without changing another.",
+      "hint": "Compare the ratios in the two formulas separately."
+    },
+    "transfer": {
+      "title": "Trace the force through the shape",
+      "body": "A load path identifies where force enters, travels, and leaves. It helps you select the cross-sections worth examining and spot geometry that a uniform-bar model misses.",
+      "action": "Sketch a bracket and mark a plausible load path. Identify one section where an average axial calculation might help and one location requiring a different model."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "07",
+        "label": "A wall carrying loads"
+      },
+      {
+        "chapter": "28",
+        "label": "Structures and materials"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Stress, strain, and elastic modulus",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus"
+      }
+    ]
+  },
+  {
+    "id": "hydrostatic-pressure",
+    "title": "The deeper wall feels the whole column",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 20,
+    "hook": "An ocean instrument descends. The pressure difference across its enclosure grows with the water above it.",
+    "objective": "Distinguish gauge and absolute pressure and convert a pressure difference into a force.",
+    "prerequisites": [
+      "Density",
+      "Force and area",
+      "Unit conversion"
+    ],
+    "explain": [
+      "In a resting liquid of approximately constant density, pressure increases with depth because lower layers support the weight of fluid above them. The increase is ρgh. Surface pressure is an additional term, so absolute pressure at depth is the surface value plus that hydrostatic increase.",
+      "Gauge pressure measures a difference from a selected reference, often the surrounding atmosphere at the surface. It is not a different physical mechanism. A device can encounter a large absolute pressure while its wall load depends on the difference between outside and inside pressure.",
+      "For a small flat area over which pressure difference is nearly uniform, the net pressure force is Δp times area. A tall vertical panel experiences a changing pressure with depth and needs a more complete calculation. The fluid load is one part of the problem; the panel’s structural response is another."
+    ],
+    "steps": [
+      {
+        "title": "State the reference",
+        "body": "Record the pressure at the surface and the pressure inside the enclosure. Decide whether the question asks for absolute pressure or a difference.",
+        "math": "pabsolute = psurface + ρgh"
+      },
+      {
+        "title": "Calculate the increase with depth",
+        "body": "Use consistent SI units: kilograms per cubic meter, meters per second squared, and meters.",
+        "math": "Δp = ρgh"
+      },
+      {
+        "title": "Apply the difference to an area",
+        "body": "For a sufficiently small horizontal face at one depth, multiply the net pressure difference by its area.",
+        "math": "F = Δp A"
+      }
+    ],
+    "example": {
+      "setup": "An invented ocean-instrument exercise uses water density 1,025 kg/m³, depth 20 m, g = 9.81 m/s², and surface pressure 101.3 kPa. The enclosure interior remains at the same 101.3 kPa.",
+      "worked": [
+        "Hydrostatic increase is 1,025 × 9.81 × 20 = 201,105 Pa, about 201.1 kPa.",
+        "Outside absolute pressure is 101.3 + 201.1 = 302.4 kPa.",
+        "The pressure difference across the enclosure is about 201.1 kPa.",
+        "On a horizontal 0.010 m² face, net force is about 201,105 × 0.010 = 2,011 N."
+      ],
+      "answer": "The selected face experiences about 2.01 kN of inward pressure force."
+    },
+    "practice": {
+      "question": "Depth doubles to 40 m under the same constant-density assumption. What is the outside absolute pressure?",
+      "choices": [
+        "About 402.2 kPa",
+        "About 503.5 kPa",
+        "About 604.8 kPa",
+        "About 201.1 kPa"
+      ],
+      "correctIndex": 1,
+      "explanation": "The hydrostatic increase doubles to about 402.2 kPa, but the 101.3 kPa surface term does not double. Adding it gives about 503.5 kPa absolute.",
+      "hint": "Separate the depth-dependent term from the fixed surface reference."
+    },
+    "transfer": {
+      "title": "Compare environments through pressure difference",
+      "body": "An ocean enclosure resists external pressure; a pressurized space enclosure may resist the opposite direction of loading. The same boundary-and-difference habit connects the two while their structural details differ.",
+      "action": "Draw an ocean instrument and a pressurized room in vacuum. Label inside pressure, outside pressure, and the direction of the net wall load for each."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "07",
+        "label": "Pressure boundaries"
+      },
+      {
+        "chapter": "28",
+        "label": "Applied ocean engineering"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Fluids, density, and pressure",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/14-1-fluids-density-and-pressure"
+      }
+    ]
+  },
+  {
+    "id": "feedback-and-control",
+    "title": "Measure the error, change the action",
+    "subject": "Engineering",
+    "level": "Stretch",
+    "minutes": 25,
+    "hook": "The mechanism misses its target. A controller uses that difference to decide what happens next.",
+    "objective": "Trace a simple feedback update and distinguish gain, overshoot, and convergence.",
+    "prerequisites": [
+      "Functions",
+      "Signed numbers",
+      "Repeated multiplication"
+    ],
+    "explain": [
+      "Feedback compares a measured output with a reference and uses the difference to change an action. The error is reference minus measured output under the convention here. A proportional controller makes its correction proportional to that error, so larger errors produce larger commanded corrections.",
+      "To see the idea clearly, imagine an ideal position model that executes each correction completely before the next measurement. Its update is xnext = x + K(r − x). The dimensionless gain K determines how much of the measured error is corrected in one step. This is a deliberately simple discrete model that you can trace on paper.",
+      "A larger gain is not automatically a better choice. It can reduce error rapidly, reverse its sign, or prevent convergence. Real mechanisms also bring dynamics, delay, measurement noise, and actuator limits. The paper model teaches how the loop’s sign and gain affect its behavior before those additional features are introduced."
+    ],
+    "steps": [
+      {
+        "title": "Define the reference and error",
+        "body": "Use the same units for desired and measured position. A positive error means the measurement lies below the reference.",
+        "math": "e = r − x"
+      },
+      {
+        "title": "Calculate the correction",
+        "body": "Multiply the error by K. In this ideal update, the correction has the same position unit as the error.",
+        "math": "Δx = K e"
+      },
+      {
+        "title": "Measure again in the model",
+        "body": "Add the correction to the current position, then calculate a fresh error for the next step.",
+        "math": "xnext = x + K(r − x)"
+      }
+    ],
+    "example": {
+      "setup": "Set a fictional position reference to 10 mm, initial position to 2 mm, and gain K = 0.5. Trace three ideal updates.",
+      "worked": [
+        "First error is 10 − 2 = 8 mm; correction is 4 mm, giving x = 6 mm.",
+        "Second error is 4 mm; correction is 2 mm, giving x = 8 mm.",
+        "Third error is 2 mm; correction is 1 mm, giving x = 9 mm.",
+        "Each step leaves half the preceding error.",
+        "The model approaches the reference rather than reaching it exactly after these finite steps."
+      ],
+      "answer": "The modeled positions are 6, 8, and 9 mm after the first three updates."
+    },
+    "practice": {
+      "question": "For the same ideal update rule, use r = 8 mm, x₀ = 0, and K = 1.25. What is the position after two updates?",
+      "choices": [
+        "8 mm",
+        "10 mm",
+        "7.5 mm",
+        "12.5 mm"
+      ],
+      "correctIndex": 2,
+      "explanation": "The first correction is 1.25 × 8 = 10 mm, overshooting to x = 10. The next error is −2 mm, giving a −2.5 mm correction and x = 7.5 mm. Overshoot does not necessarily mean divergence in this model.",
+      "hint": "Recompute the signed error after the first update."
+    },
+    "transfer": {
+      "title": "Read a response as evidence about a loop",
+      "body": "A sequence that alternates around the target tells a different story from one that approaches it monotonically. Plotting the measured response helps distinguish a fast correction from a useful correction.",
+      "action": "Trace five updates with K = 0.5, 1.25, and 2 using the same starting point. Plot the errors and describe which sequences shrink, alternate, or repeat."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "23",
+        "label": "Dynamic systems and mathematical models"
+      },
+      {
+        "chapter": "28",
+        "label": "Controls and research depth"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MIT OpenCourseWare · Feedback control introduction",
+        "url": "https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/d2d138e9053e153f601a27a6c6cc3b4d_MIT16_30F10_lec01.pdf"
+      }
+    ]
+  },
+  {
+    "id": "orbital-transfers",
+    "title": "A faster push can lead to a slower orbit",
+    "subject": "Engineering",
+    "level": "Stretch",
+    "minutes": 25,
+    "hook": "A spacecraft accelerates to raise its orbit, then settles into a circular orbit whose speed is lower.",
+    "objective": "Distinguish an immediate velocity change from the later speed along a transfer trajectory.",
+    "prerequisites": [
+      "Circular-orbit speed",
+      "Square roots",
+      "Radius versus altitude"
+    ],
+    "explain": [
+      "A circular orbit is one particular relationship between position and velocity. A short forward velocity change at one point does not instantly move a spacecraft onto a larger circle. It changes the trajectory from that point onward. In an ideal outward Hohmann transfer, the first change puts the spacecraft on an ellipse whose low point touches the original circle.",
+      "As the spacecraft coasts outward, its speed decreases. At the high point of the transfer ellipse, its speed is below the circular speed required at that radius. A second forward velocity change raises it to the outer circular speed. Both changes are forward even though the final circular speed is lower than the initial one.",
+      "The contradiction disappears when you compare velocities at the same location and distinguish the burn from the coast. This model uses coplanar circular endpoints, two impulsive changes, and two-body gravity. Its value is explaining the geometry and energy relationship, rather than describing a complete mission."
+    ],
+    "steps": [
+      {
+        "title": "Define the two circles",
+        "body": "Use radii measured from the central body. The transfer ellipse’s semimajor axis is the average of its low and high radii.",
+        "math": "at = (r₁ + r₂)/2"
+      },
+      {
+        "title": "Find speeds on the ellipse",
+        "body": "The vis-viva relation gives speed at a radius r for an orbit with semimajor axis a.",
+        "math": "v = √[μ(2/r − 1/a)]"
+      },
+      {
+        "title": "Compare locally at each endpoint",
+        "body": "Subtract the initial circular speed from the transfer’s low-point speed. At the far end, subtract transfer speed from the desired circular speed."
+      }
+    ],
+    "example": {
+      "setup": "Take r₁ = 7,000 km, r₂ = 14,000 km, and μ = 398,600 km³/s² in this illustrative Earth calculation. Treat the velocity changes as instantaneous.",
+      "worked": [
+        "The transfer semimajor axis is 10,500 km.",
+        "Initial circular speed is √(398,600/7,000) ≈ 7.546 km/s.",
+        "Transfer speed at the low point is about 8.713 km/s, requiring an increase of about 1.167 km/s.",
+        "At the high point, transfer speed is about 4.357 km/s.",
+        "The outer circular speed is about 5.336 km/s, so the second increase is about 0.979 km/s."
+      ],
+      "answer": "Two forward velocity changes lead to an outer circular speed of about 5.336 km/s, below the original 7.546 km/s."
+    },
+    "practice": {
+      "question": "If the second velocity change is omitted in this ideal model, what happens after the spacecraft reaches the high point?",
+      "choices": [
+        "It follows the transfer ellipse back toward the lower radius",
+        "It remains automatically on the outer circle",
+        "It escapes because the first change was forward",
+        "It stops moving at the high point"
+      ],
+      "correctIndex": 0,
+      "explanation": "The first change established an ellipse. Reaching its high point does not replace that ellipse with a circle; without another change, the spacecraft continues along the same orbit.",
+      "hint": "A location alone does not determine an orbit; velocity matters too."
+    },
+    "transfer": {
+      "title": "Compare states rather than slogans",
+      "body": "Statements such as faster means higher are incomplete without identifying the point on the trajectory and the kind of change. A sketch can expose the missing comparison.",
+      "action": "Draw both circles and the connecting ellipse. Mark the two forward changes and label where coasting speed decreases."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "04",
+        "label": "Free fall and orbital environments"
+      },
+      {
+        "chapter": "14",
+        "label": "Orbital infrastructure"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NASA · Transfer trajectories",
+        "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter4-1/"
+      },
+      {
+        "label": "MIT OpenCourseWare · Orbit-transfer worked methods",
+        "url": "https://ocw.mit.edu/courses/16-851-satellite-engineering-fall-2003/e9e1eb82a6e428358fb07c1ee0fd2c3c_ps2_cg_solution.pdf"
+      }
+    ]
+  },
+  {
+    "id": "engineering-drawings",
+    "title": "Make the shape unambiguous",
+    "subject": "Engineering",
+    "level": "Foundation",
+    "minutes": 18,
+    "hook": "A beautiful perspective picture can still leave the person making the part guessing about a hole.",
+    "objective": "Use coordinated views and dimension references to communicate a simple part clearly.",
+    "prerequisites": [
+      "Basic geometry",
+      "Length units",
+      "Coordinate directions"
+    ],
+    "explain": [
+      "An engineering drawing communicates information needed to make, inspect, or assemble an object. A perspective view helps a reader recognize the shape, but it may hide dimensions or distort apparent lengths. Orthographic views show the object from defined directions so features can be related without relying on perspective.",
+      "Views work together. A circular feature in a top view may be a through-hole, a blind hole, or the end of a cylindrical protrusion. Another view or a clear callout supplies the missing information. The reader should not have to infer a manufacturing decision from the artist’s shading.",
+      "Dimensions also need references. A hole center located from the left edge is related to the right edge through the overall width. If the width changes, those two distances cannot both remain fixed automatically. Clear references make a revision traceable and reduce the chance that two individually plausible dimensions contradict each other."
+    ],
+    "steps": [
+      {
+        "title": "Choose the views that reveal the features",
+        "body": "Start with a top view and a front view for the selected block. Add another view only if it communicates information the others leave ambiguous."
+      },
+      {
+        "title": "Locate features from named references",
+        "body": "State overall dimensions and the hole center’s offsets from identified faces. Specify the length unit once clearly and use it consistently."
+      },
+      {
+        "title": "Check agreement across views",
+        "body": "The same feature should project to consistent positions. Identify what would change in every affected view after a revision."
+      }
+    ],
+    "example": {
+      "setup": "Describe a fictional block that is 60 mm wide, 40 mm deep, and 10 mm thick. It has a 6 mm diameter hole through its thickness, centered 20 mm from the left face and 15 mm from the front face.",
+      "worked": [
+        "The top view is a 60 by 40 mm rectangle with a 6 mm circle at the specified offsets.",
+        "The front view communicates the 60 by 10 mm outer shape and the hole’s passage through the thickness.",
+        "The hole center is 60 − 20 = 40 mm from the right face.",
+        "It is 40 − 15 = 25 mm from the back face.",
+        "A through-hole callout distinguishes this feature from a recess that stops inside the block."
+      ],
+      "answer": "The coordinated views and references describe both the hole’s position and its extent."
+    },
+    "practice": {
+      "question": "The block width increases to 70 mm while the hole stays 20 mm from the left face. What is its new distance from the right face?",
+      "choices": [
+        "30 mm",
+        "50 mm",
+        "40 mm",
+        "90 mm"
+      ],
+      "correctIndex": 1,
+      "explanation": "The two distances add to the overall width. The new right-side distance is 70 − 20 = 50 mm. Retaining the old 40 mm value would conflict with the revised geometry.",
+      "hint": "Write the overall width as the sum of the two edge-to-center distances."
+    },
+    "transfer": {
+      "title": "Treat a drawing as an interface",
+      "body": "The drawing connects design intent with another person’s work. Its quality depends on whether that person can recover the intended shape, dimensions, and references without asking you to narrate the picture.",
+      "action": "Sketch two views of a simple object, add one hole or slot, and ask someone to describe its three-dimensional form from your drawing alone."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "13",
+        "label": "Manufacturing information that travels"
+      },
+      {
+        "chapter": "17",
+        "label": "Making and inspecting a part"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MIT OpenCourseWare · Engineering drawing and sketching",
+        "url": "https://ocw.mit.edu/courses/2-007-design-and-manufacturing-i-spring-2009/pages/related-resources/drawing_and_sketching/"
+      }
+    ]
+  },
+  {
+    "id": "test-design-and-confounding",
+    "title": "Change one thing you can explain",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "The new fixture looks slower, but a different person performed its test.",
+    "objective": "Recognize a confounded comparison and design a more informative test using blocks and repeated observations.",
+    "prerequisites": [
+      "Averages",
+      "A testable question",
+      "Recording conditions"
+    ],
+    "explain": [
+      "A test should help distinguish explanations. If design A is tested by an experienced operator and design B by a new operator, a time difference could come from the design, the operator, or both. More precise timing does not resolve that ambiguity. The comparison needs a structure that separates the influences.",
+      "Blocking groups trials around a known source of variation, such as operator or test day. Each design is tested within each block, allowing a comparison under more similar conditions. Randomizing the order within those blocks helps prevent an unplanned trend from consistently favoring one design.",
+      "A small dataset can illustrate a pattern without establishing a universal advantage. Repeated trials, a defined task, and records of deviations make the result more interpretable. Do not treat repeated readings from one unchanged event as though they were independent repetitions of the whole task."
+    ],
+    "steps": [
+      {
+        "title": "Name the factor of interest",
+        "body": "Write the design difference being compared and the measured outcome. Keep the task and definition of completion the same."
+      },
+      {
+        "title": "Identify nuisance factors",
+        "body": "List operator, practice, time, equipment state, or other conditions that might influence the outcome. Choose a useful blocking factor you can record."
+      },
+      {
+        "title": "Compare within blocks",
+        "body": "Have each block include both designs, randomize their order where feasible, and retain all observations with the relevant conditions."
+      }
+    ],
+    "example": {
+      "setup": "A fictional fixture comparison records one illustrative trial per design for two operators. Operator 1 takes 40 s with A and 34 s with B. Operator 2 takes 55 s with A and 48 s with B.",
+      "worked": [
+        "For operator 1, B − A = 34 − 40 = −6 s.",
+        "For operator 2, B − A = 48 − 55 = −7 s.",
+        "Both within-operator comparisons favor B in this small example.",
+        "Comparing only operator 1’s A trial with operator 2’s B trial would give 48 − 40 = +8 s, apparently favoring A.",
+        "The mean of the two within-operator differences is −6.5 s; more trials would be needed to investigate variability."
+      ],
+      "answer": "The blocked comparison reveals information that the mismatched single comparison hides."
+    },
+    "practice": {
+      "question": "All A trials used a fresh battery and all B trials used a nearly depleted battery. Which next test best addresses that ambiguity?",
+      "choices": [
+        "Measure the same arrangement with a more precise stopwatch",
+        "Repeat only A until its average stabilizes",
+        "Discard whichever design has the slower average",
+        "Test both designs within comparable battery-condition blocks and vary their order"
+      ],
+      "correctIndex": 3,
+      "explanation": "Both designs need exposure to comparable battery conditions. Blocking and varying order separate the design comparison from the known equipment-state difference more effectively than merely collecting precise copies of the confounded test.",
+      "hint": "The suspected alternative explanation must be represented in both sides of the comparison."
+    },
+    "transfer": {
+      "title": "Make the test plan part of the project",
+      "body": "A portfolio becomes more convincing when its experiment could have disproved the preferred explanation. The plan shows how a result will answer the question, not simply how a demonstration will look successful.",
+      "action": "Choose two harmless layouts to compare. Write the task, outcome, repeated-trial plan, one blocking factor, and the observations you will preserve."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "19",
+        "label": "Separating competing explanations"
+      },
+      {
+        "chapter": "25",
+        "label": "A project with reproducible evidence"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NIST · Randomized block designs",
+        "url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri332.htm"
+      }
+    ]
+  },
+  {
+    "id": "thermodynamics-first-law",
+    "title": "Keep the energy ledger closed",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "A gas loses heat and still gains internal energy. Another transfer is hiding in the accounting.",
+    "objective": "Apply a stated first-law sign convention to heat and work crossing a system boundary.",
+    "prerequisites": [
+      "Signed arithmetic",
+      "Energy versus power",
+      "System boundaries"
+    ],
+    "explain": [
+      "Choose a closed system: energy may cross its boundary, but matter does not. For a simple exercise where changes in the whole system’s kinetic and gravitational potential energy are negligible, the first law relates its internal-energy change to heat and work transfers.",
+      "Use Q positive when heat enters the system and W positive when the system does work on its surroundings. With that convention, ΔU = Q − W. Work done on the system makes W negative. Other texts may choose a different work sign, so the convention belongs beside the equation.",
+      "Heat is energy crossing a boundary because of a temperature difference; internal energy is a property of the system’s state. Calling both stored heat obscures the distinction. The first law tracks the amount of energy, while other thermodynamic principles constrain which processes and conversions can occur."
+    ],
+    "steps": [
+      {
+        "title": "Draw the boundary and arrows",
+        "body": "Mark heat entering or leaving and work done by or on the selected system. Decide which transfers receive positive or negative signs."
+      },
+      {
+        "title": "Apply one convention consistently",
+        "body": "Use the selected definition of W throughout the calculation rather than switching between work by and work on without changing the sign.",
+        "math": "ΔU = Q − Wby"
+      },
+      {
+        "title": "Add successive changes",
+        "body": "Internal-energy changes over successive intervals add. Keep each interval’s transfers visible so the final balance can be checked."
+      }
+    ],
+    "example": {
+      "setup": "A fictional closed gas system first receives 500 J of heat while doing 200 J of work on its surroundings. It then loses 120 J of heat while the surroundings do 50 J of work on it.",
+      "worked": [
+        "First interval: Q = +500 J and Wby = +200 J.",
+        "Its internal-energy change is 500 − 200 = +300 J.",
+        "Second interval: Q = −120 J and Wby = −50 J.",
+        "Its change is −120 − (−50) = −70 J.",
+        "Total change is +300 − 70 = +230 J."
+      ],
+      "answer": "The system ends with 230 J more internal energy than it had at the beginning."
+    },
+    "practice": {
+      "question": "A closed system loses 100 J of heat while 160 J of work is done on it. What is its internal-energy change under the same assumptions?",
+      "choices": [
+        "+60 J",
+        "−260 J",
+        "−60 J",
+        "+260 J"
+      ],
+      "correctIndex": 0,
+      "explanation": "Q = −100 J and Wby = −160 J. Therefore ΔU = −100 − (−160) = +60 J. Losing heat does not necessarily mean internal energy decreases when work also crosses the boundary.",
+      "hint": "Work done on the system is negative under the chosen work-by convention."
+    },
+    "transfer": {
+      "title": "Ask where the energy went",
+      "body": "A pump, heater, compressor, or cooling system becomes easier to reason about when each boundary crossing is named. The appropriate balance can grow more detailed without abandoning that habit.",
+      "action": "Draw an energy ledger for a fictional sealed piston-and-gas system. Invent one interval with positive ΔU and another with negative ΔU, then check the signs aloud."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "06",
+        "label": "Conservation and system boundaries"
+      },
+      {
+        "chapter": "11",
+        "label": "Heat through a complete system"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · First law of thermodynamics",
+        "url": "https://openstax.org/books/university-physics-volume-2/pages/3-3-first-law-of-thermodynamics"
+      }
+    ]
+  },
+  {
+    "id": "algorithmic-thinking",
+    "title": "Turn the task into steps that survive exceptions",
+    "subject": "Engineering",
+    "level": "Foundation",
+    "minutes": 20,
+    "hook": "The average looks correct until a missing sensor reading is quietly treated as zero.",
+    "objective": "Write and trace an algorithm with a clear input contract, a stopping condition, and explicit handling of missing data.",
+    "prerequisites": [
+      "Averages",
+      "Comparisons",
+      "Step-by-step reasoning"
+    ],
+    "explain": [
+      "An algorithm is a defined procedure for producing an outcome from inputs. Writing one forces you to replace phrases such as process the readings with operations another person could follow. The procedure needs a clear result, a way to finish, and behavior for cases that do not resemble the happy example.",
+      "Separate a value from the absence of a value. Zero can be a legitimate measurement; a missing reading is information about the data collection process. Treating both as false in a programming condition can discard useful zeros, while replacing missing data with zero can bias the result.",
+      "Pseudocode lets you investigate these choices before committing to a programming language. A trace table records what each step does to the current state. Good test inputs include an ordinary case, boundary values, and a case that should produce an explicit unavailable result rather than a misleading number."
+    ],
+    "steps": [
+      {
+        "title": "Define accepted inputs and outputs",
+        "body": "For this exercise, accept finite numeric readings. Return their mean and count; if none are valid, return an unavailable result. Report how many entries were skipped."
+      },
+      {
+        "title": "Keep a running state",
+        "body": "Start sum and count at zero. For each accepted reading, add its value to sum and increase count by one.",
+        "math": "sum ← sum + reading; count ← count + 1"
+      },
+      {
+        "title": "Guard the final division",
+        "body": "After the loop finishes, divide only when count is greater than zero. An empty valid set has no mean in this procedure.",
+        "math": "if count > 0: mean ← sum/count; otherwise: unavailable"
+      }
+    ],
+    "example": {
+      "setup": "Trace an invented data-cleaning exercise with entries [10.2, 'sensor offline', 9.8, null, 10.0] in millimeters. Only finite numeric entries are accepted.",
+      "worked": [
+        "After 10.2, sum is 10.2 and count is 1.",
+        "Skip the text entry and record one skipped value.",
+        "After 9.8, sum is 20.0 and count is 2.",
+        "Skip null and record a second skipped value.",
+        "After 10.0, sum is 30.0 and count is 3; the mean is 10.0 mm."
+      ],
+      "answer": "Report a 10.0 mm mean from three valid readings, with two entries skipped."
+    },
+    "practice": {
+      "question": "What should the same procedure report for [0, 0, null]?",
+      "choices": [
+        "Unavailable, because all entries are false-like",
+        "A mean of 0 from three valid readings",
+        "A mean of 0 from two valid readings, with one skipped entry",
+        "A mean of 1 because null counts as missing"
+      ],
+      "correctIndex": 2,
+      "explanation": "The two numeric zeros are valid values. Null is not. The correct mean is 0/2 = 0, and the counts preserve the difference between a zero measurement and missing data.",
+      "hint": "Apply the input contract instead of testing whether a value seems truthy."
+    },
+    "transfer": {
+      "title": "Use exceptions to improve the specification",
+      "body": "Algorithms appear in analysis scripts, test procedures, data pipelines, and robot behaviors. Writing down the awkward cases often improves the question before any code is written.",
+      "action": "Trace the procedure on an empty list, a list with one valid reading, and a list containing negative values. Explain why each outcome follows from the stated input contract."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "15",
+        "label": "Evidence that a task is finished"
+      },
+      {
+        "chapter": "23",
+        "label": "Computation as a mathematical tool"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Harvard CS50 · Algorithms and pseudocode",
+        "url": "https://cs50.harvard.edu/extension/2026/spring/notes/0/"
+      }
+    ]
+  }
+]
+

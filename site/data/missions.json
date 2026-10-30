@@ -1,0 +1,1930 @@
+[
+  {
+    "id": "units-that-catch-mistakes",
+    "title": "The thousand-fold mistake hiding in a label",
+    "subject": "Mathematics",
+    "level": "Foundation",
+    "minutes": 12,
+    "hook": "A cooling pump looks too small because someone mixed liters per minute with cubic meters per second.",
+    "objective": "Convert a flow rate through several units and use cancellation to check the answer.",
+    "prerequisites": [
+      "Multiplication and division",
+      "Fractions"
+    ],
+    "explain": [
+      "Imagine a maintenance bench with a pump, a clear reservoir, and a stopwatch. The pump label gives liters per minute. Your calculation expects cubic meters per second. Both describe volume moving through a boundary, but their numbers differ dramatically. A unit is part of the quantity, so copying only the number removes information the next person needs.",
+      "A conversion factor is a fraction whose numerator and denominator represent the same physical amount. Multiplying by it changes the description without changing the flow. Arrange each fraction so the unwanted unit cancels. This gives you a visible route through the calculation and catches many inverted factors before they reach a spreadsheet.",
+      "The final unit also tells you what operation makes sense next. Flow multiplied by time gives volume. Flow divided by time gives a change in flow per time. Those are different questions. Before reaching for a calculator, say the desired result aloud: how much water passes through the pump during this test?"
+    ],
+    "steps": [
+      {
+        "title": "Name the quantity",
+        "body": "Write the measured number together with its unit, then write the desired unit separately. Keep rate and total volume in different columns.",
+        "math": "18 L/min → ? m³/s"
+      },
+      {
+        "title": "Cancel one unit at a time",
+        "body": "A cubic meter contains 1,000 liters, and a minute contains 60 seconds. Put liters below liters and minutes above minutes.",
+        "math": "18 L/min × (1 m³ / 1,000 L) × (1 min / 60 s)"
+      },
+      {
+        "title": "Check the scale",
+        "body": "Eighteen liters each minute is less than one liter each second. A result of hundreds of cubic meters per second would contradict the tabletop scene.",
+        "math": "18 / 60,000 = 0.00030 m³/s"
+      }
+    ],
+    "example": {
+      "setup": "A fictional pump moves 18 L/min steadily for a 40-second collection test. Find the volume collected in liters and cubic meters.",
+      "worked": [
+        "Convert the duration: 40 s × (1 min / 60 s) = 2/3 min.",
+        "Multiply flow by duration: 18 L/min × 2/3 min = 12 L.",
+        "Convert volume: 12 L × (1 m³ / 1,000 L) = 0.012 m³.",
+        "Cross-check: 0.00030 m³/s × 40 s = 0.012 m³."
+      ],
+      "answer": "The collection is 12 L, or 0.012 m³."
+    },
+    "practice": {
+      "question": "A second pump delivers 0.40 L/s. Which pump moves more water, and by how much per minute?",
+      "choices": [
+        "The first, by 17.6 L/min",
+        "The second, by 6 L/min",
+        "They are equal",
+        "The second, by 0.10 L/min"
+      ],
+      "correctIndex": 1,
+      "explanation": "Convert the second rating before comparing: 0.40 L/s × 60 s/min = 24 L/min. Subtract the first pump’s 18 L/min to obtain 6 L/min.",
+      "hint": "A smaller numerical rating can describe a larger rate when its time unit is shorter."
+    },
+    "transfer": {
+      "title": "Make a spreadsheet audit column",
+      "body": "A maintenance calculation becomes easier to review when every input has a unit and every conversion is visible. The same habit connects water, air, electrical energy, and manufacturing dimensions.",
+      "action": "Convert one familiar rate twice, using two different routes, and check that both reach the same physical quantity."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "08",
+        "label": "Air and water as services"
+      },
+      {
+        "chapter": "23",
+        "label": "Mathematics inside the machine"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Unit conversion",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/1-3-unit-conversion"
+      }
+    ]
+  },
+  {
+    "id": "algebra-for-a-service-window",
+    "title": "Solve for the time the machine buys you",
+    "subject": "Mathematics",
+    "level": "Foundation",
+    "minutes": 15,
+    "hook": "The reserve tank has a falling level. Algebra turns that observation into a service window.",
+    "objective": "Build and solve a linear equation, then interpret its solution in the physical situation.",
+    "prerequisites": [
+      "Signed numbers",
+      "Unit conversion"
+    ],
+    "explain": [
+      "A tank level changes because material crosses its boundary. If the outflow exceeds the inflow by a steady amount, its usable inventory decreases at a steady rate. You can represent that story with an equation before knowing any advanced fluid mechanics. The model’s strength is that every term has an identifiable physical meaning.",
+      "In a linear inventory model, the starting amount is the intercept and the net rate is the slope. The unknown might be the remaining volume, the time until a threshold, or the rate needed to preserve a reserve. Rearranging the equation changes which question you can answer; it does not change the underlying balance.",
+      "Solving an equation means finding a value that makes both sides equal. Perform the same operation on both sides and preserve units. A negative time or a time beyond the operating period is a reason to reconsider the question. An algebraically correct result still needs a physical interpretation."
+    ],
+    "steps": [
+      {
+        "title": "Separate stock from rate",
+        "body": "Let V be liters remaining and t be minutes elapsed. A starting inventory is measured in liters; the change per minute is measured in liters per minute.",
+        "math": "V(t) = V₀ − q t"
+      },
+      {
+        "title": "Define the stopping condition",
+        "body": "Ask when the inventory reaches the selected reserve threshold, rather than quietly assuming that all stored liquid may be consumed.",
+        "math": "Vreserve = V₀ − q t"
+      },
+      {
+        "title": "Isolate time and substitute back",
+        "body": "Move the inventory difference to one side, divide by the positive depletion rate, and verify the result in the original equation.",
+        "math": "t = (V₀ − Vreserve) / q"
+      }
+    ],
+    "example": {
+      "setup": "For a bench exercise, a reservoir begins with 120 L. The combined inflow and outflow produce a net loss of 3 L/min. The team wants to stop the test with 30 L remaining.",
+      "worked": [
+        "Write the balance: V(t) = 120 L − (3 L/min)t.",
+        "Set the stopping volume: 30 L = 120 L − (3 L/min)t.",
+        "Subtract 30 L and rearrange: (3 L/min)t = 90 L.",
+        "Divide: t = 90 L / (3 L/min) = 30 min.",
+        "Check: 120 − 3 × 30 = 30 L."
+      ],
+      "answer": "The selected reserve is reached after 30 minutes."
+    },
+    "practice": {
+      "question": "A revision adds 20 L to the starting inventory but increases net loss to 4 L/min. With the same 30 L reserve, what happens to the service window?",
+      "choices": [
+        "It becomes 35 min",
+        "It stays at 30 min",
+        "It becomes 22.5 min",
+        "It becomes 27.5 min"
+      ],
+      "correctIndex": 3,
+      "explanation": "The new usable amount is 140 − 30 = 110 L. Dividing by 4 L/min gives 27.5 min. Extra inventory does not guarantee extra time when the depletion rate also changes.",
+      "hint": "Rebuild both the numerator and denominator; do not adjust only the starting volume."
+    },
+    "transfer": {
+      "title": "Read an equation as a design conversation",
+      "body": "This same structure describes a battery losing charge, a spare-parts stock declining, or work accumulating faster than a team can finish it. The variables change, but the balance remains recognizable.",
+      "action": "Write a stock-and-rate equation for something you can observe. Label what must remain constant for your model to apply."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "06",
+        "label": "Balances and engineering decisions"
+      },
+      {
+        "chapter": "23",
+        "label": "Algebra with a physical purpose"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Linear equations in one variable",
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/2-2-linear-equations-in-one-variable"
+      }
+    ]
+  },
+  {
+    "id": "ratios-and-the-missing-water",
+    "title": "A small percentage can fill a large tank",
+    "subject": "Mathematics",
+    "level": "Foundation",
+    "minutes": 15,
+    "hook": "A recovery percentage sounds impressive until you count what leaves the system every day.",
+    "objective": "Use percentages as ratios, identify their denominator, and calculate cumulative losses.",
+    "prerequisites": [
+      "Fractions and decimals",
+      "Multiplication"
+    ],
+    "explain": [
+      "A percentage compares an amount with a specified base. Saying that a machine recovers 95 percent is incomplete until you know 95 percent of what. It might refer to the water entering one processor, a particular waste stream, or a much broader settlement balance. Those boundaries need not contain the same quantities.",
+      "For a single pass through a simplified processor, recovery and unrecovered fraction add to one. Multiply the input by each fraction to obtain the corresponding outputs. If daily input stays steady, the daily loss accumulates with time. A small fraction of a large repeated throughput can become a substantial resupply requirement.",
+      "Changes in percentages deserve careful language. Moving from 95 percent to 98 percent recovery is an increase of three percentage points. In the same simple boundary, the unrecovered share falls from five percent to two percent, a 60 percent reduction in loss. Both statements can be correct because they compare different quantities."
+    ],
+    "steps": [
+      {
+        "title": "Draw the boundary",
+        "body": "Place one box around the processor and label the water entering it. Do not include streams the stated recovery fraction does not cover.",
+        "math": "Input = recovered output + unrecovered output"
+      },
+      {
+        "title": "Convert percent to a fraction",
+        "body": "Divide the percentage by 100 before multiplying. Compute the unrecovered share separately so that the two outputs can be checked against the input.",
+        "math": "Loss fraction = 1 − recovery fraction"
+      },
+      {
+        "title": "Scale through time",
+        "body": "Multiply daily loss by the number of days only when the daily operating assumption stays the same. Record that assumption beside the result.",
+        "math": "Cumulative loss = daily input × loss fraction × days"
+      }
+    ],
+    "example": {
+      "setup": "An invented water-processing exercise uses 80 kg/day of input for 180 days. Compare recovery fractions of 0.95 and 0.98, with no other streams included.",
+      "worked": [
+        "At 95 percent, loss is 80 × 0.05 = 4 kg/day.",
+        "Over 180 days, that becomes 4 × 180 = 720 kg.",
+        "At 98 percent, loss is 80 × 0.02 = 1.6 kg/day.",
+        "The second total is 1.6 × 180 = 288 kg.",
+        "The difference is 432 kg, and 432/720 = 0.60, a 60 percent loss reduction."
+      ],
+      "answer": "Three percentage points of improved recovery save 432 kg over the selected interval."
+    },
+    "practice": {
+      "question": "Throughput doubles to 160 kg/day at 98 percent recovery. Compared with the original 80 kg/day case at 95 percent, how does daily loss change?",
+      "choices": [
+        "It falls to 3.2 kg/day",
+        "It doubles to 8 kg/day",
+        "It falls to 1.6 kg/day",
+        "It stays at 4 kg/day"
+      ],
+      "correctIndex": 0,
+      "explanation": "160 × 0.02 = 3.2 kg/day, less than the original 4 kg/day. Better recovery partly offsets the larger throughput; the actual result requires both changes.",
+      "hint": "Compare the products, not the percentages alone."
+    },
+    "transfer": {
+      "title": "Find the denominator in a claim",
+      "body": "Efficiency, availability, recycling, completion, and budget progress are all ratios. Asking what was counted, over which interval, and inside which boundary makes a claim much more useful.",
+      "action": "Rewrite one percentage you encounter as a complete sentence naming the numerator, denominator, and time interval."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "08",
+        "label": "Water loops and reserves"
+      },
+      {
+        "chapter": "09",
+        "label": "Material afterlives"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Proportions and their applications",
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications"
+      }
+    ]
+  },
+  {
+    "id": "functions-as-machine-behavior",
+    "title": "Give the machine an input and read its answer",
+    "subject": "Mathematics",
+    "level": "Foundation",
+    "minutes": 15,
+    "hook": "A motor’s electrical demand changes with load. A function makes the relationship visible.",
+    "objective": "Interpret a function, its domain, its intercept, and its rate of change.",
+    "prerequisites": [
+      "Substitution into an equation",
+      "Coordinate graphs"
+    ],
+    "explain": [
+      "A function assigns one output to each allowed input. In an engineering model, the input might be force and the output might be electrical power. Writing P(F) says that the model predicts power from force; it does not claim that force is the only influence in the real machine. Speed, temperature, and operating mode may be held fixed.",
+      "The graph carries physical information. An intercept can represent demand that exists even with no useful load. A slope expresses how much additional output the model predicts per unit of input. Its unit is a ratio: watts per newton in this example. Reading these features connects the algebra to the hardware.",
+      "A model also has a domain. A fitted relationship from a small test range should not silently become a promise about every possible load. Inside the range, compare prediction with measurement. Outside it, ask whether friction, heating, limits, or a new operating mode might change the relationship."
+    ],
+    "steps": [
+      {
+        "title": "Read the notation",
+        "body": "Treat F as the input and P as the output. State the fixed operating conditions that make a one-input model useful.",
+        "math": "P(F) = 12 W + (0.40 W/N)F"
+      },
+      {
+        "title": "Identify the two contributions",
+        "body": "The constant term represents the selected no-load demand. The term containing F is the additional demand that grows with the modeled load.",
+        "math": "P(0 N) = 12 W"
+      },
+      {
+        "title": "Use the domain",
+        "body": "For this exercise, the model is defined from 0 to 50 N. Mark those limits on the horizontal axis before drawing the line.",
+        "math": "0 N ≤ F ≤ 50 N"
+      }
+    ],
+    "example": {
+      "setup": "A fictional actuator at a fixed speed follows P(F) = 12 + 0.40F, with power in watts and force in newtons over the stated range. Find demand at 30 N and the load corresponding to 28 W.",
+      "worked": [
+        "Substitute 30 N: P = 12 W + (0.40 W/N)(30 N) = 24 W.",
+        "For the inverse question, set 28 = 12 + 0.40F.",
+        "Subtract 12: 16 = 0.40F.",
+        "Divide by 0.40: F = 40 N, which lies inside the modeled domain."
+      ],
+      "answer": "The model predicts 24 W at 30 N and 40 N at 28 W."
+    },
+    "practice": {
+      "question": "A revised controller reduces the constant term from 12 W to 8 W while the slope stays unchanged. What is the predicted percentage reduction in demand at 30 N?",
+      "choices": [
+        "50 percent",
+        "33.3 percent",
+        "16.7 percent",
+        "4 percent"
+      ],
+      "correctIndex": 2,
+      "explanation": "The new demand is 8 + 0.40 × 30 = 20 W. The reduction is 4 W from an original 24 W, so 4/24 × 100 ≈ 16.7 percent.",
+      "hint": "Calculate the full old and new outputs before forming the percentage."
+    },
+    "transfer": {
+      "title": "Build a small calibration curve",
+      "body": "A table of input-output pairs can reveal a relationship before an equation is available. Residuals—the differences between observations and predictions—show where a simple model stops describing the behavior well.",
+      "action": "Invent five inputs inside the domain, plot their predicted outputs, and mark one hypothetical observation that would make you question the model."
+    },
+    "simulation": "foundation:functions",
+    "book": [
+      {
+        "chapter": "10",
+        "label": "Demand, generation, and operating modes"
+      },
+      {
+        "chapter": "23",
+        "label": "Functions as engineering relationships"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Functions and function notation",
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/3-1-functions-and-function-notation"
+      }
+    ],
+    "simulationIntro": "A linear function turns a starting amount and a steady rate into a prediction. Change the starting water, flow rate, and time in this reservoir example."
+  },
+  {
+    "id": "geometry-and-the-room-inside",
+    "title": "A bigger box changes more than the floor plan",
+    "subject": "Mathematics",
+    "level": "Foundation",
+    "minutes": 18,
+    "hook": "You double a model’s dimensions. Its surface and its interior refuse to grow at the same rate.",
+    "objective": "Calculate area and volume, then distinguish linear, square, and cubic scaling.",
+    "prerequisites": [
+      "Multiplication",
+      "Squares and cubes"
+    ],
+    "explain": [
+      "Stand beside a rectangular equipment enclosure and imagine tracing its edges, covering its exterior with panels, then filling its interior with air. These are three different measurements: length, area, and volume. Their units tell you how many dimensions have been multiplied together. Confusing them can distort estimates of material, usable space, or stored inventory.",
+      "For a rectangular box, volume is length times width times height. Surface area counts three different face areas twice. If every length grows by a scale factor k, each area grows by k squared and volume grows by k cubed. The result comes from multiplying the changed dimensions, not from a separate engineering rule.",
+      "Geometry provides a first estimate, then the design adds detail. A wall has thickness, corners need joints, openings interrupt panels, and equipment consumes interior space. Scaling a shape does not automatically scale the structure that supports it. Keep the geometric answer clear so those later effects can be added deliberately."
+    ],
+    "steps": [
+      {
+        "title": "Name the dimensions",
+        "body": "Draw a box and place one length on each perpendicular direction. Use the same length unit for all three before calculating.",
+        "math": "V = L × W × H"
+      },
+      {
+        "title": "Count every face",
+        "body": "Two faces have area LW, two have LH, and two have WH. Add them rather than multiplying all three dimensions.",
+        "math": "A = 2(LW + LH + WH)"
+      },
+      {
+        "title": "Compare scale factors",
+        "body": "Write the new-to-old ratio separately for length, area, and volume. This avoids treating all size-related quantities as proportional.",
+        "math": "Length: k; area: k²; volume: k³"
+      }
+    ],
+    "example": {
+      "setup": "An imaginary service enclosure is 2 m long, 1 m wide, and 1 m high. A geometrically similar proposal doubles every dimension.",
+      "worked": [
+        "Original volume: 2 × 1 × 1 = 2 m³.",
+        "Original surface area: 2(2 × 1 + 2 × 1 + 1 × 1) = 10 m².",
+        "New dimensions: 4 m by 2 m by 2 m.",
+        "New volume: 16 m³, eight times the original.",
+        "New surface area: 40 m², four times the original."
+      ],
+      "answer": "Doubling every length multiplies enclosed volume by eight and surface area by four."
+    },
+    "practice": {
+      "question": "Instead, only the original box’s length doubles, from 2 m to 4 m. What are the new volume and surface area?",
+      "choices": [
+        "4 m³ and 20 m²",
+        "8 m³ and 40 m²",
+        "4 m³ and 18 m²",
+        "2 m³ and 18 m²"
+      ],
+      "correctIndex": 2,
+      "explanation": "Volume becomes 4 × 1 × 1 = 4 m³. Area becomes 2(4 + 4 + 1) = 18 m². The square-and-cube shortcut applies only when every linear dimension shares the same scale factor.",
+      "hint": "Return to the full formulas because this change is not geometrically similar."
+    },
+    "transfer": {
+      "title": "See why expansion is a new design",
+      "body": "A larger settlement needs a new circulation and service plan, not simply a larger picture of the first one. Even basic geometry reveals that enclosing surface, interior volume, and useful floor area have different relationships.",
+      "action": "Draw two boxes with the same volume but different proportions. Compare their surface areas and sketch where a removable equipment tray could travel."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "07",
+        "label": "Walls, volume, and interfaces"
+      },
+      {
+        "chapter": "20",
+        "label": "Expansion changes the system"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Volume and surface area",
+        "url": "https://openstax.org/books/prealgebra-2e/pages/9-6-solve-geometry-applications-volume-and-surface-area"
+      }
+    ]
+  },
+  {
+    "id": "trigonometry-on-a-ramp",
+    "title": "An angle turns into distance and effort",
+    "subject": "Mathematics",
+    "level": "Next step",
+    "minutes": 18,
+    "hook": "A cargo ramp reaches the same platform in two different footprints. Trigonometry tells you what changed.",
+    "objective": "Use sine, cosine, and tangent to connect an incline’s height, length, and horizontal run.",
+    "prerequisites": [
+      "Right triangles",
+      "Ratios",
+      "Calculator in degree mode"
+    ],
+    "explain": [
+      "View a straight ramp from the side. Its deck is the hypotenuse of a right triangle, its rise is the vertical side, and its run is the horizontal side. Once you choose the angle measured from horizontal, the names opposite and adjacent become unambiguous. A labeled sketch prevents more errors than memorizing additional formulas.",
+      "Sine compares rise with ramp length; cosine compares run with ramp length; tangent compares rise with run. Each ratio is dimensionless because its two lengths use the same unit. An angle therefore connects different measurements of the same geometry. It does not directly tell you that a ramp is usable by a particular vehicle.",
+      "Changing the angle while holding rise fixed changes both the required deck length and the footprint. A gentler ramp occupies more horizontal space. Later mechanics can connect that geometry to forces and traction, while design adds clearances and turning space. The triangle is the first layer of a larger access problem."
+    ],
+    "steps": [
+      {
+        "title": "Choose the reference angle",
+        "body": "Mark the angle between the ramp and horizontal. Label the vertical rise h, horizontal run x, and ramp length L.",
+        "math": "sin θ = h/L; cos θ = x/L; tan θ = h/x"
+      },
+      {
+        "title": "Select the ratio with your knowns",
+        "body": "If rise and angle are known, tangent gives horizontal run directly. Sine gives deck length without first finding the run.",
+        "math": "x = h/tan θ; L = h/sin θ"
+      },
+      {
+        "title": "Check the triangle",
+        "body": "The ramp length must exceed both legs. Verify the result using the Pythagorean relation and keep the calculator’s angle mode visible.",
+        "math": "L² = h² + x²"
+      }
+    ],
+    "example": {
+      "setup": "A fictional cargo platform is 1.2 m above its approach surface. Sketch a straight ramp inclined at 20 degrees.",
+      "worked": [
+        "Horizontal run: x = 1.2/tan 20° ≈ 3.30 m.",
+        "Deck length: L = 1.2/sin 20° ≈ 3.51 m.",
+        "Check: √(1.2² + 3.30²) ≈ 3.51 m.",
+        "The triangle alone needs about 3.30 m of horizontal footprint; approach and exit space would be additional."
+      ],
+      "answer": "The ramp is approximately 3.51 m long with a 3.30 m horizontal run."
+    },
+    "practice": {
+      "question": "The available horizontal run shrinks to 2.4 m while the rise remains 1.2 m. Which angle is required?",
+      "choices": [
+        "About 26.6°",
+        "About 14.0°",
+        "30.0° exactly",
+        "60.0° exactly"
+      ],
+      "correctIndex": 0,
+      "explanation": "tan θ = 1.2/2.4 = 0.5, so θ = arctan 0.5 ≈ 26.6°. The shorter footprint requires a steeper incline.",
+      "hint": "The known pair is opposite and adjacent; choose the corresponding inverse function."
+    },
+    "transfer": {
+      "title": "Use the triangle before the CAD model",
+      "body": "Booms, folding panels, viewing angles, and access ramps all contain useful triangles. A quick calculation can reject an impossible arrangement before detailed modeling begins.",
+      "action": "Draw a ramp with a chosen rise and two different angles. Compare its deck length and footprint, then name one non-geometric condition still needed."
+    },
+    "simulation": "ramp",
+    "book": [
+      {
+        "chapter": "05",
+        "label": "Moving cargo into place"
+      },
+      {
+        "chapter": "23",
+        "label": "Angles with physical meaning"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Right-triangle trigonometry",
+        "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-2-right-triangle-trigonometry"
+      }
+    ],
+    "simulationIntro": "Keep the rise fixed and change the horizontal run. Watch the angle and deck length change together. The experiment also connects that geometry to the force needed to move a load on the Moon."
+  },
+  {
+    "id": "vectors-for-a-moving-tool",
+    "title": "The tool moved, but did it go the right way?",
+    "subject": "Mathematics",
+    "level": "Next step",
+    "minutes": 18,
+    "hook": "A robot’s two motions can add, oppose, or partly cancel. Their lengths alone cannot tell the story.",
+    "objective": "Add vectors by components and distinguish displacement from distance traveled.",
+    "prerequisites": [
+      "Signed numbers",
+      "Pythagorean theorem",
+      "Coordinate axes"
+    ],
+    "explain": [
+      "A vector describes magnitude and direction. For a tool moving on a flat work surface, two signed components can describe its displacement: one along a chosen x axis and another along y. The axes are part of the description. A value copied from a different coordinate frame may be numerically tidy and physically wrong.",
+      "Add motions by adding their corresponding components. East and west contributions can cancel even though both motions require travel. The resulting vector joins the original position to the final position. Its magnitude is the straight-line displacement, which need not equal the length of the actual path.",
+      "This distinction matters in work planning. A final position may be reachable while a selected route crosses equipment or exceeds a cable’s freedom. Vector arithmetic tells you where the tool ends. The path and the surrounding geometry tell you whether it can get there. Both descriptions are useful, and neither replaces the other."
+    ],
+    "steps": [
+      {
+        "title": "Fix the axes",
+        "body": "Choose positive x to the right and positive y upward on the drawing. Record all component values in meters in that same frame.",
+        "math": "d = (Δx, Δy)"
+      },
+      {
+        "title": "Add matching components",
+        "body": "Combine x with x and y with y. Keep negative signs attached to directions rather than treating them as unwanted arithmetic.",
+        "math": "dtotal = (x₁ + x₂, y₁ + y₂)"
+      },
+      {
+        "title": "Find the displacement magnitude",
+        "body": "The two perpendicular components form a right triangle. Their squared sum gives the squared straight-line distance between start and finish.",
+        "math": "|dtotal| = √(Δx² + Δy²)"
+      }
+    ],
+    "example": {
+      "setup": "In a tabletop plan, a tool first moves 0.30 m right and 0.40 m up. Its second straight move is 0.10 m left and 0.20 m up.",
+      "worked": [
+        "First displacement: d₁ = (0.30, 0.40) m; its length is 0.50 m.",
+        "Second displacement: d₂ = (−0.10, 0.20) m; its length is about 0.224 m.",
+        "Total displacement: (0.20, 0.60) m.",
+        "Its magnitude is √(0.20² + 0.60²) ≈ 0.632 m.",
+        "The traveled path is 0.50 + 0.224 ≈ 0.724 m, longer than the net displacement."
+      ],
+      "answer": "The tool finishes 0.20 m right and 0.60 m up, about 0.632 m from its start."
+    },
+    "practice": {
+      "question": "Which third displacement returns the tool directly to its original position?",
+      "choices": [
+        "(0.20, 0.60) m",
+        "(−0.20, 0.60) m",
+        "(−0.30, −0.40) m",
+        "(−0.20, −0.60) m"
+      ],
+      "correctIndex": 3,
+      "explanation": "The return vector must cancel the total displacement, so both signs reverse. Reversing only the first move would leave the second move uncompensated.",
+      "hint": "The final component sums must both equal zero."
+    },
+    "transfer": {
+      "title": "Draw a motion ledger",
+      "body": "The same component method applies to forces, velocities, and sensor offsets, with different units. Always state the common frame before combining entries.",
+      "action": "Draw a three-move route around a paper obstacle. Calculate its final displacement, then compare the route length with the straight-line distance."
+    },
+    "simulation": "foundation:vectors",
+    "book": [
+      {
+        "chapter": "15",
+        "label": "A robot’s view of the worksite"
+      },
+      {
+        "chapter": "23",
+        "label": "Vectors and reference frames"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Coordinates and vector components",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/2-2-coordinate-systems-and-components-of-a-vector"
+      }
+    ],
+    "simulationIntro": "Adjust the magnitudes and directions of two vectors. Compare their sum with the original arrows."
+  },
+  {
+    "id": "derivatives-watch-the-motion",
+    "title": "Catch the moment a mechanism speeds up",
+    "subject": "Mathematics",
+    "level": "Stretch",
+    "minutes": 22,
+    "hook": "A position graph can look gentle while the tool is accelerating toward the end of its travel.",
+    "objective": "Interpret a derivative as an instantaneous rate and connect position, velocity, and acceleration.",
+    "prerequisites": [
+      "Functions",
+      "Graph slope",
+      "Powers"
+    ],
+    "explain": [
+      "A sequence of position measurements tells you where a tool was. The slope between two measurements gives its average velocity during that interval. Shorter intervals reveal more local behavior, provided the measurement quality supports them. Calculus formalizes the limit of that shrinking-interval idea as a derivative.",
+      "For a position function x(t), the derivative dx/dt is velocity. Differentiating velocity gives acceleration. Their units change with each time derivative: meters, meters per second, then meters per second squared. A smooth position curve can therefore hide a changing velocity that matters to contact, vibration, and stopping distance.",
+      "The derivative is a property of the chosen model. If the model fits a short operating interval, its predicted rate belongs to that interval too. Measured data may contain noise, and dividing small differences can amplify it. Use the physical scene and nearby measurements to judge whether a calculated rate is believable."
+    ],
+    "steps": [
+      {
+        "title": "Start with an average rate",
+        "body": "Choose two times and divide the change in position by the elapsed time. This is the slope of the line joining the points.",
+        "math": "vaverage = [x(t₂) − x(t₁)] / (t₂ − t₁)"
+      },
+      {
+        "title": "Differentiate the model",
+        "body": "For the quadratic model x = at², the derivative is 2at. The coefficient a here belongs to the position equation; it is half the constant physical acceleration.",
+        "math": "x(t) = (0.020 m/s²)t²; v(t) = (0.040 m/s²)t"
+      },
+      {
+        "title": "Read the next derivative",
+        "body": "Velocity increases by 0.040 m/s each second, so acceleration is constant in this model.",
+        "math": "dv/dt = 0.040 m/s²"
+      }
+    ],
+    "example": {
+      "setup": "For the first five seconds of an imaginary tool movement, x(t) = 0.020t² meters when t is in seconds. Compare instantaneous velocity at four seconds with average velocity from three to five seconds.",
+      "worked": [
+        "At t = 4 s, v = 0.040 × 4 = 0.160 m/s.",
+        "Position at 3 s is 0.020 × 9 = 0.180 m.",
+        "Position at 5 s is 0.020 × 25 = 0.500 m.",
+        "Average velocity is (0.500 − 0.180)/(5 − 3) = 0.160 m/s.",
+        "The equality occurs here because this quadratic model has linearly changing velocity and the interval is centered on four seconds."
+      ],
+      "answer": "Both requested velocities are 0.160 m/s in this particular model."
+    },
+    "practice": {
+      "question": "The motion must remain at or below 0.120 m/s. During the modeled five-second interval, when does it first reach that limit?",
+      "choices": [
+        "At 2 s",
+        "At 3 s",
+        "At 4 s",
+        "It never reaches it"
+      ],
+      "correctIndex": 1,
+      "explanation": "Solve 0.040t = 0.120 to obtain t = 3 s. Position is only 0.180 m then, illustrating why a position threshold and a speed threshold are different conditions.",
+      "hint": "Use the derivative, not the original position function."
+    },
+    "transfer": {
+      "title": "Look for rates hiding in plots",
+      "body": "Temperature rise, battery depletion, vibration, and tracking errors all have rates worth interpreting. A graph becomes a source of decisions when you can distinguish its level from its slope.",
+      "action": "Sketch a curve that stays positive while its slope becomes negative. Explain what that would mean for the position of a moving tool."
+    },
+    "simulation": "foundation:motion",
+    "book": [
+      {
+        "chapter": "16",
+        "label": "Mechanisms and motion"
+      },
+      {
+        "chapter": "23",
+        "label": "Calculus in a moving machine"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Defining the derivative",
+        "url": "https://openstax.org/books/calculus-volume-1/pages/3-1-defining-the-derivative"
+      }
+    ],
+    "simulationIntro": "Use a position curve to watch velocity and acceleration change together. Play the motion, then pause and inspect a moment."
+  },
+  {
+    "id": "integrals-count-the-interval",
+    "title": "Add up a changing world",
+    "subject": "Mathematics",
+    "level": "Stretch",
+    "minutes": 22,
+    "hook": "A heater’s power climbs during startup. Its final wattage does not tell you the energy it consumed.",
+    "objective": "Interpret a definite integral as accumulated quantity and check it with geometric area.",
+    "prerequisites": [
+      "Functions and graphs",
+      "Area of rectangles and triangles",
+      "Power versus energy"
+    ],
+    "explain": [
+      "A power reading describes the rate of energy transfer at a moment. Energy over an interval depends on the whole history of that rate. If the power is constant, multiplying by duration works immediately. When the power changes, you can divide the interval into small pieces and add the energy assigned to each piece.",
+      "An integral is the mathematical form of that accumulation. On a power-versus-time graph, a strip’s height is power and its width is time, so their product is energy. The units follow the axes: watts times seconds give joules, while kilowatts times hours give kilowatt-hours. The graph’s area has a physical meaning because of that multiplication.",
+      "Using the final reading for the entire interval can overstate or understate the total. Using an average reading works only if it is the appropriate time average. For a straight ramp in power, the mean of the two endpoint values gives that average; for an arbitrary curve, it generally does not."
+    ],
+    "steps": [
+      {
+        "title": "Identify rate and accumulated quantity",
+        "body": "Decide what the vertical axis measures and what multiplying it by a short time interval would produce.",
+        "math": "Energy increment ≈ power × time increment"
+      },
+      {
+        "title": "Break the shape into simple areas",
+        "body": "A linear increase above a nonzero starting power makes a rectangle plus a triangle. Add those areas to check the calculus.",
+        "math": "E = Pstart Δt + ½(Pend − Pstart)Δt"
+      },
+      {
+        "title": "Use an antiderivative",
+        "body": "For P(t) = 100 + 20t in watts with t in seconds, integrate each term and evaluate at the two interval endpoints.",
+        "math": "E = ∫₀¹⁰(100 + 20t) dt = [100t + 10t²]₀¹⁰"
+      }
+    ],
+    "example": {
+      "setup": "In an invented ten-second startup, a device’s power rises linearly from 100 W to 300 W. Find the consumed energy.",
+      "worked": [
+        "Rectangle: 100 W × 10 s = 1,000 J.",
+        "Triangle above it: ½ × 200 W × 10 s = 1,000 J.",
+        "Total: 2,000 J, or 2.0 kJ.",
+        "The integral gives 100 × 10 + 10 × 10² = 2,000 J.",
+        "Check using average power: (100 + 300)/2 = 200 W; 200 × 10 = 2,000 J."
+      ],
+      "answer": "The device consumes 2.0 kJ during startup."
+    },
+    "practice": {
+      "question": "A different startup holds 300 W for the first two seconds and 100 W for the next eight seconds. What is its total energy?",
+      "choices": [
+        "1,400 J",
+        "2,000 J",
+        "3,000 J",
+        "1,000 J"
+      ],
+      "correctIndex": 0,
+      "explanation": "Add the two rectangular areas: 300 × 2 + 100 × 8 = 1,400 J. Averaging 300 and 100 without accounting for their unequal durations would give the wrong result.",
+      "hint": "Weight each power by the time spent at that power."
+    },
+    "transfer": {
+      "title": "Read a log as an accumulated demand",
+      "body": "Flow logs become total volume, speed logs become traveled distance when speed is nonnegative, and power logs become energy. Accumulation turns a changing trace into a budget.",
+      "action": "Sketch three power schedules with the same energy but different peak powers. Explain why a supply might handle one schedule and struggle with another."
+    },
+    "simulation": "foundation:accumulation",
+    "book": [
+      {
+        "chapter": "10",
+        "label": "Energy across operating intervals"
+      },
+      {
+        "chapter": "23",
+        "label": "Integration as accumulation"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · The definite integral",
+        "url": "https://openstax.org/books/calculus-volume-1/pages/5-2-the-definite-integral"
+      }
+    ],
+    "simulationIntro": "Build a two-stage power timeline. The shaded area is the energy used across the interval."
+  },
+  {
+    "id": "statistics-behind-the-average",
+    "title": "The average can hide the problem",
+    "subject": "Mathematics",
+    "level": "Next step",
+    "minutes": 20,
+    "hook": "Two mechanisms hit the same average position. One repeats cleanly; the other wanders.",
+    "objective": "Compare center and spread without mistaking repeated readings for proven accuracy.",
+    "prerequisites": [
+      "Arithmetic mean",
+      "Squares and square roots"
+    ],
+    "explain": [
+      "A test log is a collection of observations, not a single verdict. The mean describes one aspect of its center. Spread describes how far readings scatter around that center. Two mechanisms can have the same mean and quite different repeatability, which matters when a tool has to meet a narrow opening.",
+      "Sample standard deviation summarizes spread using squared departures from the sample mean. Squaring prevents positive and negative departures from canceling. Dividing by n minus one produces the usual sample variance, and taking its square root restores the original unit. The arithmetic is easier to trust when you keep the departures visible.",
+      "Tight scatter does not prove accuracy. A mislocated reference, a biased sensor, or a repeated setup error can shift all readings together. Nor do four successful trials establish behavior across all temperatures and loads. Separate three questions: where is the center, how much does it vary, and how trustworthy is the reference?"
+    ],
+    "steps": [
+      {
+        "title": "Calculate the center",
+        "body": "Add the measurements and divide by their count. Preserve the measurement unit in the result.",
+        "math": "mean = Σx / n"
+      },
+      {
+        "title": "Measure departures",
+        "body": "Subtract the mean from each observation, square each departure, and add the squares.",
+        "math": "Sum of squared departures = Σ(x − mean)²"
+      },
+      {
+        "title": "Return to the original unit",
+        "body": "For a sample of n readings, divide by n − 1 and take the square root. Do not report the variance as though it were a length.",
+        "math": "s = √[Σ(x − mean)² / (n − 1)]"
+      }
+    ],
+    "example": {
+      "setup": "Two invented insertion studies measure position in millimeters. A gives 9.8, 10.0, 10.0, 10.2. B gives 9.4, 10.0, 10.0, 10.6.",
+      "worked": [
+        "Both sums are 40.0 mm, so both means are 10.0 mm.",
+        "For A, squared departures sum to 0.04 + 0 + 0 + 0.04 = 0.08 mm².",
+        "A’s sample standard deviation is √(0.08/3) ≈ 0.163 mm.",
+        "For B, the squared departures sum to 0.72 mm².",
+        "B’s sample standard deviation is √(0.72/3) ≈ 0.490 mm, three times A’s."
+      ],
+      "answer": "The centers match, but B shows three times the sample spread."
+    },
+    "practice": {
+      "question": "A reference check later shows that every A reading was 0.5 mm too high. After correcting all readings, what changes?",
+      "choices": [
+        "Mean stays 10.0 mm; standard deviation falls by 0.5 mm",
+        "Both mean and standard deviation become zero",
+        "Mean becomes 9.5 mm; standard deviation stays about 0.163 mm",
+        "Standard deviation doubles"
+      ],
+      "correctIndex": 2,
+      "explanation": "Subtracting the same offset shifts the mean but preserves every departure from that mean. The example separates a common bias from trial-to-trial scatter.",
+      "hint": "Compare each corrected reading with the corrected mean."
+    },
+    "transfer": {
+      "title": "Keep the individual observations",
+      "body": "A summary statistic is easier to interpret beside the raw readings, the test conditions, and the reference used. A plot may reveal trends or outliers that a single spread number hides.",
+      "action": "Make a small dot plot of both datasets. Add a target line at 10.0 mm, then show the corrected A data on the same scale."
+    },
+    "simulation": "uncertainty",
+    "book": [
+      {
+        "chapter": "17",
+        "label": "Measurement and workshop evidence"
+      },
+      {
+        "chapter": "25",
+        "label": "A portfolio built from observations"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Measures of data spread",
+        "url": "https://openstax.org/books/introductory-statistics-2e/pages/2-7-measures-of-the-spread-of-the-data"
+      }
+    ],
+    "simulationIntro": "The worked example compares two datasets. Here you can vary the spread and calibration offset separately. Predict which control changes the mean, which changes the sample standard deviation, and which changes both."
+  },
+  {
+    "id": "torque-and-the-hidden-lever",
+    "title": "The bolt is reachable. The turning space is not.",
+    "subject": "Engineering",
+    "level": "Foundation",
+    "minutes": 18,
+    "hook": "A hand fits through the opening, but the tool cannot apply the turning effect the job needs.",
+    "objective": "Calculate torque from force, lever arm, and angle, then identify a useful geometry change.",
+    "prerequisites": [
+      "Multiplication",
+      "Sine of familiar angles"
+    ],
+    "explain": [
+      "Force alone does not describe a turning action. Where the force acts and which direction it points also matter. Push a door close to its hinge and compare that with pushing near the handle. Torque measures the turning effect about a selected axis, connecting the applied force with its perpendicular distance from that axis.",
+      "The compact equation is τ = rF sin θ, where θ is the angle between the arm from the axis and the applied force. The sine term extracts the part of the force that turns the object. A force along the arm has zero torque about that axis even though the force itself may be large.",
+      "A longer handle helps only if the workspace permits the necessary motion and force direction. A nearby wall can remove the angular range that made the tool attractive. This is why a service drawing should show swept volume, hand position, and neighboring hardware as well as the fastener location."
+    ],
+    "steps": [
+      {
+        "title": "Choose the axis",
+        "body": "Mark the hinge or fastener axis. Draw r from that axis to the point where the force acts; do not measure from a convenient edge.",
+        "math": "τ = r F sin θ"
+      },
+      {
+        "title": "Find the effective arm",
+        "body": "The perpendicular distance from the axis to the force’s line of action is the effective lever arm. It may be much shorter than the tool itself.",
+        "math": "rperpendicular = r sin θ"
+      },
+      {
+        "title": "Keep the turning direction",
+        "body": "In a two-dimensional sketch, choose one turning direction as positive. Opposing torques subtract when checking equilibrium.",
+        "math": "Στ = 0 for rotational equilibrium"
+      }
+    ],
+    "example": {
+      "setup": "In a low-force tabletop study, a 0.20 m handle receives 10 N. Compare a perpendicular push with a push angled 30 degrees to the handle.",
+      "worked": [
+        "At 90 degrees: τ = 0.20 × 10 × sin 90° = 2.0 N·m.",
+        "At 30 degrees: τ = 0.20 × 10 × 0.5 = 1.0 N·m.",
+        "The second effective lever arm is only 0.10 m.",
+        "To produce 2.0 N·m at 30 degrees with the same handle, the ideal required force is 2.0/(0.20 × 0.5) = 20 N."
+      ],
+      "answer": "The angled push provides half the torque, despite having the same force and handle length."
+    },
+    "practice": {
+      "question": "Available space limits a new handle to 0.15 m, but allows a perpendicular push. What force produces 1.8 N·m?",
+      "choices": [
+        "0.27 N",
+        "12 N",
+        "9 N",
+        "18 N"
+      ],
+      "correctIndex": 1,
+      "explanation": "With sin 90° = 1, F = τ/r = 1.8/0.15 = 12 N. A shorter handle does not make the required torque disappear; it changes the force needed.",
+      "hint": "Rearrange the torque equation after using the permitted force direction."
+    },
+    "transfer": {
+      "title": "Design the service motion",
+      "body": "The book’s obstructed bracket becomes understandable when the worksite includes the tool’s force direction. Access is a sequence of possible motions, not just an opening large enough to see through.",
+      "action": "Sketch two handle locations on an unpowered model. Show the force arrow and swept space for each before deciding which geometry to test."
+    },
+    "simulation": "leverage",
+    "book": [
+      {
+        "chapter": "01",
+        "label": "The blocked connection"
+      },
+      {
+        "chapter": "16",
+        "label": "Hinges, fasteners, and mechanisms"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Torque and rotational equilibrium",
+        "url": "https://openstax.org/books/college-physics-2e/pages/9-2-the-second-condition-for-equilibrium"
+      }
+    ],
+    "simulationIntro": "Start with the perpendicular-force case: change the force or lever arm and predict the torque. The worked example then extends the idea to an angled push, where the effective lever arm becomes shorter."
+  },
+  {
+    "id": "energy-without-free-lifting",
+    "title": "A longer ramp does not erase the work",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 20,
+    "hook": "A gentler incline reduces the force along the ramp. The cargo still ends up higher.",
+    "objective": "Connect force, distance, gravitational energy, and losses in a simple lifting task.",
+    "prerequisites": [
+      "Trigonometry",
+      "Units of force and energy"
+    ],
+    "explain": [
+      "Work is energy transferred by a force acting through displacement. For a force parallel to a straight motion, it is force times distance. A machine can trade a smaller force for a longer distance, which is useful even when it does not reduce the ideal energy requirement. The trade changes what a person or actuator must deliver.",
+      "For a small height change in a nearly uniform gravitational field, raising a mass adds mgh of gravitational potential energy. The starting and ending heights determine that change. A longer path can lower the required uphill force while leaving the same gravitational energy increase.",
+      "Real mechanisms add effects such as rolling resistance, sliding friction, and electrical losses. A longer path can therefore increase the energy that must be supplied even while making the peak force manageable. Force capability, energy supply, speed, and available space are separate design constraints; one attractive number cannot represent all four."
+    ],
+    "steps": [
+      {
+        "title": "Calculate the height-change energy",
+        "body": "Use mass rather than weight in mgh. For this Earth-based exercise, take g = 9.81 m/s².",
+        "math": "ΔU = m g h"
+      },
+      {
+        "title": "Resolve the ideal uphill force",
+        "body": "On a frictionless ramp at constant speed, the applied uphill force balances the component of weight along the ramp.",
+        "math": "F = m g sin θ"
+      },
+      {
+        "title": "Compare work with the energy change",
+        "body": "The ramp length is h/sin θ. Multiplying the ideal force by that length cancels the sine terms.",
+        "math": "W = (m g sin θ)(h/sin θ) = m g h"
+      }
+    ],
+    "example": {
+      "setup": "A 20 kg test load rises 1.0 m. Compare ideal ramps inclined at 30 and 15 degrees, with no friction and constant speed.",
+      "worked": [
+        "The energy increase is 20 × 9.81 × 1.0 = 196.2 J.",
+        "At 30 degrees, F = 98.1 N and ramp length is 2.0 m.",
+        "Their product is 98.1 × 2.0 = 196.2 J.",
+        "At 15 degrees, F ≈ 50.8 N and length ≈ 3.86 m.",
+        "Keeping unrounded values gives the same work, 196.2 J."
+      ],
+      "answer": "The gentler ramp reduces force by about half but requires nearly twice the travel."
+    },
+    "practice": {
+      "question": "The 30-degree ramp has a constant 8 N resistance over its 2.0 m length. What input work is required at constant speed?",
+      "choices": [
+        "196.2 J",
+        "204.2 J",
+        "392.4 J",
+        "212.2 J"
+      ],
+      "correctIndex": 3,
+      "explanation": "The resisting force adds 8 N × 2.0 m = 16 J to the gravitational requirement. Total input work is 196.2 + 16 = 212.2 J.",
+      "hint": "Add the energy dissipated along the path to the increase in gravitational energy."
+    },
+    "transfer": {
+      "title": "Separate the machine’s constraints",
+      "body": "A winch or rover might have enough energy for a task but insufficient force at one configuration. Conversely, a strong actuator may exhaust a small energy store. Evaluate the quantities independently.",
+      "action": "For a fictional lift, list the required force, distance, energy, and duration in separate rows. Explain which design choice changes each row."
+    },
+    "simulation": "ramp",
+    "book": [
+      {
+        "chapter": "05",
+        "label": "Handling and installing cargo"
+      },
+      {
+        "chapter": "10",
+        "label": "Power and energy budgets"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Gravitational potential energy",
+        "url": "https://openstax.org/books/college-physics-2e/pages/7-3-gravitational-potential-energy"
+      },
+      {
+        "label": "OpenStax · Work and energy",
+        "url": "https://openstax.org/books/college-physics-2e/pages/7-2-kinetic-energy-and-the-work-energy-theorem"
+      }
+    ],
+    "simulationIntro": "The worked lift uses Earth’s gravity; this experiment uses lunar gravity. In either setting, keep the rise fixed and change the horizontal run. Compare the force, travel distance, and work against gravity."
+  },
+  {
+    "id": "orbits-are-falling-paths",
+    "title": "Fall fast enough to keep missing Earth",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "The cabin feels weightless while its entire path bends continuously toward Earth.",
+    "objective": "Calculate circular-orbit speed and period while distinguishing orbital radius from altitude.",
+    "prerequisites": [
+      "Square roots",
+      "Circular circumference",
+      "Force and acceleration"
+    ],
+    "explain": [
+      "An orbiting spacecraft does not need gravity to disappear. Its velocity continually changes direction because gravity pulls inward. In a circular-orbit model, that inward acceleration is v²/r. Gravity supplies it; there is no additional outward physical force required in an Earth-centered inertial description.",
+      "Equating gravitational acceleration with the acceleration of circular motion gives a speed determined by the central body and orbital radius. The spacecraft’s own mass cancels when it is negligible compared with the central body. A more massive cargo vehicle at the same circular radius does not need a different orbital speed solely because of its mass.",
+      "The radius in the equation runs from Earth’s center, not from its surface. Confusing radius with altitude is a major modeling error. Another tempting mistake is to assume higher circular orbits move faster. The circular speed decreases as radius increases, while the distance around the orbit increases, so the period becomes longer."
+    ],
+    "steps": [
+      {
+        "title": "Define the circular model",
+        "body": "Use r for center-to-spacecraft distance and μ for the central body’s gravitational parameter. Ignore drag and other perturbations for this calculation.",
+        "math": "μ/r² = v²/r"
+      },
+      {
+        "title": "Solve for speed",
+        "body": "Cancel one factor of r and take the positive square root. Using μ in m³/s² and r in meters returns meters per second.",
+        "math": "v = √(μ/r)"
+      },
+      {
+        "title": "Divide circumference by speed",
+        "body": "One revolution covers 2πr. Dividing by speed gives the period in seconds.",
+        "math": "T = 2πr/v"
+      }
+    ],
+    "example": {
+      "setup": "Choose an illustrative circular Earth orbit with r = 8.00 × 10⁶ m and use μ = 3.986 × 10¹⁴ m³/s². Find its speed and period.",
+      "worked": [
+        "Compute μ/r = 4.9825 × 10⁷ m²/s².",
+        "Take the square root: v ≈ 7,059 m/s, or 7.06 km/s.",
+        "Circumference is 2π × 8.00 × 10⁶ ≈ 5.027 × 10⁷ m.",
+        "Divide by the unrounded speed: T ≈ 7,121 s.",
+        "Convert to minutes: T ≈ 118.7 min."
+      ],
+      "answer": "The selected circular orbit requires about 7.06 km/s and takes about 118.7 minutes per revolution."
+    },
+    "practice": {
+      "question": "For a circular orbit around the same body, the radius becomes four times larger. How do speed and period change?",
+      "choices": [
+        "Speed doubles; period doubles",
+        "Speed quarters; period doubles",
+        "Speed halves; period becomes eight times larger",
+        "Both remain unchanged"
+      ],
+      "correctIndex": 2,
+      "explanation": "Speed scales with 1/√r, so it halves. Circumference grows fourfold, and dividing that distance by half the speed makes the period eight times larger.",
+      "hint": "Apply the radius change to both the travel distance and the speed."
+    },
+    "transfer": {
+      "title": "Keep the reference point visible",
+      "body": "Orbit calculations become much clearer when the sketch names the center, surface, altitude, radius, and direction of motion. A good diagram is part of the calculation.",
+      "action": "Draw two circular orbits around the same body. Add an inward acceleration arrow and a tangent velocity arrow at one point on each."
+    },
+    "simulation": "orbit",
+    "book": [
+      {
+        "chapter": "04",
+        "label": "Space environments and free fall"
+      },
+      {
+        "chapter": "14",
+        "label": "Orbital habitats"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Satellite orbits and energy",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/13-4-satellite-orbits-and-energy"
+      },
+      {
+        "label": "NASA · Gravity and mechanics",
+        "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter3-3/"
+      }
+    ],
+    "simulationIntro": "The controls use altitude above Earth, while the equations use distance from Earth’s center. Change altitude to explore speed and period. Then change spacecraft mass and identify which displayed quantities depend on it."
+  },
+  {
+    "id": "rotation-makes-a-floor",
+    "title": "Turn motion into somewhere to stand",
+    "subject": "Engineering",
+    "level": "Stretch",
+    "minutes": 22,
+    "hook": "A rotating floor can push against your feet, but its radius and speed have to be considered together.",
+    "objective": "Calculate rotational acceleration from radius and revolutions per minute, then compare design changes.",
+    "prerequisites": [
+      "Circular motion",
+      "Unit conversion",
+      "Squares and square roots"
+    ],
+    "explain": [
+      "In a rotating ring, a person who stays with the floor follows a curved path. The floor supplies an inward force that changes the person’s direction of motion. That contact can produce a familiar sense of support. The engineering question begins with the acceleration needed for the chosen circular motion.",
+      "The relation is a = ω²r, where angular speed ω is measured in radians per second. Revolutions per minute must be converted before substitution. The squared dependence on angular speed is important: doubling rotation rate at the same radius multiplies acceleration by four, while doubling radius at the same rotation rate only doubles it.",
+      "Matching one acceleration value does not settle the experience of living in the ring. Acceleration varies with distance from the axis, and moving within the rotating environment introduces additional effects. The simple equation supplies a useful first comparison, then structure, motion, layout, and human response become further questions."
+    ],
+    "steps": [
+      {
+        "title": "Convert the rotation rate",
+        "body": "One revolution is 2π radians and one minute is 60 seconds. Keep both factors visible.",
+        "math": "ω = rpm × 2π/60"
+      },
+      {
+        "title": "Calculate the local acceleration",
+        "body": "Use the radius of the location being evaluated. The floor and a point closer to the axis have different values at the same angular speed.",
+        "math": "a = ω²r"
+      },
+      {
+        "title": "Compare with a reference",
+        "body": "For orientation, divide by 9.81 m/s² to express the result relative to standard Earth gravity. This is a ratio, not a separate force.",
+        "math": "a/9.81 m/s²"
+      }
+    ],
+    "example": {
+      "setup": "Imagine a ring with a floor radius of 100 m rotating at 3 rpm. Compare the floor with a point 2 m closer to the axis.",
+      "worked": [
+        "Angular speed is 3 × 2π/60 ≈ 0.314 rad/s.",
+        "Floor acceleration is 0.314² × 100 ≈ 9.87 m/s².",
+        "That is about 1.01 times 9.81 m/s².",
+        "At r = 98 m, acceleration is about 9.67 m/s².",
+        "The closer point has 98 percent of the floor’s acceleration, a 2 percent difference."
+      ],
+      "answer": "The selected floor has about 9.87 m/s² of rotational acceleration; the inward point has about 9.67 m/s²."
+    },
+    "practice": {
+      "question": "The ring radius doubles to 200 m. What rotation rate keeps the original floor acceleration?",
+      "choices": [
+        "About 2.12 rpm",
+        "6 rpm",
+        "3 rpm",
+        "1.5 rpm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Holding ω²r constant means angular speed must fall by √2 when radius doubles. The new rate is 3/√2 ≈ 2.12 rpm.",
+      "hint": "Solve for angular speed before applying the radius change."
+    },
+    "transfer": {
+      "title": "Compare two ways to change a result",
+      "body": "A designer can alter geometry or motion to reach the same nominal acceleration. The surrounding consequences differ: a larger radius changes structure and travel distances; a higher rate changes rotational conditions.",
+      "action": "Make a two-column comparison of radius changes and rotation-rate changes. Include one consequence that the acceleration equation does not describe."
+    },
+    "simulation": "rotation",
+    "book": [
+      {
+        "chapter": "14",
+        "label": "The rotating-habitat bargain"
+      },
+      {
+        "chapter": "12",
+        "label": "Designing for lived experience"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Centripetal acceleration",
+        "url": "https://openstax.org/books/college-physics-2e/pages/6-2-centripetal-acceleration"
+      }
+    ],
+    "simulationIntro": "Begin at the worked example’s 100 m radius and 3 rpm. Double the radius, predict the new acceleration, then reduce the rotation rate until the original floor acceleration returns."
+  },
+  {
+    "id": "heat-needs-a-route",
+    "title": "The vacuum will not carry your heat away",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 20,
+    "hook": "A device is attached to a radiator, yet its electronics still run hot. Follow the whole path between them.",
+    "objective": "Calculate conduction through a simple link and identify why heat rejection requires more than a cold surroundings.",
+    "prerequisites": [
+      "Algebra",
+      "Area and length units"
+    ],
+    "explain": [
+      "Heat moves because of temperature differences, through mechanisms that depend on the setting. A solid bracket can conduct heat. A moving fluid can carry it. A surface can emit thermal radiation. Outside a spacecraft, vacuum removes ordinary air convection, so an exposed surface needs a radiative path rather than a breeze.",
+      "The device and radiator are connected through a chain of thermal interfaces. A narrow or long conducting link can create a large temperature difference even when the radiator itself has capacity. Following the chain prevents the mistaken conclusion that adding radiator area must solve every overheating problem.",
+      "For steady one-dimensional conduction through a uniform link, heat-transfer rate is proportional to conductivity, cross-sectional area, and temperature difference, and inversely proportional to length. This model leaves contact resistance out initially. That omission is useful when explicit, because later measurements can reveal whether the interfaces dominate the real path."
+    ],
+    "steps": [
+      {
+        "title": "Draw the heat path",
+        "body": "Mark the warm component, conducting link, joints, radiator, and surroundings. Use arrows for energy flow rather than treating a temperature as something that is consumed."
+      },
+      {
+        "title": "Calculate the simple link",
+        "body": "Use conductivity k, cross-sectional area A, link length L, and end-to-end temperature difference ΔT.",
+        "math": "Q̇ = k A ΔT/L"
+      },
+      {
+        "title": "Check what the result means",
+        "body": "The answer is a heat-transfer rate in watts. It does not state the total energy removed without an operating duration, or prove that the radiator can reject it."
+      }
+    ],
+    "example": {
+      "setup": "An invented aluminum-like link has k = 200 W/(m·K), area 0.0020 m², and length 0.10 m. Its warm end is 15 K above its cool end.",
+      "worked": [
+        "Multiply conductivity by area: kA = 0.40 W·m/K.",
+        "Multiply by temperature difference: kAΔT = 6.0 W·m.",
+        "Divide by length: Q̇ = 6.0/0.10 = 60 W.",
+        "If the same heat rate must pass through a link twice as long, the required ΔT doubles to 30 K.",
+        "Temperature differences in kelvins and Celsius degrees have the same numerical size."
+      ],
+      "answer": "The original idealized link conducts 60 W for a 15 K temperature difference."
+    },
+    "practice": {
+      "question": "Length doubles and cross-sectional area also doubles, with the same material and temperature difference. What happens to the modeled heat-transfer rate?",
+      "choices": [
+        "It halves",
+        "It doubles",
+        "It becomes four times larger",
+        "It stays at 60 W"
+      ],
+      "correctIndex": 3,
+      "explanation": "The ratio A/L is unchanged because both numerator and denominator double. The two geometric changes cancel in this conduction model.",
+      "hint": "Inspect the ratio of area to length before calculating."
+    },
+    "transfer": {
+      "title": "Diagnose the bottleneck, not the nearest symptom",
+      "body": "A temperature rise may come from increased heat generation, reduced flow, a poorer contact, or changed rejection conditions. A complete path diagram helps choose observations that distinguish those explanations.",
+      "action": "Sketch a laptop-to-room heat path or a fictional equipment-to-radiator path. Name one measurement that could reveal a bottleneck at each interface."
+    },
+    "simulation": "cooling",
+    "book": [
+      {
+        "chapter": "11",
+        "label": "Give heat a destination"
+      },
+      {
+        "chapter": "19",
+        "label": "Investigating a cooling fault"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Mechanisms of heat transfer",
+        "url": "https://openstax.org/books/university-physics-volume-2/pages/1-6-mechanisms-of-heat-transfer"
+      }
+    ],
+    "simulationIntro": "The worked example follows heat through a solid link. This experiment follows another part of a possible heat path: radiation from a surface to its surroundings. Compare which variables control each transfer rate."
+  },
+  {
+    "id": "circuits-and-the-power-ledger",
+    "title": "Every device votes in the power budget",
+    "subject": "Engineering",
+    "level": "Foundation",
+    "minutes": 18,
+    "hook": "Each component looks modest on its own. Switch them on together and the supply sees their combined demand.",
+    "objective": "Calculate DC power and current, then separate simultaneous demand from energy over time.",
+    "prerequisites": [
+      "Addition and multiplication",
+      "Ratios",
+      "Power versus energy"
+    ],
+    "explain": [
+      "A power budget describes what is operating together. For a steady DC load, electrical power equals voltage times current at the chosen boundary. If several loads share a bus, their powers add. At a common bus voltage, the corresponding branch currents add too, provided all ratings refer to the same operating condition.",
+      "A low daily energy total does not guarantee that the supply can support a short burst of simultaneous demand. Conversely, a device with modest power can consume substantial energy if it runs continuously. Nameplate power, average power, peak demand, and energy belong in separate columns because they answer different design questions.",
+      "The boundary matters when voltage conversion is involved. A 90 percent efficient converter supplying 90 W to a load takes 100 W from its source under that assumption. The missing 10 W becomes loss rather than useful output. Multiplying output by efficiency instead of dividing would predict a source that supplies too little energy."
+    ],
+    "steps": [
+      {
+        "title": "Sum the operating loads",
+        "body": "List devices that are on in the selected mode. Add their electrical powers at a common boundary.",
+        "math": "Ptotal = P₁ + P₂ + P₃"
+      },
+      {
+        "title": "Find the bus current",
+        "body": "For a steady DC exercise, divide total power by bus voltage. Treat this as a budget calculation, not a wire or protection selection.",
+        "math": "I = P/V"
+      },
+      {
+        "title": "Accumulate operating energy",
+        "body": "Multiply each load’s power by its own duration, then add. Use watt-hours when duration is in hours.",
+        "math": "E = Σ(Pᵢ tᵢ)"
+      }
+    ],
+    "example": {
+      "setup": "A fictional 24 V test station has a 48 W fan, 12 W controller, and 120 W heater. The fan and controller run for three hours; the heater runs for one hour.",
+      "worked": [
+        "With everything on, total load is 48 + 12 + 120 = 180 W.",
+        "The corresponding bus current is 180/24 = 7.5 A.",
+        "Fan energy is 48 × 3 = 144 Wh.",
+        "Controller energy is 12 × 3 = 36 Wh; heater energy is 120 × 1 = 120 Wh.",
+        "Total energy is 300 Wh, while average power over three hours is 100 W."
+      ],
+      "answer": "The station needs 180 W at its selected peak and consumes 300 Wh over the three-hour schedule."
+    },
+    "practice": {
+      "question": "A 90 percent efficient converter feeds all these loads. What source power is needed when every load is on?",
+      "choices": [
+        "162 W",
+        "200 W",
+        "180 W",
+        "270 W"
+      ],
+      "correctIndex": 1,
+      "explanation": "Input power is output power divided by efficiency: 180/0.90 = 200 W. The converter’s 20 W loss must also go somewhere as heat.",
+      "hint": "The source must provide at least the useful output when the converter has losses."
+    },
+    "transfer": {
+      "title": "Build a mode table",
+      "body": "A service mode can reduce energy demand by scheduling or deferring work, but critical functions still need their required supply. A mode table makes those decisions explicit.",
+      "action": "Make three columns for normal operation, maintenance, and standby. Assign the fictional loads to each, calculate the totals, and explain one scheduling choice."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "10",
+        "label": "Electrical services and modes"
+      },
+      {
+        "chapter": "06",
+        "label": "System boundaries and budgets"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Electrical energy and power",
+        "url": "https://openstax.org/books/university-physics-volume-2/pages/9-5-electrical-energy-and-power"
+      }
+    ]
+  },
+  {
+    "id": "robot-kinematics-from-two-links",
+    "title": "Place the fingertip by moving two joints",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 25,
+    "hook": "The second joint turns relative to the first link. Forget that detail and the tool lands in the wrong place.",
+    "objective": "Calculate the endpoint of a two-link planar arm and reason about its reachable region.",
+    "prerequisites": [
+      "Trigonometric components",
+      "Vector addition",
+      "Degrees and reference angles"
+    ],
+    "explain": [
+      "Kinematics connects a mechanism’s configuration with its geometry of motion. For a two-link arm moving in a plane, forward kinematics starts with joint angles and predicts the fingertip position. It answers where the tool goes before asking what forces, torques, or control effort are needed to move it.",
+      "The first link’s angle is measured from a fixed axis. In the convention used here, the second joint angle is measured relative to the first link, so the second link’s absolute direction is the sum of the two angles. This distinction is easy to miss in a drawing and can create a perfectly executed calculation of the wrong geometry.",
+      "Each link contributes horizontal and vertical components. Add those components to find the endpoint. The arm’s reach is not simply every point inside a circle whose radius is the total link length. Unequal link lengths leave an unreachable central region, even before joint limits, obstacles, cables, and tool orientation are considered."
+    ],
+    "steps": [
+      {
+        "title": "Label the angle convention",
+        "body": "Use θ₁ from the fixed x axis to link one, and θ₂ from link one to link two. The second absolute angle is θ₁ + θ₂.",
+        "math": "Second-link direction = θ₁ + θ₂"
+      },
+      {
+        "title": "Add horizontal components",
+        "body": "Project each link onto the fixed x axis, then add the two contributions.",
+        "math": "x = L₁ cos θ₁ + L₂ cos(θ₁ + θ₂)"
+      },
+      {
+        "title": "Add vertical components",
+        "body": "Use sine for the vertical projections. Keep the same fixed reference frame for both links.",
+        "math": "y = L₁ sin θ₁ + L₂ sin(θ₁ + θ₂)"
+      }
+    ],
+    "example": {
+      "setup": "An imaginary arm has L₁ = 0.40 m and L₂ = 0.30 m. Set θ₁ = 30 degrees and the relative elbow angle θ₂ = 60 degrees.",
+      "worked": [
+        "The second link points at 30° + 60° = 90° from the fixed x axis.",
+        "First-link contributions are x₁ ≈ 0.346 m and y₁ = 0.200 m.",
+        "Second-link contributions are x₂ = 0 and y₂ = 0.300 m.",
+        "Add them: x ≈ 0.346 m and y = 0.500 m.",
+        "Sketching a sloping first link and a vertical second link provides an immediate geometric check."
+      ],
+      "answer": "The fingertip is approximately at (0.346 m, 0.500 m)."
+    },
+    "practice": {
+      "question": "With unrestricted joint rotation and no obstacles, can this arm place its fingertip 0.05 m from the base?",
+      "choices": [
+        "Yes, because 0.05 m is less than 0.70 m",
+        "No, its minimum radial reach is 0.30 m",
+        "Only if both links are horizontal",
+        "No, its minimum radial reach is 0.10 m"
+      ],
+      "correctIndex": 3,
+      "explanation": "The closest the endpoint can get is |0.40 − 0.30| = 0.10 m when the links fold back along each other. The requested 0.05 m lies inside that central unreachable region.",
+      "hint": "Imagine folding the shorter link directly back along the longer one."
+    },
+    "transfer": {
+      "title": "Reach is only the beginning",
+      "body": "A tool may reach a connector while arriving with an unusable orientation or blocked approach path. Forward kinematics helps expose the geometry that an installation plan must then complete.",
+      "action": "Draw the worked pose, then draw the fully extended and fully folded poses. Mark a reachable target and one target inside the central gap."
+    },
+    "simulation": "robot",
+    "book": [
+      {
+        "chapter": "15",
+        "label": "Robotic installation and evidence"
+      },
+      {
+        "chapter": "16",
+        "label": "Mechanism geometry"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MIT OpenCourseWare · Planar kinematics",
+        "url": "https://www.ocw.mit.edu/courses/2-12-introduction-to-robotics-fall-2005/c8828a16e71c246b78461dd0596b983f_chapter4.pdf"
+      }
+    ],
+    "simulationIntro": "The simulator uses a 1 m upper arm; the worked example uses 0.40 m. Both use the same relative elbow-angle convention. Track the second link’s absolute direction as the sum of the two joint angles."
+  },
+  {
+    "id": "reliability-and-shared-failures",
+    "title": "Two pumps can still share one failure",
+    "subject": "Engineering",
+    "level": "Next step",
+    "minutes": 22,
+    "hook": "Adding a backup changes the drawing. Whether it preserves the service depends on what both pumps share.",
+    "objective": "Calculate simple redundant-system reliability and examine independence and capacity assumptions.",
+    "prerequisites": [
+      "Probabilities as fractions",
+      "Multiplication",
+      "Complements"
+    ],
+    "explain": [
+      "A reliability number needs a function and an interval. Here it means the probability that a selected component continues to perform its required function for a specified mission interval. Without those details, comparing two percentages can hide different tasks, environments, or durations.",
+      "If either of two independent components can provide the entire required service, the parallel arrangement fails only when both components fail. Multiply their failure probabilities, then subtract from one. This calculation assumes independence and enough surviving capacity. Two installed components do not automatically satisfy either condition.",
+      "A shared power source, controller, inlet, or installation error can defeat both branches. These common dependencies are often clearer on a functional diagram than on a parts list. Reliability reasoning asks which combinations preserve the service, not simply how many boxes appear in the drawing."
+    ],
+    "steps": [
+      {
+        "title": "Define success",
+        "body": "State the required flow and interval. Decide whether one pump alone can satisfy the full task or whether both are needed."
+      },
+      {
+        "title": "Calculate independent branch failure",
+        "body": "If each pump has reliability R, its failure probability is 1 − R. For two independent pumps in a full-capacity parallel arrangement, both must fail to lose pumping.",
+        "math": "Rparallel = 1 − (1 − R₁)(1 − R₂)"
+      },
+      {
+        "title": "Include a shared dependency",
+        "body": "If a common power unit must also survive and is independent of pump failures, multiply its reliability by the parallel-pump result.",
+        "math": "Rsystem = Rpower × Rparallel"
+      }
+    ],
+    "example": {
+      "setup": "For an invented mission interval, each of two full-capacity pumps has reliability 0.90. Their failures are independent. A shared power unit has reliability 0.98 and is independent of both pumps.",
+      "worked": [
+        "Each pump’s failure probability is 0.10.",
+        "Both fail with probability 0.10 × 0.10 = 0.01.",
+        "The pump pair therefore has reliability 1 − 0.01 = 0.99.",
+        "Include the required shared power unit: 0.98 × 0.99 = 0.9702.",
+        "The resulting probability is 97.02 percent under the stated model."
+      ],
+      "answer": "The complete modeled service has 97.02 percent reliability, below the pump pair’s 99 percent."
+    },
+    "practice": {
+      "question": "Now each pump can deliver only 60 percent of the required flow, so both must run to meet full demand. Each remains independently 90 percent reliable. Ignoring the power unit, what is reliability for meeting full demand?",
+      "choices": [
+        "99 percent",
+        "81 percent",
+        "90 percent",
+        "60 percent"
+      ],
+      "correctIndex": 1,
+      "explanation": "Both pumps must survive, so success probability is 0.90 × 0.90 = 0.81. The physical pair has changed from full-service redundancy to a both-required arrangement.",
+      "hint": "Ask which combinations meet the required capacity, not which combinations leave any pump running."
+    },
+    "transfer": {
+      "title": "Draw the common causes",
+      "body": "A cooling branch can remain partly operational without preserving the original heat-rejection capacity. Reliability and degraded-mode planning therefore belong in the same conversation.",
+      "action": "Sketch a pair of pumps and all shared supporting services. Circle one dependency that would deserve separate evidence before claiming redundancy."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "11",
+        "label": "Capacity after a branch loss"
+      },
+      {
+        "chapter": "19",
+        "label": "Failures and recovery"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NIST · Parallel or redundant model",
+        "url": "https://www.itl.nist.gov/div898/handbook/apr/section1/apr183.htm"
+      },
+      {
+        "label": "NIST · Series model",
+        "url": "https://www.itl.nist.gov/div898/handbook/apr/section1/apr182.htm"
+      }
+    ]
+  },
+  {
+    "id": "writing-a-decision-memo",
+    "title": "Write the paragraph that changes the drawing",
+    "subject": "Humanities",
+    "level": "Foundation",
+    "minutes": 18,
+    "hook": "The test found an obstruction. A vague report could let the next drawing repeat it.",
+    "objective": "Write a short decision memo that separates observation, interpretation, and requested action.",
+    "prerequisites": [
+      "A concrete observation",
+      "A reader and purpose"
+    ],
+    "explain": [
+      "Engineering writing carries work across time and between people. A reader may need to choose a revision, authorize a test, or understand why an earlier decision was made. Begin by identifying that reader and the decision they face. A technically correct paragraph can still fail if it leaves the needed action hidden.",
+      "An observation states what was seen or measured. An interpretation explains what it may mean. A recommendation proposes what to do next. Mixing them makes confidence difficult to assess: a suspected cause can quietly become a recorded fact. Keeping them distinct gives another person a fair chance to evaluate your reasoning.",
+      "Precision does not require inflated language. A component name, drawing revision, test condition, and measured result often do more work than an impressive adjective. The purpose of revision is to remove ambiguity while preserving the evidence that matters to the decision. Brevity is useful when it reduces effort without erasing context."
+    ],
+    "steps": [
+      {
+        "title": "Name the decision first",
+        "body": "Write one sentence saying what you want the reader to decide. Identify the component and revision so the request can be acted on."
+      },
+      {
+        "title": "Put evidence before the causal claim",
+        "body": "Describe the test condition and observation. Then state what explanation the evidence supports and what remains unresolved."
+      },
+      {
+        "title": "Make the next action bounded",
+        "body": "Specify a proposed change or test, an owner or role, and the evidence that would show it worked. Avoid assigning success before the retest happens."
+      }
+    ],
+    "example": {
+      "setup": "In a fictional access study, a removal tool contacts bracket B in three of twelve trials on layout revision C. A proposed 15 mm relocation has not yet been tested.",
+      "worked": [
+        "Weak opening: The layout is bad and needs improvement. This does not identify the observed problem or the requested decision.",
+        "Evidence: On revision C, the removal tool contacted bracket B in three of twelve trials using the documented approach path.",
+        "Interpretation: The contact locations suggest that bracket position limits the approach clearance; the relocation remains untested.",
+        "Decision request: Approve a mockup of bracket B shifted 15 mm, followed by the same twelve-trial removal sequence with contact locations recorded."
+      ],
+      "answer": "The revised memo gives the reviewer a specific decision, supporting observations, and a checkable next step."
+    },
+    "practice": {
+      "question": "During review, you discover that two trials used a different tool. What is the best revision to the evidence statement?",
+      "choices": [
+        "Keep the total unchanged because all trials involved removal",
+        "Remove the two trials without mentioning them",
+        "Report the tool difference and separate the results before comparing configurations",
+        "Replace all numbers with the phrase occasional contact"
+      ],
+      "correctIndex": 2,
+      "explanation": "The tool difference may affect comparability. Recording it preserves the evidence and allows a fair comparison without pretending the trials had identical conditions.",
+      "hint": "Think about what a future reader would need to reproduce or challenge the result."
+    },
+    "transfer": {
+      "title": "Use composition class as design practice",
+      "body": "Claims, organization, audience, and revision directly affect whether technical evidence survives a handoff. A short memo can become a portfolio artifact when it shows how writing improved a real decision.",
+      "action": "Write a 120-word memo about an everyday object. Include one observation, one interpretation, one requested action, and one condition for judging the result."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "06",
+        "label": "Requirements and evidence"
+      },
+      {
+        "chapter": "25",
+        "label": "Documenting an investigation"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Purdue OWL · Memo audience and purpose",
+        "url": "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/memos/audience_and_purpose.html"
+      }
+    ]
+  },
+  {
+    "id": "speaking-for-a-design-review",
+    "title": "Make the room understand the decision",
+    "subject": "Humanities",
+    "level": "Foundation",
+    "minutes": 20,
+    "hook": "You have three minutes, one drawing, and a room full of people who need different things from the design.",
+    "objective": "Structure a brief technical presentation around a decision and a visible chain of evidence.",
+    "prerequisites": [
+      "One technical question",
+      "A sketch or small dataset"
+    ],
+    "explain": [
+      "A design review is a shared thinking task. The audience needs context, evidence to evaluate the options, and a clear statement of the decision. Speaking well means helping other people inspect the reasoning while time is limited.",
+      "A slide title can state a useful claim rather than name a broad topic. The visual below it should help the audience test that claim. If the title says that access improved, a labeled before-and-after drawing or a comparable measurement is more useful than a decorative machine image. Explain what the audience should notice before adding more detail.",
+      "Rehearsal reveals hidden assumptions. If you cannot explain the axes, units, test condition, or comparison in ordinary language, the slide may be asking the audience to supply missing reasoning. Questions are evidence about what the room understood. A careful answer can distinguish what you know, what you infer, and what you need to check."
+    ],
+    "steps": [
+      {
+        "title": "Open with the decision",
+        "body": "State the proposed action and why the review is happening now. Give listeners a destination for the information that follows."
+      },
+      {
+        "title": "Show one decisive comparison",
+        "body": "Use the same scale and conditions where possible. Label the visual so someone arriving late can still identify the two options and the result."
+      },
+      {
+        "title": "Close with the unresolved condition",
+        "body": "Say what evidence would change your recommendation. End with a concrete request rather than a generic invitation for questions."
+      }
+    ],
+    "example": {
+      "setup": "A fictional team must choose which of two service-door layouts to mock up next. You have three minutes and one comparison drawing.",
+      "worked": [
+        "First 30 seconds: Recommend testing layout B because it keeps the removal path clear in the current geometric study.",
+        "Next 90 seconds: Show both layouts at the same scale, trace the removal path, and point to the two interference locations in A.",
+        "Next 40 seconds: Explain that the study represents geometry; loaded handling and hose movement have not yet been compared.",
+        "Final 20 seconds: Request time for a full-size mockup using the same removal task, with contact points and completion time recorded."
+      ],
+      "answer": "The presentation converts three minutes into a decision, a reason, a limitation, and a next test."
+    },
+    "practice": {
+      "question": "A reviewer asks whether layout B is faster, but you have only geometric clearance observations. Which answer best supports the review?",
+      "choices": [
+        "We have not timed it; the present evidence supports clearance, and timing is part of the proposed comparison",
+        "Yes, because more clearance always means less time",
+        "Probably, but the difference is too small to matter",
+        "The question is outside the presentation"
+      ],
+      "correctIndex": 0,
+      "explanation": "The answer preserves the distinction between observed clearance and unmeasured task duration while connecting the question to a concrete next step.",
+      "hint": "Answer the actual question without promoting a plausible inference into a measurement."
+    },
+    "transfer": {
+      "title": "Practice explaining a machine to another field",
+      "body": "Public speaking helps when technicians, analysts, managers, and users bring different knowledge to the same meeting. Shared understanding grows when the explanation supplies the missing context without burying the point.",
+      "action": "Record a two-minute explanation of a small mechanism. Ask a listener to repeat the decision and evidence; revise the part they could not recover."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "06",
+        "label": "Engineering decisions across disciplines"
+      },
+      {
+        "chapter": "30",
+        "label": "Making a contribution visible"
+      }
+    ],
+    "sources": [
+      {
+        "label": "MIT Communication Lab · Slide presentations",
+        "url": "https://mitcommlab.mit.edu/eecs/commkit/slideshow/"
+      }
+    ]
+  },
+  {
+    "id": "history-as-an-engineering-tool",
+    "title": "The old mission is a laboratory of decisions",
+    "subject": "Humanities",
+    "level": "Foundation",
+    "minutes": 22,
+    "hook": "Skylab arrived in orbit damaged. Understanding its recovery means studying what people knew before the outcome.",
+    "objective": "Use a historical episode to reconstruct constraints without turning hindsight into certainty.",
+    "prerequisites": [
+      "Reading a source critically",
+      "Distinguishing evidence from interpretation"
+    ],
+    "explain": [
+      "History gives engineering a longer memory. It reveals how hardware, institutions, manufacturing, and decisions interacted under conditions that no single equation captures. Reading only the achievement loses the uncertainty that made the work difficult. Ask what options appeared available at the time.",
+      "In 1973, damage during Skylab’s launch left the station with serious thermal and power problems. NASA’s account describes engineers evaluating sunshade options and the first crew deploying a parasol-like shade through a scientific airlock. The recovery depended on a physical interface, a launch deadline, packaging constraints, and coordinated work.",
+      "The episode does not establish that every damaged station can be rescued, or that improvisation removes the need for preparation. Those conclusions go beyond the evidence. Instead, reconstruct a bounded decision: what problem needed attention, what the team could deliver in time, and which existing features made an intervention possible."
+    ],
+    "steps": [
+      {
+        "title": "Separate the event from the later story",
+        "body": "Record the source, the event being described, and the author’s perspective. A later account can explain an outcome while smoothing over disagreements or abandoned options."
+      },
+      {
+        "title": "Recover the constraints",
+        "body": "List the conditions an option had to satisfy at the time. Include transport, schedule, installation access, and available knowledge rather than comparing only ideal performance."
+      },
+      {
+        "title": "Transfer a question, not a slogan",
+        "body": "Use the case to generate a design question for a new situation. Check whether the historical conditions actually resemble the new ones before carrying over an answer."
+      }
+    ],
+    "example": {
+      "setup": "Use NASA’s Skylab recovery account to examine the shade-selection decision, then apply one question to a fictional replaceable equipment enclosure.",
+      "worked": [
+        "Historical problem: loss of shielding contributed to overheating, while launch damage also reduced available power.",
+        "Historical constraints: a shade had to be prepared for the crew’s launch, fit the transport opportunity, and be deployed using a feasible method.",
+        "Enabling interface: a scientific airlock offered a route for deploying the selected parasol-like shade from inside.",
+        "New design question: Does the enclosure retain any accessible path for installing an unforeseen protective or service item after assembly?"
+      ],
+      "answer": "The useful inheritance is a question about access and adaptation, supported by a specific historical mechanism."
+    },
+    "practice": {
+      "question": "A teammate says Skylab proves that future habitat failures will be fixable. Which response best uses the historical evidence?",
+      "choices": [
+        "Accept it because a real mission is stronger evidence than a model",
+        "Ask which access paths, resources, failure conditions, and time constraints would have to match for that inference to hold",
+        "Reject all comparison because the hardware is old",
+        "Replace the claim with an equally broad statement that rescue is impossible"
+      ],
+      "correctIndex": 1,
+      "explanation": "A historical case supports reasoning about conditions and mechanisms. It cannot by itself establish a universal outcome for different systems.",
+      "hint": "Identify the conditions that made this particular recovery possible."
+    },
+    "transfer": {
+      "title": "Build a decision timeline",
+      "body": "A history paper can train the same discipline used in an anomaly review: distinguish what happened, what was known then, what was decided, and what later evidence changed.",
+      "action": "Create four columns for event, available evidence, decision, and later result. Fill one row from the Skylab source and one from a project you have observed."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "03",
+        "label": "The inheritance of inhabited machines"
+      },
+      {
+        "chapter": "21",
+        "label": "Adaptation and aging infrastructure"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NASA · Skylab 2 recovery",
+        "url": "https://www.nasa.gov/history/skylab-2-we-can-fix-anything/"
+      }
+    ]
+  },
+  {
+    "id": "ethics-when-the-test-disagrees",
+    "title": "Keep the result you wish were different",
+    "subject": "Humanities",
+    "level": "Next step",
+    "minutes": 20,
+    "hook": "The revised latch passed its last trial. Two earlier failures are still in the notebook.",
+    "objective": "Distinguish a defensible technical claim from selective reporting when evidence is inconvenient.",
+    "prerequisites": [
+      "A testable requirement",
+      "Observation versus interpretation"
+    ],
+    "explain": [
+      "Engineering ethics often appears in ordinary decisions about evidence. Which trials enter a report? Which operating conditions belong beside a result? Who gets told that a change altered the basis of an earlier decision? These choices affect what other people can responsibly conclude and what work they may undertake next.",
+      "A passing retest is useful evidence, but it does not erase the history that made the retest necessary. If the configuration changed, the earlier and later results may describe different systems. Record that distinction. If the configuration did not change, the mixed outcomes may reveal variability that a final successful demonstration conceals.",
+      "Professional ethics guidance emphasizes truthful reporting, competence, and public welfare. In a project, those broad obligations become concrete habits: preserve observations, identify uncertainty that matters, give appropriate credit, and make disagreements inspectable. The aim is not to sound cautious about everything; it is to make each claim match its support."
+    ],
+    "steps": [
+      {
+        "title": "State the exact claim",
+        "body": "Write what the report would lead a reader to believe. Distinguish one successful demonstration from evidence of consistent performance across specified conditions."
+      },
+      {
+        "title": "Trace the relevant record",
+        "body": "Identify failed and successful trials, configuration changes, deviations, and missing observations. Explain exclusions rather than quietly deleting inconvenient data."
+      },
+      {
+        "title": "Propose the honest next action",
+        "body": "Decide what can be reported now and what needs further investigation. Bring unresolved material concerns to the person responsible for the decision."
+      }
+    ],
+    "example": {
+      "setup": "In a fictional latch study, revision A fails to engage in two of eight trials. After a guide is moved, revision B succeeds in four trials. A draft slide says the latch passed twelve trials.",
+      "worked": [
+        "The draft combines two configurations and implies that all twelve attempts succeeded.",
+        "A more accurate record separates revision A’s six successes and two failures from revision B’s four successes.",
+        "The report can say that revision B succeeded in the four documented trials after the guide change.",
+        "It should retain the earlier failures and explain why the team believes the guide change addresses them.",
+        "A next test can examine the confusing alignment conditions that produced the failures."
+      ],
+      "answer": "Report the configuration-specific results and preserve the evidence linking the revision to the observed problem."
+    },
+    "practice": {
+      "question": "One failed trial used an incorrectly installed guide. Which treatment best supports an honest report?",
+      "choices": [
+        "Delete it because setup mistakes never matter",
+        "Count it as proof that every correctly installed guide fails",
+        "Replace it with the next passing trial",
+        "Retain it, identify the setup deviation, and analyze whether it belongs in the intended-condition comparison or reveals an installation risk"
+      ],
+      "correctIndex": 3,
+      "explanation": "A setup deviation may justify a separate analysis, but the event can still matter to installation and use. Transparent classification preserves both the comparison and the operational lesson.",
+      "hint": "Excluding a trial from one comparison does not require erasing its existence."
+    },
+    "transfer": {
+      "title": "Build trust into the notebook",
+      "body": "A dated configuration record makes honesty easier because the evidence already shows what changed. Good documentation supports both ethical reporting and useful technical investigation.",
+      "action": "Rewrite one overbroad claim such as tested successfully into a sentence naming the configuration, conditions, number of trials, and observed result."
+    },
+    "simulation": "uncertainty",
+    "book": [
+      {
+        "chapter": "19",
+        "label": "Investigation without convenient stories"
+      },
+      {
+        "chapter": "25",
+        "label": "Evidence in a portfolio"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NSPE · Code of Ethics for Engineers",
+        "url": "https://www.nspe.org/career-growth/nspe-code-ethics-engineers"
+      }
+    ],
+    "simulationIntro": "Create a set of closely grouped readings that misses the reference by changing the calibration offset. Then write the result you would report, including the reference comparison that a statement about repeatability alone would leave out."
+  },
+  {
+    "id": "economics-of-the-next-test",
+    "title": "Spend the next hour where it teaches most",
+    "subject": "Humanities",
+    "level": "Foundation",
+    "minutes": 20,
+    "hook": "The team can afford another test or a useful redesign. Choosing one also means giving something up.",
+    "objective": "Use a resource constraint and opportunity cost to compare feasible project actions.",
+    "prerequisites": [
+      "Simple arithmetic",
+      "A clearly defined project goal"
+    ],
+    "explain": [
+      "A project budget includes scarce time as well as money. A chosen activity uses resources unavailable to another activity. Opportunity cost names the value of the best alternative you give up. It is more informative than purchase price when workshop access or a reviewer’s time is the constraint.",
+      "A budget constraint identifies feasible combinations. It does not tell you which combination is best until you state a goal and consider what each activity contributes. More tests are not automatically better if they repeat a condition already understood. More redesign is not automatically better if the suspected cause has never been isolated.",
+      "Past spending can explain how the project arrived here, but unrecoverable effort does not become a benefit of spending more. Compare the future consequences of the options still available. At the same time, keep genuine future switching costs—such as retraining or rebuilding a fixture—in the comparison rather than confusing them with sunk effort."
+    ],
+    "steps": [
+      {
+        "title": "Name the constrained resource",
+        "body": "Choose a time window and identify what is actually scarce. A twelve-hour workshop allocation differs from twelve calendar hours if several people can work in parallel."
+      },
+      {
+        "title": "List feasible combinations",
+        "body": "Use the time required for each activity to form a budget inequality. Keep activities whole if a partial activity provides no useful result.",
+        "math": "4t + 3r ≤ 12 hours"
+      },
+      {
+        "title": "Connect the choice to an unanswered question",
+        "body": "Compare what the next test or revision would reveal. The arithmetic narrows the options; the engineering objective gives them value."
+      }
+    ],
+    "example": {
+      "setup": "A fictional project has twelve remaining workshop hours. A comparative test takes four hours and a documented revision takes three. Activities are sequential and must be completed to count.",
+      "worked": [
+        "Three tests use 3 × 4 = 12 hours.",
+        "Two tests plus one revision use 8 + 3 = 11 hours.",
+        "One test plus two revisions use 4 + 6 = 10 hours.",
+        "Four revisions use 4 × 3 = 12 hours.",
+        "If the current uncertainty is whether a geometry change helps, a sequence containing a change and a comparison may teach more than four untested changes."
+      ],
+      "answer": "Several plans are feasible; the best choice depends on which remaining uncertainty the project needs to reduce."
+    },
+    "practice": {
+      "question": "With six workshop hours left, the team can complete either one four-hour test or two three-hour revisions. If it chooses the test, what relevant opportunity has it given up?",
+      "choices": [
+        "The chance to complete two revisions in the remaining window",
+        "The twelve hours already used last month",
+        "Exactly four hours of future work in every possible plan",
+        "Nothing, because two hours remain unused"
+      ],
+      "correctIndex": 0,
+      "explanation": "Under the stated alternatives, choosing the test prevents completing the two-revision option. Unused time does not mean there was no opportunity cost.",
+      "hint": "Compare the best feasible alternative within the same remaining time window."
+    },
+    "transfer": {
+      "title": "Plan a learning budget",
+      "body": "A study schedule can be examined in the same way: prerequisite practice, a small build, and documentation compete for finite attention. The useful question is what the next block of effort makes possible.",
+      "action": "Choose a six-hour project window. List three feasible plans, the evidence each would produce, and the alternative you would give up by selecting one."
+    },
+    "simulation": "none",
+    "book": [
+      {
+        "chapter": "20",
+        "label": "Expansion and scarce resources"
+      },
+      {
+        "chapter": "30",
+        "label": "A workable next contribution"
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenStax · Budget constraints and opportunity cost",
+        "url": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint"
+      }
+    ]
+  },
+  {
+    "id": "teamwork-at-the-interface",
+    "title": "The gap between two finished parts",
+    "subject": "Humanities",
+    "level": "Foundation",
+    "minutes": 20,
+    "hook": "The drawer team and cabinet team both finish on time. The drawer still cannot pass through the opening.",
+    "objective": "Turn a vague handoff into a shared interface agreement with ownership and verification.",
+    "prerequisites": [
+      "A simple drawing",
+      "Clear written communication"
+    ],
+    "explain": [
+      "Many failures happen between individually reasonable pieces of work. One person assumes a dimension includes a handle; another assumes it describes only the body. Both can report completion while the assembly fails. Teamwork includes making those assumptions visible before the parts meet.",
+      "An interface agreement describes what crosses a boundary and what each side must provide. For a physical connection, that may include geometry, reference surfaces, allowable variation, loads, and an assembly sequence. For a data connection, it may include units, timing, names, and meaning. The agreement should be specific enough to test.",
+      "Ownership does not mean that one person makes all decisions alone. It means the group knows who maintains the shared record and who must participate when it changes. A small change can affect a neighbor’s work, so the notification and acceptance process is part of the technical arrangement."
+    ],
+    "steps": [
+      {
+        "title": "Write the shared boundary",
+        "body": "Identify the two sides and the function they must accomplish together. Use a common drawing reference and revision identifier."
+      },
+      {
+        "title": "Resolve ambiguous measurements",
+        "body": "State what each dimension includes, where it is measured, and what clearance is required. A nominal dimension alone may conceal variation or protruding hardware."
+      },
+      {
+        "title": "Agree on the handoff test",
+        "body": "Name the configuration, sequence, responsible roles, and evidence that will show the interface works. Revisit the agreement when either side changes."
+      }
+    ],
+    "example": {
+      "setup": "In a fictional mockup, a drawer body is 268 mm wide and the cabinet opening is 270 mm. The drawer team adds a 4 mm side-mounted cable guide after the opening drawing is released.",
+      "worked": [
+        "The original nominal width difference was 270 − 268 = 2 mm.",
+        "With the guide protruding 4 mm, the drawer’s relevant envelope becomes 272 mm.",
+        "That exceeds the nominal opening by 2 mm, even before considering variation or desired clearance.",
+        "The teams revise the interface record to define the maximum assembled envelope, rather than only the drawer body.",
+        "They schedule a removal-path check using the documented configuration and identify who must review future protrusions."
+      ],
+      "answer": "The missing agreement concerned the assembled envelope and change notification, not either team’s ability to measure its own part."
+    },
+    "practice": {
+      "question": "A supplier proposes a smaller drawer body but a new handle that projects into the removal path. What should happen before accepting the change?",
+      "choices": [
+        "Accept it because the body is smaller",
+        "Ask the drawer team alone to approve its own part",
+        "Update the shared envelope and removal sequence, then review the affected interface with both sides",
+        "Ignore the handle until final assembly"
+      ],
+      "correctIndex": 2,
+      "explanation": "The task depends on the complete assembly and path. A favorable change in one dimension does not establish that the shared function still works.",
+      "hint": "The interface includes what moves through the opening, not just the dimension that improved."
+    },
+    "transfer": {
+      "title": "Make the handoff a deliverable",
+      "body": "A group project becomes stronger when the shared assumptions have a home. This can be a one-page interface sketch rather than a large bureaucracy, as long as it stays current and usable.",
+      "action": "Choose two objects or two software steps that must work together. Write three shared assumptions, identify an owner for the record, and define one end-to-end check."
+    },
+    "simulation": "robot",
+    "book": [
+      {
+        "chapter": "06",
+        "label": "Interfaces and responsibility"
+      },
+      {
+        "chapter": "13",
+        "label": "From production to installed service"
+      }
+    ],
+    "sources": [
+      {
+        "label": "NASA · Interface management",
+        "url": "https://www.nasa.gov/reference/6-3-interface-management/"
+      }
+    ],
+    "simulationIntro": "Imagine one team owns the arm dimensions and another plans the tool position. Hold the joint angles fixed and change the forearm length. Use the moving endpoint to identify information those teams must share when the geometry changes."
+  }
+]

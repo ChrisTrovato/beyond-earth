@@ -1,0 +1,177 @@
+{
+  "case": "MERIDIAN",
+  "status": "fictional educational case, not a qualified design",
+  "snapshots": {
+    "P0": "unoccupied robotic precursor; loads not sized",
+    "M1": "12 adults, continuous occupation; quantitative reference",
+    "E2": "proposed 24-person expansion requiring new sizing; no inherited capacity claim"
+  },
+  "parameters": [
+    {
+      "id": "population",
+      "value": 12,
+      "unit": "adults",
+      "status": "assumed",
+      "scope": "M1"
+    },
+    {
+      "id": "floor",
+      "value": 600,
+      "unit": "m2 usable",
+      "status": "assumed",
+      "scope": "M1"
+    },
+    {
+      "id": "volume",
+      "value": 1800,
+      "unit": "m3 gas",
+      "status": "assumed",
+      "scope": "M1"
+    },
+    {
+      "id": "pressure",
+      "value": 70,
+      "unit": "kPa absolute",
+      "status": "assumed, unqualified",
+      "scope": "M1"
+    },
+    {
+      "id": "oxygen_fraction",
+      "value": 0.3,
+      "unit": "mole fraction",
+      "status": "assumed, unqualified health/fire design",
+      "scope": "M1"
+    },
+    {
+      "id": "normal_power",
+      "value": 60,
+      "unit": "kW average electrical",
+      "status": "assumed",
+      "scope": "M1"
+    },
+    {
+      "id": "survival_power",
+      "value": 30,
+      "unit": "kW electrical",
+      "status": "assumed incomplete critical-load model",
+      "scope": "M1"
+    },
+    {
+      "id": "solar",
+      "value": 200,
+      "unit": "kW nameplate",
+      "status": "assumed; site yield unresolved",
+      "scope": "M1"
+    },
+    {
+      "id": "heat",
+      "value": 100,
+      "unit": "kW rejected heat",
+      "status": "assumed independent thermal design case; not inferred from electrical load",
+      "scope": "M1"
+    },
+    {
+      "id": "cooling_branches",
+      "value": 2,
+      "unit": "isolatable branches",
+      "status": "assumed",
+      "scope": "M1"
+    },
+    {
+      "id": "branch_heat",
+      "value": 60,
+      "unit": "kW each at assumed design condition",
+      "status": "assumed; not environment-independent",
+      "scope": "M1"
+    },
+    {
+      "id": "storage_duration",
+      "value": 72,
+      "unit": "h",
+      "status": "assumed dark contingency, not complete lunar night",
+      "scope": "M1"
+    },
+    {
+      "id": "storage_usable",
+      "value": 0.8,
+      "unit": "fraction",
+      "status": "assumed",
+      "scope": "M1"
+    },
+    {
+      "id": "storage_discharge",
+      "value": 0.9,
+      "unit": "efficiency",
+      "status": "assumed",
+      "scope": "M1"
+    },
+    {
+      "id": "storage_nameplate",
+      "value": 3000,
+      "unit": "kWh",
+      "status": "derived",
+      "calculation": "30*72/(0.8*0.9)",
+      "scope": "M1"
+    },
+    {
+      "id": "food",
+      "value": 0.8,
+      "unit": "kg dry/person/day",
+      "status": "assumed; packaging and nutrition omitted",
+      "scope": "M1"
+    },
+    {
+      "id": "water_process",
+      "value": 20,
+      "unit": "kg/person/day",
+      "status": "assumed selected stream",
+      "scope": "M1"
+    },
+    {
+      "id": "water_recovery",
+      "value": 0.9,
+      "unit": "fraction selected stream",
+      "status": "assumed",
+      "scope": "M1"
+    },
+    {
+      "id": "water_makeup",
+      "value": 24,
+      "unit": "kg/day",
+      "status": "derived before other losses",
+      "calculation": "12*20*(1-0.9)",
+      "scope": "M1"
+    },
+    {
+      "id": "oxygen_use",
+      "value": 0.84,
+      "unit": "kg/person/day",
+      "status": "rounded educational assumption; not current NASA requirement",
+      "scope": "M1"
+    },
+    {
+      "id": "resupply_interval",
+      "value": 180,
+      "unit": "days",
+      "status": "assumed planning interval, not orbit schedule",
+      "scope": "M1"
+    }
+  ],
+  "unresolved": [
+    "exact site and illumination time series",
+    "launch/landing architecture and qualified cargo limits",
+    "complete mass budget",
+    "radiation shielding and human health suitability",
+    "qualified atmosphere/fire design",
+    "backup generation architecture",
+    "emergency evacuation capability",
+    "all-year energy balance",
+    "cost and funded operator"
+  ],
+  "established_story_assets": [
+    "pump spare",
+    "strainer cartridge spare",
+    "two isolated cooling branches"
+  ],
+  "fault": "gradually loading coolant strainer; ambiguous symptoms; reduce heat <=60kW before isolating one branch under assumed conditions"
+}

@@ -1,0 +1,905 @@
+[
+  {
+    "id": "R01",
+    "title": "Systems Engineering Handbook: 5.2 Product Integration",
+    "publisher": "NASA",
+    "date": "web edition; accessed 2026-10-29",
+    "url": "https://www.nasa.gov/reference/5-2-product-integration/",
+    "supports": "Integration includes interfaces and system interactions; chapters1 and5",
+    "limits": "Process guidance, not evidence that MERIDIAN has been integrated",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "01",
+      "05"
+    ]
+  },
+  {
+    "id": "R02",
+    "title": "Illumination at the Moon's South Pole, 2023 to 2030",
+    "publisher": "NASA Scientific Visualization Studio",
+    "date": "2022; simulation period2023–2030",
+    "url": "https://svs.gsfc.nasa.gov/4930",
+    "supports": "Polar illumination varies with terrain and time; chapter2",
+    "limits": "Does not select or qualify a site for MERIDIAN",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "02"
+    ]
+  },
+  {
+    "id": "R03",
+    "title": "Apollo 13: Mission Details",
+    "publisher": "NASA",
+    "date": "historical account; accessed2026-10-29",
+    "url": "https://www.nasa.gov/missions/apollo/apollo-13-mission-details/",
+    "supports": "Incompatible carbon-dioxide-removal canister interfaces and adaptation; chapter3",
+    "limits": "Historical event, not universal interchangeability prescription",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "03"
+    ]
+  },
+  {
+    "id": "R04",
+    "title": "Skylab 2: We can fix anything!",
+    "publisher": "NASA History",
+    "date": "2018",
+    "url": "https://www.nasa.gov/history/skylab-2-we-can-fix-anything/",
+    "supports": "Skylab launch damage, parasol and array repair; chapter3",
+    "limits": "Narrow historical account; recovery does not imply universal repairability",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "03"
+    ]
+  },
+  {
+    "id": "R05",
+    "title": "The initial flight anomalies of Skylab 1",
+    "publisher": "NASA Technical Reports Server",
+    "date": "1973 report; NTRS record19930015503",
+    "url": "https://ntrs.nasa.gov/citations/19930015503",
+    "supports": "Investigation of shield failure and unaccounted aerodynamic loads; chapter3",
+    "limits": "Specific failure investigation",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "03"
+    ]
+  },
+  {
+    "id": "R06",
+    "title": "International Space Station",
+    "publisher": "NASA",
+    "date": "web history; accessed2026-10-29",
+    "url": "https://www.nasa.gov/reference/international-space-station/",
+    "supports": "Assembly sequence and continuous occupation beginning November2000; chapter3",
+    "limits": "Does not establish lunar or multigenerational habitation",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "03"
+    ]
+  },
+  {
+    "id": "R07",
+    "title": "NASA Enables Construction Technology for Moon and Mars Exploration",
+    "publisher": "NASA",
+    "date": "2025-05-13",
+    "url": "https://www.nasa.gov/directorates/stmd/nasa-enables-construction-technology-for-moon-and-mars-exploration/",
+    "supports": "Construction technology research context; chapter3",
+    "limits": "Terrestrial development and analog work, not a built lunar settlement",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "03"
+    ]
+  },
+  {
+    "id": "R08",
+    "title": "What is Microgravity?",
+    "publisher": "NASA Glenn Research Center",
+    "date": "2009; web edition accessed2026-10-29",
+    "url": "https://www.nasa.gov/centers-and-facilities/glenn/what-is-microgravity/",
+    "supports": "Orbital free fall, gravity still present; chapter4",
+    "limits": "Conceptual explanation; no specific orbit design",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "04"
+    ]
+  },
+  {
+    "id": "R09",
+    "title": "Moon Facts",
+    "publisher": "NASA Science",
+    "date": "web edition accessed2026-10-29",
+    "url": "https://science.nasa.gov/moon/facts/",
+    "supports": "Approximately one-sixth gravity and tenuous exosphere; chapter4",
+    "limits": "Broad overview, not site environmental model",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "04"
+    ]
+  },
+  {
+    "id": "R10",
+    "title": "The Effects of Lunar Dust on EVA Systems During the Apollo Missions",
+    "publisher": "NASA; James R. Gaier",
+    "date": "2007-04-01; NASA/TM-2005-213610/REV1",
+    "url": "https://ntrs.nasa.gov/citations/20070021819",
+    "supports": "Observed dust impacts on seals, mechanisms, thermal control and visibility; chapter4",
+    "limits": "Apollo evidence; extrapolation to long service requires new testing",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "04"
+    ]
+  },
+  {
+    "id": "R11",
+    "title": "InSight Landing Press Kit: Mars at a Glance",
+    "publisher": "NASA Jet Propulsion Laboratory",
+    "date": "2018",
+    "url": "https://www.jpl.nasa.gov/news/press_kits/insight/landing/facts/mars-at-a-glance/",
+    "supports": "Mars surface gravity and atmosphere composition; chapter4",
+    "limits": "General facts, not a selected site model",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "04"
+    ]
+  },
+  {
+    "id": "R12",
+    "title": "Systems Engineering Handbook",
+    "publisher": "NASA",
+    "date": "NASA/SP-2016-6105 Rev2; online edition",
+    "url": "https://www.nasa.gov/reference/systems-engineering-handbook/",
+    "supports": "Lifecycle, requirements and interfaces; chapter6",
+    "limits": "Method guidance, not a compliance certification",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "06"
+    ]
+  },
+  {
+    "id": "R13",
+    "title": "Systems Engineering Handbook Appendix: Verification and Validation Plan Outline",
+    "publisher": "NASA",
+    "date": "online edition accessed2026-10-29",
+    "url": "https://www.nasa.gov/reference/system-engineering-handbook-appendix/",
+    "supports": "Verification methods and validation planning; chapter6",
+    "limits": "General guidance; selected demonstrations still need justified relevance",
+    "accessed": "2026-10-29",
+    "chapterIds": [
+      "06"
+    ]
+  },
+  {
+    "id": "H01",
+    "title": "Hazard: Space Radiation",
+    "url": "https://www.nasa.gov/hrp/hazard-space-radiation/",
+    "publisher": "NASA Human Research Program",
+    "date": "n.d.; accessed snapshot",
+    "accessed": "2026-10-29",
+    "supports": "Space radiation is a human-spaceflight hazard; NASA studies monitoring and protection. Chapter 07 uses a bounded summary of this purpose.",
+    "limits": "Overview does not establish a safe universal shielding thickness or certify MERIDIAN. Original shielding architecture discussion is a conceptual synthesis.",
+    "chapterIds": [
+      "07"
+    ]
+  },
+  {
+    "id": "H02",
+    "title": "Lunar Dust Effects on Spacesuit Systems: Insights from the Apollo Spacesuits",
+    "url": "https://ntrs.nasa.gov/citations/20090015239",
+    "publisher": "Christoffersen et al.; NASA Technical Reports Server",
+    "date": "2008-01-01",
+    "accessed": "2026-10-29",
+    "supports": "Selected Apollo hardware examination found retained lunar particles and fabric effects; comparison found no measurable added wear in the particular wrist bearing examined. Chapter 07 preserves that nuance.",
+    "limits": "Selected historical samples, not a universal lifetime test or a complete dust-management qualification.",
+    "chapterIds": [
+      "07"
+    ]
+  },
+  {
+    "id": "H03",
+    "title": "NASA-STD-3001, Volume 2, Revision F: Human Factors, Habitability, and Environmental Health",
+    "url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_2",
+    "publisher": "NASA Technical Standards System",
+    "date": "2026-07-14",
+    "accessed": "2026-10-29",
+    "supports": "Official repository identifies active Version F and date; scope integrates human health/performance, hardware/software, operations, and human-system requirements. Chapter 08 cites this scope and edition.",
+    "limits": "MERIDIAN is not audited for compliance. Repository's specific applicability and program requirements must be checked for an actual design.",
+    "chapterIds": [
+      "08"
+    ]
+  },
+  {
+    "id": "H04",
+    "title": "Life Support Baseline Values and Assumptions Document, NASA/TP-2015-218570/REV1",
+    "url": "https://ntrs.nasa.gov/api/citations/20180001338/downloads/20180001338.pdf",
+    "publisher": "Anderson, Ewert, and Keener; NASA Johnson Space Center",
+    "date": "2018-01",
+    "accessed": "2026-10-29",
+    "supports": "Table 3-33, printed p.63 (PDF p.77), nominal 82 kg crewmember model gives 0.816 kg oxygen per crewmember-day; values depend on activity and model assumptions.",
+    "limits": "Book deliberately retains 0.84 kg/person/day as its own rounded educational assumption. Other MERIDIAN water, food, power, and atmosphere inputs are not attributed to this source.",
+    "chapterIds": [
+      "08"
+    ]
+  },
+  {
+    "id": "H05",
+    "title": "NASA Achieves Water Recovery Milestone on International Space Station",
+    "url": "https://www.nasa.gov/missions/station/nasa-achieves-water-recovery-milestone-on-international-space-station/",
+    "publisher": "NASA",
+    "date": "2023-06-20",
+    "accessed": "2026-10-29",
+    "supports": "Reported demonstration of 98 percent overall water recovery in the described ISS system with Brine Processor Assembly; additional water recovered from brine.",
+    "limits": "Water-system result, not total ecological/material closure or guaranteed performance for MERIDIAN's assumed boundary.",
+    "chapterIds": [
+      "08"
+    ]
+  },
+  {
+    "id": "H06",
+    "title": "Space Food System Overview",
+    "url": "https://ntrs.nasa.gov/api/citations/20250004456/downloads/ISS%20Food%20System%20Overview%20-%20ION%20052025.pdf",
+    "publisher": "Xulei Wu; NASA Johnson Space Center",
+    "date": "2025-05-22",
+    "accessed": "2026-10-29",
+    "supports": "NASA presentation identifies future food-system challenges including extended shelf life; Chapter 09 uses a short discussion of storage duration and nutrition/quality requirements.",
+    "limits": "Presentation is not a specification for MERIDIAN's diet, dry mass, or food reserves. 0.8 kg dry food/person/day is an explicit teaching assumption.",
+    "chapterIds": [
+      "09"
+    ]
+  },
+  {
+    "id": "H07",
+    "title": "VEGGIE: Vegetable Production System",
+    "url": "https://science.nasa.gov/mission/veggie/",
+    "publisher": "NASA Science",
+    "date": "n.d.; mission launched 2014-04-18",
+    "accessed": "2026-10-29",
+    "supports": "ISS experiment studies plant growth in microgravity and supplies supplemental fresh food; does not claim full dietary self-sufficiency.",
+    "limits": "Book's 20 m² lighting exercise is original hypothetical arithmetic and predicts no crop yield.",
+    "chapterIds": [
+      "09"
+    ]
+  },
+  {
+    "id": "H08",
+    "title": "Boldly Go! NASA's New Space Toilet Offers More Comfort, Improved Efficiency for Deep Space Missions",
+    "url": "https://www.nasa.gov/humans-in-space/boldly-go-nasas-new-space-toilet-offers-more-comfort-improved-efficiency-for-deep-space-missions/",
+    "publisher": "NASA",
+    "date": "2020-09-17",
+    "accessed": "2026-10-29",
+    "supports": "UWMS description explains microgravity airflow collection and ergonomic/maintenance improvements. Chapter 09 cites a bounded historical design example.",
+    "limits": "2020 description, not current complete ISS sanitation status; microgravity hardware not asserted suitable unchanged for lunar surface.",
+    "chapterIds": [
+      "09"
+    ]
+  },
+  {
+    "id": "H09",
+    "title": "Fission Surface Power",
+    "url": "https://www.nasa.gov/exploration-systems-development-mission-directorate/fission-surface-power/",
+    "publisher": "NASA",
+    "date": "n.d.; accessed snapshot",
+    "accessed": "2026-10-29",
+    "supports": "NASA describes collaboration with DOE and industry on 40 kW-class lunar fission power and early-2030s objective.",
+    "limits": "Development objective, not completed lunar operation; no reactor supplied to fictional MERIDIAN by implication.",
+    "chapterIds": [
+      "10"
+    ]
+  },
+  {
+    "id": "H10",
+    "title": "7.0 Thermal Control, State of the Art of Small Spacecraft Technology",
+    "url": "https://www.nasa.gov/smallsat-institute/sst-soa/thermal-control/",
+    "publisher": "NASA Small Spacecraft Systems Virtual Institute",
+    "date": "n.d.; accessed edition",
+    "accessed": "2026-10-29",
+    "supports": "Vacuum heat transfer, surface optical properties, and environmental-exposure considerations. Chapter 11 uses a short foundational source note.",
+    "limits": "Small-spacecraft review does not size MERIDIAN. Radiator, fluid-flow, transient, and uncertainty examples are original simplified calculations.",
+    "chapterIds": [
+      "11"
+    ]
+  },
+  {
+    "id": "H11",
+    "title": "Human Integration Design Handbook",
+    "url": "https://www.nasa.gov/human-integration-design-handbook/",
+    "publisher": "NASA",
+    "date": "n.d.; Revision 1 linked",
+    "accessed": "2026-10-29",
+    "supports": "Handbook collects human-spaceflight history, lessons, and design rationale; companion Human Integration Design Processes addresses methods.",
+    "limits": "Chapter 12's layouts, queue example, privacy choices, and design situations are original hypothetical analysis, not validated habitat prescriptions.",
+    "chapterIds": [
+      "12"
+    ]
+  },
+  {
+    "id": "H12",
+    "title": "About Human Spaceflight Risks",
+    "url": "https://www.nasa.gov/hrp/risks/",
+    "publisher": "NASA Human Research Program",
+    "date": "n.d.; accessed snapshot",
+    "accessed": "2026-10-29",
+    "supports": "Five-hazard framework: radiation, isolation/confinement, distance from Earth, gravity fields, hostile/closed environments; risks vary by mission.",
+    "limits": "Overview does not certify indefinite lunar residence or provide clinical treatment advice.",
+    "chapterIds": [
+      "12"
+    ]
+  },
+  {
+    "id": "H13",
+    "title": "Hazard: Gravity Fields",
+    "url": "https://www.nasa.gov/hrp/hazard-gravity-fields/",
+    "publisher": "NASA Human Research Program",
+    "date": "n.d.; accessed snapshot",
+    "accessed": "2026-10-29",
+    "supports": "Altered gravity and transitions affect human adaptation, including bone, muscle, balance and performance concerns.",
+    "limits": "Evidence from missions and analog research is not a lifetime lunar or Mars population study. Book explicitly preserves unknowns for partial gravity and multigenerational residence.",
+    "chapterIds": [
+      "12"
+    ]
+  },
+  {
+    "id": "H14",
+    "title": "Architecture Standards",
+    "url": "https://www.nasa.gov/architecture-standards/",
+    "publisher": "NASA",
+    "date": "n.d.; docking entry Revision G, August 2025",
+    "accessed": "2026-10-29",
+    "supports": "Catalogue lists docking, rendezvous, robotics, power, life-support, thermal, software standards; docking entry identifies IDSS Revision G.",
+    "limits": "Catalogue supports interface ecosystem and edition claim, not compatibility certification for fictional vehicles.",
+    "chapterIds": [
+      "13"
+    ]
+  },
+  {
+    "id": "H15",
+    "title": "Surface Mating, Space Logistics Technology Catalog",
+    "url": "https://www.nasa.gov/surface-mating/",
+    "publisher": "NASA",
+    "date": "2026-06-17 catalogue date",
+    "accessed": "2026-10-29",
+    "supports": "IDSS-S surface transfer concept listed at TRL 3; pressurized surface transfer described as emerging, later readiness estimate stated.",
+    "limits": "Concept and estimate, not completed lunar demonstration or guaranteed readiness date.",
+    "chapterIds": [
+      "13"
+    ]
+  },
+  {
+    "id": "H16",
+    "title": "Mars Communications Disruption and Delay: 2023 Moon to Mars Architecture white paper",
+    "url": "https://www.nasa.gov/wp-content/uploads/2024/01/mars-communications-disruption-and-delay.pdf",
+    "publisher": "NASA",
+    "date": "2023; posted 2024-01",
+    "accessed": "2026-10-29",
+    "supports": "Delay and disruption depend on trajectory and mission phase; some one-way delays can reach approximately 21–23 minutes.",
+    "limits": "Not a fixed delay for all Mars operations. Forty-minute question/reply example is original arithmetic assuming 20 minutes each way and immediate response.",
+    "chapterIds": [
+      "14"
+    ]
+  },
+  {
+    "id": "H17",
+    "title": "NASA's Oxygen-Generating Experiment MOXIE Completes Mars Mission",
+    "url": "https://www.jpl.nasa.gov/news/nasas-oxygen-generating-experiment-moxie-completes-mars-mission/",
+    "publisher": "NASA Jet Propulsion Laboratory",
+    "date": "2023-09-06",
+    "accessed": "2026-10-29",
+    "supports": "Sixteen runs, total 122 g oxygen, peak 12 g/hour at at least 98 percent purity, operations concluded in 2023.",
+    "limits": "Bounded rover experiment, not continuous settlement service. Rate-ratio exercise explicitly disclaims replication of 35 instruments as a design.",
+    "chapterIds": [
+      "14"
+    ]
+  },
+  {
+    "id": "H18",
+    "title": "Long Term Human Presence in Space Requires Artificial Gravity and Radiation Shielding",
+    "url": "https://ntrs.nasa.gov/citations/20230013553",
+    "publisher": "Harry W. Jones; NASA Ames Research Center; AIAA ASCEND conference paper",
+    "date": "2023-10",
+    "accessed": "2026-10-29",
+    "supports": "A published conceptual argument for artificial gravity/radiation protection and rotating habitat architectures.",
+    "limits": "Author's conceptual argument, not a demonstrated rotating settlement or consensus medical certification. Book does not adopt its universal spin-rate or lifetime-health assertions; mechanics calculations are independently derived.",
+    "chapterIds": [
+      "14"
+    ]
+  },
+  {
+    "id": "M01",
+    "title": "NASA Enables Construction Technology for Moon and Mars Exploration",
+    "url": "https://www.nasa.gov/directorates/stmd/nasa-enables-construction-technology-for-moon-and-mars-exploration/",
+    "publisher": "NASA",
+    "date": "2025-05-13",
+    "accessed": "2026-10-29",
+    "supports": "MMPACT studies large-scale robotic construction using lunar and Martian regolith simulants; terrestrial CHAPEA habitat example.",
+    "limits": "Research and terrestrial demonstrations, not completed lunar settlement construction. Chapter 15 source-derived summary under 100 words.",
+    "chapterIds": [
+      "15"
+    ]
+  },
+  {
+    "id": "M02",
+    "title": "NASA's Network of Small Moon-Bound Rovers Is Ready to Roll",
+    "url": "https://www.jpl.nasa.gov/news/nasas-network-of-small-moon-bound-rovers-is-ready-to-roll/",
+    "publisher": "NASA Jet Propulsion Laboratory",
+    "date": "2024-03-07",
+    "accessed": "2026-10-29",
+    "supports": "CADRE environmental tests and terrestrial development-model cooperative driving, replanning and battery coordination.",
+    "limits": "Dated preflight terrestrial testing report; does not establish autonomous lunar construction or current flight outcome.",
+    "chapterIds": [
+      "15"
+    ]
+  },
+  {
+    "id": "M03",
+    "title": "Systems Engineering Handbook, 5.0 Product Realization",
+    "url": "https://www.nasa.gov/reference/5-0-product-realization/",
+    "publisher": "NASA",
+    "date": "2016 handbook revision; web edition date not established",
+    "accessed": "2026-10-29",
+    "supports": "Verification and validation distinctions; analysis, inspection, demonstration and testing; documentation of results and discrepancies.",
+    "limits": "General guidance; fictional MERIDIAN is not certified or represented as compliant. Original examples and narratives are author's synthesis.",
+    "chapterIds": [
+      "15"
+    ]
+  },
+  {
+    "id": "M04",
+    "title": "Robotics Work Successful, Station Returned to Full Power",
+    "url": "https://www.nasa.gov/blogs/spacestation/2019/05/02/robotics-work-successful-station-returned-to-full-power/",
+    "publisher": "NASA",
+    "date": "2019-05-02",
+    "accessed": "2026-10-29",
+    "supports": "Ground-controlled Canadarm2/Dextre replacement of a failed ISS main bus switching unit and successful checkout.",
+    "limits": "Specific historical servicing operation on designed hardware; no extrapolation to arbitrary spacecraft repair. Future schedules in source not adopted.",
+    "chapterIds": [
+      "16"
+    ]
+  },
+  {
+    "id": "M05",
+    "title": "About Dextre",
+    "url": "https://www.asc-csa.gc.ca/eng/iss/dextre/about.asp",
+    "publisher": "Canadian Space Agency",
+    "date": "2024-06-04 modified",
+    "accessed": "2026-10-29",
+    "supports": "Dextre's relationship to Canadarm2 and Mobile Base System; ground-control operations.",
+    "limits": "Dated overview; prospective 2025 vision-system statement not used as completed fact.",
+    "chapterIds": [
+      "16"
+    ]
+  },
+  {
+    "id": "M06",
+    "title": "Additive Manufacturing Part Qualification",
+    "url": "https://www.nist.gov/programs-projects/additive-manufacturing-part-qualification",
+    "publisher": "NIST",
+    "date": "2025-03-26 updated",
+    "accessed": "2026-10-29",
+    "supports": "Qualification research involving post-process measurement and nondestructive testing.",
+    "limits": "Project scope, not a universal certification standard or proof that a given printed part is suitable.",
+    "chapterIds": [
+      "17"
+    ]
+  },
+  {
+    "id": "M07",
+    "title": "Measurement Science for Additive Manufacturing Program",
+    "url": "https://www.nist.gov/programs-projects/measurement-science-additive-manufacturing-program",
+    "publisher": "NIST",
+    "date": "Page date not established",
+    "accessed": "2026-10-29",
+    "supports": "Material characterization, sensing, monitoring, process control, variability and qualification as linked manufacturing concerns.",
+    "limits": "Program overview supports a short factual anchor; fictional workshop analyses and worked examples are original.",
+    "chapterIds": [
+      "17"
+    ]
+  },
+  {
+    "id": "M08",
+    "title": "NASA's Oxygen-Generating Experiment MOXIE Completes Mars Mission",
+    "url": "https://www.nasa.gov/solar-system/nasas-oxygen-generating-experiment-moxie-completes-mars-mission/",
+    "publisher": "NASA",
+    "date": "2023-09-06",
+    "accessed": "2026-10-29",
+    "supports": "122 grams total oxygen, best rate 12 grams/hour, at least 98% purity; bounded Mars atmosphere demonstration.",
+    "limits": "Not lunar feedstock, continuous settlement plant, storage system or complete life-support closure.",
+    "chapterIds": [
+      "17"
+    ]
+  },
+  {
+    "id": "M09",
+    "title": "Systems Engineering Handbook, 6.0 Crosscutting Technical Management",
+    "url": "https://www.nasa.gov/reference/6-0-crosscutting-technical-management/",
+    "publisher": "NASA",
+    "date": "2016 handbook revision; web edition date not established",
+    "accessed": "2026-10-29",
+    "supports": "Configuration identification, change control, status records, audits, and coordination of interface-affecting changes.",
+    "limits": "General framework, not an assertion of compliance or a mandatory process for personal learning projects.",
+    "chapterIds": [
+      "17"
+    ]
+  },
+  {
+    "id": "M10",
+    "title": "7.0 Habitability Functions, NASA-STD-3001 Volume 2 web reference",
+    "url": "https://www.nasa.gov/reference/7-0-habit-ability-functions-vol-2/",
+    "publisher": "NASA",
+    "date": "Web reference; controlled edition must be checked for actual application",
+    "accessed": "2026-10-29",
+    "supports": "Daily functions and stowage provisions include location, protection, restraint and usable access.",
+    "limits": "Mission human-systems requirements are not evidence of lifelong lunar community suitability. No medical treatment guidance derived.",
+    "chapterIds": [
+      "18"
+    ]
+  },
+  {
+    "id": "M11",
+    "title": "NASA Plans Next Space Station Repair Spacewalk For Monday",
+    "url": "https://www.nasa.gov/news-release/nasa-plans-next-space-station-repair-spacewalk-for-monday/",
+    "publisher": "NASA",
+    "date": "2010-08-12",
+    "accessed": "2026-10-29",
+    "supports": "Two spacewalks had removed failed ISS ammonia pump; third planned for installation; failure removed half cooling capability.",
+    "limits": "Historical dated plan; manuscript does not claim this article documents final completion or that fault mechanism matches fictional strainer event.",
+    "chapterIds": [
+      "19"
+    ]
+  },
+  {
+    "id": "M12",
+    "title": "In-space Servicing, Assembly, and Manufacturing (ISAM)",
+    "url": "https://www.nasa.gov/isam/",
+    "publisher": "NASA",
+    "date": "Program page; date not established",
+    "accessed": "2026-10-29",
+    "supports": "NASA program direction toward servicing, repair, upgrade, assembly and manufacturing in space.",
+    "limits": "Program goals do not prove a proposed service market, autonomous yard, or fictional infrastructure is feasible.",
+    "chapterIds": [
+      "20"
+    ]
+  },
+  {
+    "id": "M13",
+    "title": "NASA's Management of Risks to Sustaining ISS Operations through 2030",
+    "url": "https://oig.nasa.gov/audits/nasas-management-of-risks-to-sustaining-iss-operations-through-2030/",
+    "publisher": "NASA Office of Inspector General",
+    "date": "2024-09-26",
+    "accessed": "2026-10-29",
+    "supports": "Audit scope explicitly includes continued operation, crew and operational safety and controlled deorbit.",
+    "limits": "2030/2031 dates described only as historical audit planning horizon, not confirmed final schedule in October 2026. Full technical report not represented as reviewed.",
+    "chapterIds": [
+      "21"
+    ]
+  },
+  {
+    "id": "M14",
+    "title": "Sentry",
+    "url": "https://www.whoi.edu/what-we-do/explore/underwater-vehicles/auvs/sentry/paged-2/2/",
+    "publisher": "Woods Hole Oceanographic Institution",
+    "date": "Page date not established",
+    "accessed": "2026-10-29",
+    "supports": "Sentry autonomous underwater vehicle and 6000-meter exploration capability.",
+    "limits": "No transfer of design suitability to space and no amateur depth or pressure-vessel instruction.",
+    "chapterIds": [
+      "22"
+    ]
+  },
+  {
+    "id": "M15",
+    "title": "Voyager Mission Overview",
+    "url": "https://science.nasa.gov/mission/voyager/mission-overview/",
+    "publisher": "NASA Science",
+    "date": "Living mission overview; individual event dates 2012 and 2018",
+    "accessed": "2026-10-29",
+    "supports": "Voyager 1 entered interstellar space August 2012; Voyager 2 November 5, 2018.",
+    "limits": "Crossing heliopause differs from reaching another star; no reliance on current instrument status or predicted lifetime.",
+    "chapterIds": [
+      "22"
+    ]
+  },
+  {
+    "id": "E01",
+    "title": "Aerospace Engineering (MAE-BS-001)",
+    "url": "https://maeweb.ucsd.edu/undergrad/aerospace-engineering",
+    "publisher": "UC San Diego, Mechanical and Aerospace Engineering",
+    "date": "Undated live page; checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "Undergraduate disciplinary foundations and explicit three-year transfer-plan listing.",
+    "limits": "Program structure is current snapshot, not an individual degree audit or a future offering guarantee.",
+    "chapterIds": [
+      "23",
+      "24"
+    ]
+  },
+  {
+    "id": "E02",
+    "title": "Aerospace Engineering / Mechanical Engineering Three-Year Transfer Plan",
+    "url": "https://maeweb.ucsd.edu/sites/default/files/uploads/AE%203.pdf",
+    "publisher": "UC San Diego, Mechanical and Aerospace Engineering",
+    "date": "Reviewed and updated May 2025",
+    "accessed": "2026-10-29",
+    "supports": "Three-year transfer sequence and stated prior mathematics, physics, and chemistry assumptions.",
+    "limits": "Plan is for the stated catalog and preparation; 2030 entrants require a fresh audit. PDF text read; browser screenshot retrieval failed.",
+    "chapterIds": [
+      "24"
+    ]
+  },
+  {
+    "id": "E03",
+    "title": "Transfer Major Preparation",
+    "url": "https://admissions.ucsd.edu/transfer/transfer-major-preparation.html",
+    "publisher": "UC San Diego Undergraduate Admissions",
+    "date": "Undated live page; checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "Aerospace required MATH18,20A/B/C/D; CHEM6A; PHYS2A/B/C/CL; recommended MAE8; spring completion and ASSIST direction.",
+    "limits": "Minimum admission screening differs from complete major preparation and personal articulation.",
+    "chapterIds": [
+      "24"
+    ]
+  },
+  {
+    "id": "E04",
+    "title": "Cal-GETC",
+    "url": "https://admission.universityofcalifornia.edu/admission-requirements/transfer-requirements/preparing-to-transfer/general-education-igetc/cal-getc/",
+    "publisher": "University of California Admissions",
+    "date": "Undated live guidance; fall 2025 implementation",
+    "accessed": "2026-10-29",
+    "supports": "34-semester-unit pattern, fall2025-or-later entrants, and not a universal UC admission requirement.",
+    "limits": "Applicability depends on catalog rights, destination college/school, and major; not an individual GE certification.",
+    "chapterIds": [
+      "24"
+    ]
+  },
+  {
+    "id": "E05",
+    "title": "MESA Program",
+    "url": "https://www.swccd.edu/student-support/mesa-program/",
+    "publisher": "Southwestern College",
+    "date": "Live page includes Fall 2026 information",
+    "accessed": "2026-10-29",
+    "supports": "Published tutoring, mentoring, transfer, advising, and STEM opportunities.",
+    "limits": "Eligibility, current availability, and acceptance are not established for an individual reader.",
+    "chapterIds": [
+      "24"
+    ]
+  },
+  {
+    "id": "E06",
+    "title": "MESA Program",
+    "url": "https://www.sdcity.edu/students/services/mesa/",
+    "publisher": "San Diego City College",
+    "date": "Undated live page; checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "Academic support and transfer preparation for mathematics, engineering, and science students.",
+    "limits": "Not a guarantee of membership, a particular laboratory, or current project availability.",
+    "chapterIds": [
+      "24"
+    ]
+  },
+  {
+    "id": "E07",
+    "title": "Aerospace Engineering Prerequisite Guide - FA23 Catalog",
+    "url": "https://maeweb.ucsd.edu/sites/default/files/uploads/AE%20Course%20list%20w%20prereqs%20by%20major%20FA23_Feb2025%20(3).pdf",
+    "publisher": "UC San Diego, Mechanical and Aerospace Engineering",
+    "date": "Reviewed and updated May 2025",
+    "accessed": "2026-10-29",
+    "supports": "Published prerequisite chains and usual terms for MAE143A,143B,142 and aerospace design dependencies.",
+    "limits": "Usual offering terms are not future schedule guarantees; PDF text read; browser screenshot retrieval failed.",
+    "chapterIds": [
+      "24"
+    ]
+  },
+  {
+    "id": "E08",
+    "title": "Aerospace Engineers, Occupational Outlook Handbook",
+    "url": "https://www.bls.gov/ooh/architecture-and-engineering/aerospace-engineers.htm",
+    "publisher": "U.S. Bureau of Labor Statistics",
+    "date": "2025–2035 projection vintage; live page checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "8% projected U.S. employment growth and approximately3800 annual openings over2025–2035; openings include replacement needs.",
+    "limits": "National occupation, not degree holders, current vacancies, personal prospects, or lunar-settlement employment.",
+    "chapterIds": [
+      "26"
+    ]
+  },
+  {
+    "id": "E09",
+    "title": "Mechanical Engineers, Occupational Outlook Handbook",
+    "url": "https://www.bls.gov/ooh/architecture-and-engineering/mechanical-engineers.htm",
+    "publisher": "U.S. Bureau of Labor Statistics",
+    "date": "2025–2035 projection vintage; live page checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "11% projected U.S. employment growth and approximately17800 annual openings over2025–2035.",
+    "limits": "Same occupational and forecasting boundaries as E08; no extrapolation to2040.",
+    "chapterIds": [
+      "26"
+    ]
+  },
+  {
+    "id": "E10",
+    "title": "MAE Master of Science Programs",
+    "url": "https://mae.ucsd.edu/grad/mae-master-science-program",
+    "publisher": "UC San Diego, Mechanical and Aerospace Engineering",
+    "date": "Undated live requirements; checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "PlanI thesis vs PlanII comprehensive exam; thesis major codes and36-unit structure.",
+    "limits": "Names and requirements may change; admission does not guarantee desired adviser, project, or funding.",
+    "chapterIds": [
+      "27",
+      "28",
+      "29"
+    ]
+  },
+  {
+    "id": "E11",
+    "title": "MAE Doctoral Program",
+    "url": "https://mae.ucsd.edu/grad/phd",
+    "publisher": "UC San Diego, Mechanical and Aerospace Engineering",
+    "date": "Undated live requirements; checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "Original-research degree, qualification/candidacy/dissertation structure, listed major codes including jointSDSU route.",
+    "limits": "Typical timeline is not an individual completion promise.",
+    "chapterIds": [
+      "27",
+      "29"
+    ]
+  },
+  {
+    "id": "E12",
+    "title": "Masters in Aerospace Engineering",
+    "url": "https://aerospace.sdsu.edu/programs/masters/masters-in-aerospace-engineering",
+    "publisher": "San Diego State University, Aerospace Engineering",
+    "date": "Undated live page; checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "Three specialization groupings and thesis research discussion.",
+    "limits": "Some page examples use older employer names; those were not adopted. Confirm catalog-specific culminating route.",
+    "chapterIds": [
+      "29"
+    ]
+  },
+  {
+    "id": "E13",
+    "title": "Master's Program",
+    "url": "https://aa.stanford.edu/academics-admissions/graduate-programs/masters-program",
+    "publisher": "Stanford University, Aeronautics and Astronautics",
+    "date": "Undated live requirements; checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "45-unitMS; no thesis required; experimentation/design requirement; optional research and distinction; part-time route.",
+    "limits": "Optional research requires arrangements; no admission, supervision, or financial prediction.",
+    "chapterIds": [
+      "29"
+    ]
+  },
+  {
+    "id": "E14",
+    "title": "Graduate Degrees & Requirements",
+    "url": "https://aeroastro.mit.edu/education/graduate-degrees-requirements/",
+    "publisher": "Massachusetts Institute of Technology, AeroAstro",
+    "date": "Undated live requirements; checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "SM described as two-year program with thesis; doctoralPhD/ScD research routes.",
+    "limits": "Published structure is not a guaranteed personal duration or project placement.",
+    "chapterIds": [
+      "29"
+    ]
+  },
+  {
+    "id": "E15",
+    "title": "Aerospace (AE), 2026–2027 Catalog",
+    "url": "https://www.catalog.caltech.edu/current/information-for-graduate-students/special-regulations-for-graduate-options/aerospace-ae/",
+    "publisher": "California Institute of Technology",
+    "date": "2026–2027 catalog",
+    "accessed": "2026-10-29",
+    "supports": "One-year master's programs in aeronautics or space engineering; no research component required; doctoral options; bachelor's-equivalent eligibility.",
+    "limits": "Current URL will roll forward; snapshot date and catalog year are material.",
+    "chapterIds": [
+      "29"
+    ]
+  },
+  {
+    "id": "E16",
+    "title": "Master of Engineering",
+    "url": "https://me.berkeley.edu/graduate/meng/",
+    "publisher": "University of California, Berkeley, Mechanical Engineering",
+    "date": "Undated live page includes Spring2027 links",
+    "accessed": "2026-10-29",
+    "supports": "ProfessionalMEng technical concentrations, leadership/capstone, full-time and decelerated routes.",
+    "limits": "No admission-rate or salary claims used; exact future availability requires verification.",
+    "chapterIds": [
+      "29"
+    ]
+  },
+  {
+    "id": "E17",
+    "title": "Graduate Degree Requirements",
+    "url": "https://www.robotics.umich.edu/academics/graduate/degree-requirements/",
+    "publisher": "University of Michigan Robotics",
+    "date": "Undated live requirements; checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "30-creditMS with directed study, sensing/reasoning/acting breadth, doctoral requirements.",
+    "limits": "Program structure does not establish a particular hardware project or adviser availability.",
+    "chapterIds": [
+      "29"
+    ]
+  },
+  {
+    "id": "E18",
+    "title": "Ph.D. and M.S. Requirements for Admission",
+    "url": "https://scripps.ucsd.edu/masters",
+    "publisher": "UC San Diego, Scripps Institution of Oceanography",
+    "date": "Undated live requirements; checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "Applied Ocean Science-specific preparation expectations and distinction from MAE route.",
+    "limits": "Engineering background is not an automatic prerequisite-completeness determination.",
+    "chapterIds": [
+      "28"
+    ]
+  },
+  {
+    "id": "E19",
+    "title": "Graduate Admissions: Fall2027 MAE Graduate Admissions",
+    "url": "https://mae.ucsd.edu/grad/graduate-admissions",
+    "publisher": "UC San Diego, Mechanical and Aerospace Engineering",
+    "date": "Fall2027 application cycle; checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "Undergraduate engineering major not mandatory; math/physics base expected; limitedMS support and warning not to expect assistantships.",
+    "limits": "No stipend amount or admission probability carried forward; written offers and later-cycle rules govern.",
+    "chapterIds": [
+      "29",
+      "30"
+    ]
+  },
+  {
+    "id": "E20",
+    "title": "Masters Program",
+    "url": "https://aerospace.sdsu.edu/programs/masters",
+    "publisher": "San Diego State University, Aerospace Engineering",
+    "date": "Live page includes Fall2026 brochure",
+    "accessed": "2026-10-29",
+    "supports": "Program includes full-time students and working engineers; joint doctoral relationship withUCSD described.",
+    "limits": "Old ranking/employer statements omitted; program schedule and doctoral route require individual verification.",
+    "chapterIds": [
+      "29"
+    ]
+  },
+  {
+    "id": "E21",
+    "title": "Admission Process: Fall2027 Application Process",
+    "url": "https://aerospace.sdsu.edu/programs/masters/admission",
+    "publisher": "San Diego State University, Aerospace Engineering",
+    "date": "Fall2027 application cycle",
+    "accessed": "2026-10-29",
+    "supports": "Related fields may be conditionally admitted with prerequisite work;GRE reinstated forFall2027; university and departmental application steps.",
+    "limits": "Example of changing policy, not future advice forChris's eventual application year.",
+    "chapterIds": [
+      "29"
+    ]
+  },
+  {
+    "id": "E22",
+    "title": "Admissions",
+    "url": "https://www.robotics.umich.edu/academics/graduate/admissions/",
+    "publisher": "University of Michigan Robotics",
+    "date": "Undated live page; checked 2026-10-29",
+    "accessed": "2026-10-29",
+    "supports": "Engineering background recommended but not strictly required; preparation and fit considered.",
+    "limits": "No personal eligibility or admission estimate inferred.",
+    "chapterIds": [
+      "29"
+    ]
+  },
+  {
+    "id": "E23",
+    "title": "Graduate Student Financial Support",
+    "url": "https://mae.ucsd.edu/grad/graduate-student-financial-support",
+    "publisher": "UC San Diego, Mechanical and Aerospace Engineering",
+    "date": "Live page includes October2026 update",
+    "accessed": "2026-10-29",
+    "supports": "Fellowships, scholarships, academic employment; doctoral priority; support conditions vary.",
+    "limits": "No claim of guaranteed support; consult current written offer and official financial terms.",
+    "chapterIds": [
+      "30"
+    ]
+  }
+]

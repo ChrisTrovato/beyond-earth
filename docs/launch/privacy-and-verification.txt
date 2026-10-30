@@ -1,0 +1,59 @@
+BEYOND EARTH — PRIVACY AND CONTENT VERIFICATION
+Checked: 29 October 2026
+Result: PASS for the completed release files present at this check.
+
+PUBLIC CONTENT
+60 lessons; 20 build studies; 10 learning paths; 18 lab/game routes.
+The arcade contains 3 games and 9 challenges; the design studio contains 3 labs.
+8 video excerpts connect to existing lessons and projects.
+The field guide contains 30 chapters, an epilogue, a glossary, and 69 source records.
+
+VERIFICATION
+- All lesson simulation names are supported by the current learning renderer.
+- All project, path, reel, chapter, and book-citation references checked resolve.
+- Rendered all 20 project templates and all 18 new lesson templates in a code-level
+  harness. Lesson sources, book links, project measurements, and evidence fields appear.
+- 57 arithmetic checks passed for the new instructional content. Its audited file
+  hash is unchanged after integration.
+- Four saved-progress regression suites passed: journey storage, multiple tabs,
+  workbench storage/review/project backup, and study-session timer (9 scenarios).
+- Corrected collection counts and the structure-lab learning connection were rechecked.
+- All sharing-page image/video references now resolve. The two sharing graphics,
+  site preview, video poster, and MP4 are present; their metadata scan is clean.
+- The main agent additionally verified explicit standard-YouTube fallback playback,
+  player removal on next talk, a real CSV download, and mobile views without overflow.
+
+PRIVACY
+- Scanned 104 public text/code/data files, including the downloadable manuscript.
+- Checked metadata on 11 raster images and 1 local video file.
+- No identifying reader biography, precise personal location, private education
+  schedule, family details, private background, or local filesystem paths were found.
+- Public source authors and speakers remain credited.
+- The original private production files remain unchanged; 34 retained hashes match.
+- The public PDF is unchanged from its fully reviewed, sanitized edition. Its
+  earlier text, metadata, navigation, and page-layout checks remain applicable.
+
+PUBLIC PDF
+Pages: 264
+Size: 1,206,051 bytes
+SHA-256: 433ba70a7f132a47045563ea85953b157e519f7959604d173b14c225944c8679
+Author metadata: Beyond Earth - Public Research Edition
+
+PROGRESS AND EXTERNAL SERVICES
+Learning notes and progress are stored in this browser; the application does not
+upload them to a learning database. A shared browser profile can see local records.
+Exports contain the learner's own records and should be shared deliberately.
+
+The reel's YouTube preview thumbnails can load before a video is played. Video
+players and the YouTube player API load only after the visitor clicks to load an
+excerpt. The default embed uses youtube-nocookie.com. If it fails, a separately
+labeled button lets the visitor explicitly choose the standard youtube.com player.
+Either player connects to YouTube and may involve its cookies or other processing.
+Direct publisher links are also available. The site uses Google Fonts and Vercel
+hosting, which involve ordinary external requests.
+
+BOUNDARY OF THIS CHECK
+This is a static-file and code-level audit, not a browser playback or deployment
+certificate. External video availability can change. The main release workflow
+handles browser and deployment checks. Later file changes need a fresh check.
+This report describes privacy categories without reproducing removed information.

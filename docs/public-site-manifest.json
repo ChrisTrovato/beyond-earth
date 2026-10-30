@@ -1,0 +1,591 @@
+{
+  "importDate": "2026-10-30",
+  "liveUrl": "https://ditchthescroll.com/beyond-earth/",
+  "files": [
+    {
+      "file": "academy.js",
+      "bytes": 29353,
+      "sha256": "2b6f38529b91cbd7e6dc60fa3a855a9f5e68b5a80b8d362c240a8d134751714a"
+    },
+    {
+      "file": "app.js",
+      "bytes": 32859,
+      "sha256": "4aedee4421e783326e16bdaedbaa26d22cade8eb6e91c4581e7c56759d045f3d"
+    },
+    {
+      "file": "assets/deep-ocean.jpg",
+      "bytes": 354285,
+      "sha256": "5cb4fd6b37a6eac7ac5185fa2775306327ba8eab4a42476be883661a6b77ba0f"
+    },
+    {
+      "file": "assets/figures/01-1.svg",
+      "bytes": 2482,
+      "sha256": "55c8f1162dc5529a45796ae49d713acf052df34b25e652a1bce4850dda6af713"
+    },
+    {
+      "file": "assets/figures/01-2.svg",
+      "bytes": 3648,
+      "sha256": "e5d81baa1894eea177bc6f933ce4d656ee78cf1ab7e9ca06016ee2f6dba0540c"
+    },
+    {
+      "file": "assets/figures/02-1.svg",
+      "bytes": 2257,
+      "sha256": "391543639b0e182a1b83d767a545cd7f84c47c100da0db2740c8ee8704e171db"
+    },
+    {
+      "file": "assets/figures/02-2.svg",
+      "bytes": 1625,
+      "sha256": "46722c887daeee865818f1536559190776fcc57524fa0a170943e7ad35f4f8b1"
+    },
+    {
+      "file": "assets/figures/03-1.svg",
+      "bytes": 1680,
+      "sha256": "eaf6f326b3827dc9d2e72c705e04b8361ad5e5a3611cb0f66040b4aa2e66ab5c"
+    },
+    {
+      "file": "assets/figures/03-2.svg",
+      "bytes": 1872,
+      "sha256": "ff698767f0a9f39c2398216f97809fecddc2cad72ae9b3a9853c61a9064e1330"
+    },
+    {
+      "file": "assets/figures/04-1.svg",
+      "bytes": 2489,
+      "sha256": "4cd343cca564fad30ba1d38c9d64488d9861720cc00513c3e985c175dc7851fa"
+    },
+    {
+      "file": "assets/figures/04-2.svg",
+      "bytes": 2366,
+      "sha256": "2d39d956a1ed4a3360bb53e962aa6ba5c13b3b32c44147da92ae56bff84d82e0"
+    },
+    {
+      "file": "assets/figures/05-1.svg",
+      "bytes": 3729,
+      "sha256": "1c8211cf4cbb9a454396c6256c394f4f7494a823c5a675be532d131cd331018f"
+    },
+    {
+      "file": "assets/figures/05-2.svg",
+      "bytes": 1954,
+      "sha256": "39a897e3e70a0507873dc573a8a395e724619e481763a32edc2e1bff12301f2b"
+    },
+    {
+      "file": "assets/figures/06-1.svg",
+      "bytes": 4029,
+      "sha256": "1f527b1be0116e2ddaa7dbd04a4ab7c704bce4ccf8091caff421d7112f50e802"
+    },
+    {
+      "file": "assets/figures/06-2.svg",
+      "bytes": 2975,
+      "sha256": "65ecc2e1a5c8ed7574962d5a949de1226c1138cafb8bff63c9be2d5edc7525cc"
+    },
+    {
+      "file": "assets/figures/07-1.svg",
+      "bytes": 2702,
+      "sha256": "3c2ecfacb17bbdee3b754faaea212fdeec7ef7facb77d592c42132c2557d8aca"
+    },
+    {
+      "file": "assets/figures/07-2.svg",
+      "bytes": 3839,
+      "sha256": "7826db24830132b22c338992a3ec9820f159ed7a01f335501ec12cd20e238e9f"
+    },
+    {
+      "file": "assets/figures/08-1.svg",
+      "bytes": 3457,
+      "sha256": "e4b76aab5e47e1d79f5b6b2674aa6deb032e469e28eca804ca1e7108030cecca"
+    },
+    {
+      "file": "assets/figures/08-2.svg",
+      "bytes": 8498,
+      "sha256": "93feae4779cb15b3e95c256bfe4f1fa663a5aa89d50779b2a9c4f9cd0f3df82c"
+    },
+    {
+      "file": "assets/figures/09-1.svg",
+      "bytes": 2943,
+      "sha256": "96cc33eaea96ea554f716c721efe0551855e710184b332ad2f87923578202104"
+    },
+    {
+      "file": "assets/figures/09-2.svg",
+      "bytes": 3851,
+      "sha256": "f6aa25a13c37cb2fd575d5d177dd6dfd460a89e313b8c1b1ee99eead28767d16"
+    },
+    {
+      "file": "assets/figures/10-1.svg",
+      "bytes": 4041,
+      "sha256": "c53cd8e6dcee3c7f1542e367db535904878de22105fa53b8c4e423be1c6550c8"
+    },
+    {
+      "file": "assets/figures/10-2.svg",
+      "bytes": 3012,
+      "sha256": "ddc3744841f0fecc30e993568c951c1bc0d334a7ed3606d7e0744ace36a4031f"
+    },
+    {
+      "file": "assets/figures/11-1.svg",
+      "bytes": 2889,
+      "sha256": "4a40abe293ff3a95dd81b00d66e51a74fc6609d7e7184274ac4cd47a80830d01"
+    },
+    {
+      "file": "assets/figures/11-2.svg",
+      "bytes": 3908,
+      "sha256": "f2f6a4b75e54ae4526c9931a7f89c6f2561b3294d8cf694e1a672a35069d3dd7"
+    },
+    {
+      "file": "assets/figures/12-1.svg",
+      "bytes": 2326,
+      "sha256": "47302c9f77190d293c37a1a27539a89ff62475eb3facd565ff8e1de4b7392f3b"
+    },
+    {
+      "file": "assets/figures/12-2.svg",
+      "bytes": 1598,
+      "sha256": "8ae890cf17ef251317a2501e6d187f68e109fccb0e35eacfc3789320c99316d2"
+    },
+    {
+      "file": "assets/figures/13-1.svg",
+      "bytes": 3678,
+      "sha256": "b6f0ceb8c59a57b8fd1038dc328a614724125334959ceea0cdd0bc353b4c8de3"
+    },
+    {
+      "file": "assets/figures/13-2.svg",
+      "bytes": 2131,
+      "sha256": "5c43beb68f43fbcadf9cfeff5bc1b2f2c250716a5c281e9f586e1a16c9859cf2"
+    },
+    {
+      "file": "assets/figures/14-1.svg",
+      "bytes": 5472,
+      "sha256": "1ea203b028248b1d4abb6d9efbd97c72d8d423ec0ce587e7bc5a0eb77e026454"
+    },
+    {
+      "file": "assets/figures/14-2.svg",
+      "bytes": 2101,
+      "sha256": "67c90f0b464c167b1d50deaaa42747878cba786481042f8d45d897ee837e8281"
+    },
+    {
+      "file": "assets/figures/15-1.svg",
+      "bytes": 4140,
+      "sha256": "be04d29a4cc1f94a5ef0081f849d13d3bb0fe77a5729b2c52324914096bc66ca"
+    },
+    {
+      "file": "assets/figures/15-2.svg",
+      "bytes": 1717,
+      "sha256": "a6f7eb11d05516441cf65fe6dba4ecdccb0e8b1123f7b77a544560902d0257a8"
+    },
+    {
+      "file": "assets/figures/16-1.svg",
+      "bytes": 2116,
+      "sha256": "c78d7efcd27257bd38f4e8befd747c2ecd5e304469801441bf6cd722c4702126"
+    },
+    {
+      "file": "assets/figures/16-2.svg",
+      "bytes": 2488,
+      "sha256": "7f00a51b2af981d9f7d4174baeb2da639f4b1ff92bbe80c923d663ee6d787f99"
+    },
+    {
+      "file": "assets/figures/17-1.svg",
+      "bytes": 3864,
+      "sha256": "4f5cbacc902418a351e7f0241e88a9dca994e9288c6b11f69382f1a3e81492ea"
+    },
+    {
+      "file": "assets/figures/17-2.svg",
+      "bytes": 1796,
+      "sha256": "7576064b4d9fca56a814f2a56a1b8dfc769f8f46a48bcfd2aff601da7de19418"
+    },
+    {
+      "file": "assets/figures/18-1.svg",
+      "bytes": 1961,
+      "sha256": "8e76fceaabe3ac869cafc65ee15bdfcecc1e838e80f061ca7ffd533d3fe44399"
+    },
+    {
+      "file": "assets/figures/18-2.svg",
+      "bytes": 3658,
+      "sha256": "b06d841de46a0c0e51534336c3e7bf808da2390ca4c70df9b40205c9208673a1"
+    },
+    {
+      "file": "assets/figures/19-1.svg",
+      "bytes": 3079,
+      "sha256": "97ee21e894cb2e355ea5205fa6e1496ad91911bf4e1d7f6c3722a5e59e3c00eb"
+    },
+    {
+      "file": "assets/figures/19-2.svg",
+      "bytes": 7344,
+      "sha256": "737ba7b96faee987ef0cfd45d8879198f33b869a27e2b18b5081f09194d5fe7c"
+    },
+    {
+      "file": "assets/figures/20-1.svg",
+      "bytes": 2487,
+      "sha256": "ddd07958b048d21bda740199da0390d3261405ae8a7ef7f2e59255fdb7792d57"
+    },
+    {
+      "file": "assets/figures/20-2.svg",
+      "bytes": 1879,
+      "sha256": "7519d06b3b60a25c93184315f1423d41e59d04429f7e7999f42935acfd2f80ad"
+    },
+    {
+      "file": "assets/figures/21-1.svg",
+      "bytes": 4048,
+      "sha256": "9c74c52e526d895480e409770b32adeab639fc7e5fca9ffdb044b84e14954db5"
+    },
+    {
+      "file": "assets/figures/21-2.svg",
+      "bytes": 2143,
+      "sha256": "df49eecd8d1ebffd3d536c1fe6f5d93b1edd4cb0c407f5137f303a635ff475cf"
+    },
+    {
+      "file": "assets/figures/22-1.svg",
+      "bytes": 2712,
+      "sha256": "4cd5fa8d1f0867e3d0bb27542a073b810fbb2bad252e6cf3416cf6cf4f283cc7"
+    },
+    {
+      "file": "assets/figures/22-2.svg",
+      "bytes": 1917,
+      "sha256": "fa44db5c9499d87bf656692357a1a96044b7818d5a398e1794ba139c4d866a2e"
+    },
+    {
+      "file": "assets/figures/23-1.svg",
+      "bytes": 3746,
+      "sha256": "0c0e34a7cc46253b90ca5fc0403aa16abdee6a3a49c66ef0b2ce1a81f37dbe05"
+    },
+    {
+      "file": "assets/figures/24-1.svg",
+      "bytes": 1553,
+      "sha256": "4f5def4e37bfe7796b0892a0d14de7ce74f14b3f97fea5c24b0ee7750c0b06cb"
+    },
+    {
+      "file": "assets/figures/25-1.svg",
+      "bytes": 4154,
+      "sha256": "edf4c3811bebd7ac664f7c54e305973b22967cbee4f26444b2627fdb6f173f20"
+    },
+    {
+      "file": "assets/figures/26-1.svg",
+      "bytes": 1853,
+      "sha256": "0ae9035a0fabcde1b5860e159296c2c16f4c3901e40990ab8a4a1d8087da98ef"
+    },
+    {
+      "file": "assets/figures/27-1.svg",
+      "bytes": 1671,
+      "sha256": "e7501d38d9db6189263761fae55ff71fda9ceb9d5c53e46d986ded1737977f17"
+    },
+    {
+      "file": "assets/figures/28-1.svg",
+      "bytes": 3076,
+      "sha256": "c294e5d1a09bf85d368810350f25fd8f38b6c4a7a6e9ea127669e7066410c32e"
+    },
+    {
+      "file": "assets/figures/29-1.svg",
+      "bytes": 1868,
+      "sha256": "6ad1fe57abe4db8ed4178407b3507585c0c0dd6d8d1f874be1c185b4c8231ce2"
+    },
+    {
+      "file": "assets/figures/30-1.svg",
+      "bytes": 4502,
+      "sha256": "c82e80150ecc38db311f1fbf7c93517925ce4544218e487fced20d2b94f13de9"
+    },
+    {
+      "file": "assets/hero-orbit.jpg",
+      "bytes": 400731,
+      "sha256": "b5b7cc23a98b9e02621be7d1da78d1fafee8837413376af8cf8290604a9ce96f"
+    },
+    {
+      "file": "assets/lunar-outpost.png",
+      "bytes": 2847140,
+      "sha256": "0484a7cb0f4b9020ec4cc4d9f22710cdfcbad10d9d6fe9af43a127be8527c27f"
+    },
+    {
+      "file": "assets/mark.svg",
+      "bytes": 303,
+      "sha256": "51ff4444593f3d4c6d85dcfb408024bd0d8cbfab4f9dabf3f6e62adc8f480a3a"
+    },
+    {
+      "file": "assets/social/01-future-builders.png",
+      "bytes": 2710178,
+      "sha256": "d2f570abc0e81022ddd336e4e1eb1cf5f1b65be30ba7f4f353893b00dd7bce1f"
+    },
+    {
+      "file": "assets/social/02-survive-the-dark.png",
+      "bytes": 2762710,
+      "sha256": "b0cc88be8a241bf6e316d5a12d4d2e0f693f375d095f7ad8819ca1e0cc988b89"
+    },
+    {
+      "file": "assets/social/03-where-the-math-goes.png",
+      "bytes": 2371798,
+      "sha256": "59b9916577a840fb341688f80016a3f8546f571e8728324173f7d05bf80d06ce"
+    },
+    {
+      "file": "assets/social/v4/01-build-something.png",
+      "bytes": 2422780,
+      "sha256": "8d9ad1f2e21a61fab496d32b6abb01c36b4cba1c4a28637ab32e7d268da6095f"
+    },
+    {
+      "file": "assets/social/v4/02-make-the-math-mean-something.png",
+      "bytes": 2481041,
+      "sha256": "64657cef7a74df8aedaadad33bc034b2abc060e6280de0a7fa6b44d4c44fed9a"
+    },
+    {
+      "file": "assets/social/v4/03-beyond-earth-in-motion.mp4",
+      "bytes": 1997478,
+      "sha256": "4e626f6d2b88e460e3f6f8c0ddb70e529a50b36ad28a95f4c502195655e26f8d"
+    },
+    {
+      "file": "assets/social/v4/site-preview.png",
+      "bytes": 171160,
+      "sha256": "44efac6350f50914690fc43ff46b23fd962ddc5d975dcf3156b9d0b218296637"
+    },
+    {
+      "file": "assets/social/v4/video-poster.jpg",
+      "bytes": 292348,
+      "sha256": "1a05346375fd1026e780d17bfc1b100f6bbc14e8f8476719f1fbc60241846cec"
+    },
+    {
+      "file": "assets/workshop-future.jpg",
+      "bytes": 351435,
+      "sha256": "d2fec6d1b71efe2e1a770885e22561cb2c78b4726cac5f4e513aa005d3d8ac54"
+    },
+    {
+      "file": "campus.css",
+      "bytes": 45685,
+      "sha256": "5f65091837d5da193e55dee6bc41004891dbb9f752034928d2bbfede4b26adff"
+    },
+    {
+      "file": "campus.js",
+      "bytes": 25393,
+      "sha256": "646d8e40bfaf6425c9c139d74ede2c7e469a38615851f7b94bf2ca6ea228a1ce"
+    },
+    {
+      "file": "data/appendices.json",
+      "bytes": 5108,
+      "sha256": "be36d13fbee08d5e4feb86d88f43af2065fd5273198fd88b86d210a2946adf91"
+    },
+    {
+      "file": "data/chapters.json",
+      "bytes": 1061915,
+      "sha256": "c6c7c1c3a6461e66edddf9424ba6e7ba9c7ef2163195838fbd8cb0ec3dd161d0"
+    },
+    {
+      "file": "data/figures.json",
+      "bytes": 25062,
+      "sha256": "71a4108b56d3db4c685196f7331a722aa8ca07d0af8f7a22edb013d9cfb53da1"
+    },
+    {
+      "file": "data/learning-paths-next.json",
+      "bytes": 2584,
+      "sha256": "859a11482ad1e1799e73917f4887e95f86289cf933b6dadc93f2336ec12489f0"
+    },
+    {
+      "file": "data/learning-paths.json",
+      "bytes": 10843,
+      "sha256": "216edbe34081829b6fde152515a7f4af95f16e0f667c83f1931ef8adb9e02103"
+    },
+    {
+      "file": "data/ledger.json",
+      "bytes": 4556,
+      "sha256": "c29d57d8d22199511ec0577227e31dc8dcf86788d6b2da96053477f83c88b94d"
+    },
+    {
+      "file": "data/missions-expansion.json",
+      "bytes": 79329,
+      "sha256": "737eb78b170b08eb9d787eacbc4e2134632d478f833fed9309a4583912da87e0"
+    },
+    {
+      "file": "data/missions-next.json",
+      "bytes": 82141,
+      "sha256": "ab59d8b797a84480ade27bac3646722a10ae6a8a731c4ce0bb7bf51bb991bb47"
+    },
+    {
+      "file": "data/missions.json",
+      "bytes": 113219,
+      "sha256": "c06d10da54951ec052b1f2ebcda6f39337a32b9dada160e6d52fc2823e968def"
+    },
+    {
+      "file": "data/reels.json",
+      "bytes": 12300,
+      "sha256": "a72fda50791ac4e5b6464a7658ea71200dc02eff40bfa296247c443218686977"
+    },
+    {
+      "file": "data/sources.json",
+      "bytes": 40739,
+      "sha256": "5487dbb6cfe202c21f1f0fab404d7e59e47de6dd96d502f1fb83608e853cd090"
+    },
+    {
+      "file": "design-studio.css",
+      "bytes": 8522,
+      "sha256": "e562dd638f2f5e10ba23056f4bf19c30f8c367c3d949e4f348a359c726e1bbf9"
+    },
+    {
+      "file": "design-studio.js",
+      "bytes": 18204,
+      "sha256": "94ffbd237b348b104b08a4a09a64a0d6a46eca577261d1d2bbfa646bb3f828bc"
+    },
+    {
+      "file": "downloads/Building-a-Civilization-Beyond-Earth.pdf",
+      "bytes": 1206051,
+      "sha256": "433ba70a7f132a47045563ea85953b157e519f7959604d173b14c225944c8679"
+    },
+    {
+      "file": "downloads/Editable-Manuscript.md",
+      "bytes": 496043,
+      "sha256": "c2ff550a0be7ad71a6c9fcfbb186fff4beda8cef521e27914ba36e5151ca6ea5"
+    },
+    {
+      "file": "expedition.js",
+      "bytes": 19303,
+      "sha256": "5da294057bb06173fd271ab84e8fe174e80abbb37d5766dec9d5e212075046c1"
+    },
+    {
+      "file": "experiments.css",
+      "bytes": 14929,
+      "sha256": "64455e51477155aab8e283d0d9cd6744704d4927c59079073c6abbc060c926ee"
+    },
+    {
+      "file": "experiments.js",
+      "bytes": 29917,
+      "sha256": "ac162ca55add8db88c9b8118c54408191fb2fc741100fbea6d19d6699240ebfc"
+    },
+    {
+      "file": "flight-deck.css",
+      "bytes": 15334,
+      "sha256": "238f3499aa7c3fbff110af132634119e838d4ddc62619ad16b062e6df744b0f7"
+    },
+    {
+      "file": "flight-deck.js",
+      "bytes": 41308,
+      "sha256": "5fc413bc3528590f45d09161806de36ef84102d6554e43fad392f4fe24ed166c"
+    },
+    {
+      "file": "foundation-lab.css",
+      "bytes": 13549,
+      "sha256": "1559f1ee1b10d2bfd2b7ed9ee7592902a9efe5afc0751083e4afb786646ba867"
+    },
+    {
+      "file": "foundation-lab.js",
+      "bytes": 28237,
+      "sha256": "c3aecaf0caab453e78735cb5dbf9ad85e1efe555d8702b175e67796d2df7be99"
+    },
+    {
+      "file": "index.html",
+      "bytes": 8123,
+      "sha256": "356c875871ed3c0c99552ce20e328f61b4abc566849542a478074dd46500574b"
+    },
+    {
+      "file": "journey-store.js",
+      "bytes": 10456,
+      "sha256": "62ce614e5b319c78d9493be4a3ae7d2b6c59516456718a71b28eee5e5c28cd34"
+    },
+    {
+      "file": "lab.css",
+      "bytes": 14083,
+      "sha256": "a9a959c8a22160ffb7576ba6b04f7a3ed7bd9724b07cc473511ec3521df93791"
+    },
+    {
+      "file": "lab.js",
+      "bytes": 21569,
+      "sha256": "f9bf8943c4f6c04f6e27d902d750866ab4812497e9008608d7afbaa360d3f8e2"
+    },
+    {
+      "file": "observatory.js",
+      "bytes": 20083,
+      "sha256": "66fe108c97589586808e8b8f6028f84ee1dbca3ccf1a45b4acdb866774dd0b73"
+    },
+    {
+      "file": "orbit-view.js",
+      "bytes": 6021,
+      "sha256": "8f37212a4e52a1227d5f9828a9d8c53c2f9e7a0d4ca44f228c2cb0d36ee6fbe3"
+    },
+    {
+      "file": "privacy.html",
+      "bytes": 3545,
+      "sha256": "89f486d68b7242d701116ca305ab781c28cec0a6c73e7c541bc4032b8bd5dfff"
+    },
+    {
+      "file": "projects-data.js",
+      "bytes": 25124,
+      "sha256": "b6bd41373c3458962c003537a2ec64c546ddd5269f8aa9f5cba3ad7309989dfb"
+    },
+    {
+      "file": "projects-expansion.js",
+      "bytes": 29132,
+      "sha256": "67615cb5922ce0ae5effcda86281b5ee4c8f621e9b5b1171c35c3177be6b36a3"
+    },
+    {
+      "file": "reels.css",
+      "bytes": 17022,
+      "sha256": "6d2e672ce28ab6dac0edf33e36ae346ef8869e7c962a55eaaffed33696530a79"
+    },
+    {
+      "file": "reels.js",
+      "bytes": 23362,
+      "sha256": "dc245f05c142b90b050c96d53663e816a3520ff2c5508d1c1dac9402359dd95b"
+    },
+    {
+      "file": "roadmap.css",
+      "bytes": 20464,
+      "sha256": "f8b8cbb0b8a02bccc9d89e7a4c2e842a109bf230b8a027712e4a71e62258067e"
+    },
+    {
+      "file": "roadmap.js",
+      "bytes": 27864,
+      "sha256": "157c614f96d08d7ea8ad43293156724e2a1980430ae57af02d23d494a06c682d"
+    },
+    {
+      "file": "robots.txt",
+      "bytes": 84,
+      "sha256": "b572aa0bfd9438819503717f04e971e4299d89cebb37f7f3fb725fb0bcf3d64a"
+    },
+    {
+      "file": "settlement-builder.css",
+      "bytes": 19037,
+      "sha256": "701301462c87783d36297022fcc9ec14a8bf71a732e942af46e8f60909459b90"
+    },
+    {
+      "file": "settlement-builder.js",
+      "bytes": 39814,
+      "sha256": "59ff708db660d1123cc6fad1ea08e8d29f52c330297586fd1f25b84140625d14"
+    },
+    {
+      "file": "share.css",
+      "bytes": 21413,
+      "sha256": "ab5d98d6ac3111e2802b18e428205ddf31bb83bed5b8feb49c8c292a44959ddd"
+    },
+    {
+      "file": "share.html",
+      "bytes": 18869,
+      "sha256": "4f99c97fca5bdfa65a2d0019c75547c32816adc3e2796313336bf6076e159ac4"
+    },
+    {
+      "file": "share.js",
+      "bytes": 3371,
+      "sha256": "10cd16055452814e5baa1bf146c191167a084ba19b54330659a0019014dca5ad"
+    },
+    {
+      "file": "sitemap.xml",
+      "bytes": 317,
+      "sha256": "d9f3d14b917c820ffcc3ab9f6394e4c3299f1da38088f891ac15ee4dba862299"
+    },
+    {
+      "file": "style.css",
+      "bytes": 33944,
+      "sha256": "4b0918b3279852fd0c6780f34bf0c95ee0b3b741e29b25dc46ad342523a621a0"
+    },
+    {
+      "file": "v2.css",
+      "bytes": 59704,
+      "sha256": "3fad577f9ab277b0999d23b07a0682a3b08c5be946c8af6a5885571dc8bccc58"
+    },
+    {
+      "file": "v3.css",
+      "bytes": 26313,
+      "sha256": "8416063f4009323c64fb17b3a6c38c6e12497b4b53fa996b1ca0a0e2e90de4fb"
+    },
+    {
+      "file": "v4.css",
+      "bytes": 11300,
+      "sha256": "aea0921b503cda86a235713006592e9efda52466958e2c507d89e8b7e6a8df14"
+    },
+    {
+      "file": "vercel.json",
+      "bytes": 164,
+      "sha256": "373fe7bfb9086ff4d74e78bc80cd8964b53c2495c113c4410702601106f09d93"
+    },
+    {
+      "file": "workbench-store.js",
+      "bytes": 5858,
+      "sha256": "6f53250c0f0039c091f0ab6e122a56e309e29696a4aa30934eca0575577d0eb1"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+BEYOND EARTH — WEBSITE NOTES / V4
+https://ditchthescroll.com/beyond-earth/
+
+THE FINISHED EXPERIENCE
+60 guided lessons connect mathematics, engineering, and general education to mechanisms, robotics, spaceflight, habitats, ocean systems, and engineering decisions. Each includes explanation, a worked example, practice with feedback, a next action, and primary-source links. The latest 18 lessons add about 9,360 instructional words on transfer timing, landing margins, feedback delays, actuator limits, signals, statistics, reliability, tolerances, ocean navigation, requirements, and design judgment.
+
+10 learning paths organize the ideas: algebra, mechanisms, robotics, spaceflight, habitats, ocean engineering, engineering judgment, signals/control, trustworthy autonomy, and mission decisions. Choose a path or open any individual lesson.
+
+18 interactive labs and games comprise:
+- 12 visual labs: functions; motion; accumulation; vectors; torque; ramps; circular orbits; rotating habitats; solar orientation; radiative cooling; measurement uncertainty; and robot kinematics.
+- 3 engineering arcade games: lunar descent, orbital transfer, and robot targeting, with 9 challenges in total.
+- 3 design-studio labs: controller response, beam stiffness, and reliability. Change inputs, inspect assumptions, save snapshots, and export measurements. The controller supports response comparison.
+
+20 build studies provide materials, staged steps, lesson connections, measurements, and a finished evidence artifact. The latest eight include a transfer-window map, landing workbook, delayed-feedback board, signal-filter bench, datum gauge, current-navigation map, fault-detector review, and acceptance-review kit.
+
+The motivation reel offers 8 opening excerpts from original talks, each linked to a lesson and project. Each covers the opening 90 seconds; these are opening excerpts, not selected highlights. Players load after a click. If the default player cannot connect, a labeled button offers the standard YouTube player. Advancing to another talk removes the previous player.
+
+The settlement builder is a separate activity with ten module types and three challenges: commission a site, survive and recover from a sunlight outage, and handle a failed cooling branch. It connects power, storage, cooling, services, and freight under stated teaching assumptions.
+
+The review deck retains question context and feedback. Correct reviews are scheduled after 1, 3, 7, 14, then 30 days; incorrect answers become available immediately. Reviews do not complete lessons automatically. A short round contains up to five eligible questions.
+
+Mission Control connects progress, notes, a selected path, and focus sessions. The complete 30-chapter book, epilogue, glossary, 52 technical figures, 69 book source records, general education roadmap, PDF, and editable manuscript remain available.
+
+STARTING POINTS
+Home: https://ditchthescroll.com/beyond-earth/
+Engineering arcade: https://ditchthescroll.com/beyond-earth/#arcade
+Design studio: https://ditchthescroll.com/beyond-earth/#studio
+Motivation reel: https://ditchthescroll.com/beyond-earth/#reels
+Learning paths: https://ditchthescroll.com/beyond-earth/#paths
+All lessons: https://ditchthescroll.com/beyond-earth/#learn
+Labs and games: https://ditchthescroll.com/beyond-earth/#labs
+Settlement builder: https://ditchthescroll.com/beyond-earth/#build
+Project workshop: https://ditchthescroll.com/beyond-earth/#projects
+Review deck: https://ditchthescroll.com/beyond-earth/#review
+Mission Control: https://ditchthescroll.com/beyond-earth/#journey
+Education roadmap: https://ditchthescroll.com/beyond-earth/#roadmap
+Complete book: https://ditchthescroll.com/beyond-earth/#library
+Sharing page: https://ditchthescroll.com/beyond-earth/share.html
+Privacy: https://ditchthescroll.com/beyond-earth/privacy.html
+
+KEEPING YOUR WORK
+No account is required. Learning records stay in local storage in the current browser profile; the application does not upload them to a learning database.
+
+Mission Control exports and imports lesson progress, lab visits, field notes, study sessions, the selected learning path, review history, and project records. Import replaces the included records and pauses the restored study timer. Compatible older logs remain supported; a log without workbench data leaves existing workbench data intact.
+
+These features use separate storage and are NOT included in a Mission Control export: settlement drafts, book reading positions, roadmap checklists, arcade achievements, reel bookmarks, and design-studio snapshots. The design studio provides its own experiment-log JSON export and measurement CSV downloads. Individual project pages export a readable project report.
+
+Clearing site data can remove local records. Anyone using the same browser profile can see them. Export work you want to retain, and pay attention to storage-unavailable messages. An exported learning log contains your own notes and records; it is separate from the public site files.
+
+EXTERNAL SERVICES
+YouTube preview thumbnails can load before playback. The player and its API load after the visitor chooses to load an excerpt. The default embed uses youtube-nocookie.com; the explicitly chosen fallback uses youtube.com. Both connect to YouTube and may involve its cookies or other processing. Direct publisher links remain available. The main site loads Google Fonts and is hosted on Vercel.
+
+SOURCE AND PUBLIC EDITION
+The beyond-earth-site/ folder contains the complete static website: HTML, CSS, JavaScript modules, JSON lessons/book content, diagrams, artwork, media, and public downloads. No build step, application database, or API key is required. Serve it over HTTP or deploy it as a static site; opening index.html directly from the filesystem does not support normal module/data loading.
+
+Lesson sources are linked within lessons. Book sources retain the documented October 2026 research snapshot. Model equations and assumptions appear beside the labs. MERIDIAN is the fictional settlement used to connect the systems.
+
+The public PDF, manuscript, roadmap, source notes, and figures use general-audience examples. Keep this sanitized public source separate from the original private production files. Regenerating it from private originals could restore material intentionally removed from the shared edition.
+
+VERIFICATION
+Content and module checks confirmed all final collection counts. Checked lesson, project, path, reel, chapter, and source references resolve; lesson simulator names are supported. Code-level rendering checks covered all 20 projects and all 18 newly added lessons, including sources and evidence fields. The latest lessons passed 57 independent arithmetic checks.
+
+Saved-progress regression suites passed for journey storage, multiple tabs, workbench/review/project backups, and study timers, including blocked storage and invalid imports. Mobile browser checks found no horizontal overflow in the new views.
+
+Physics QA covered descent motion, propellant limits and ground contact; orbital-transfer geometry and velocity; robot kinematics and obstacle checks; beam scaling; reliability combinations; controller equilibrium, saturation, and time-step sensitivity. The release browser check produced a real measurement CSV download with the selected reliability result.
+
+The standard YouTube fallback was tested after a timeout on the privacy-enhanced host. Playback worked after explicit selection, and advancing to another talk destroyed the prior iframe. External video availability can change.
+
+The public PDF is unchanged from the fully reviewed sanitized edition: 264 pages, 1,206,051 bytes.
+SHA-256: 433ba70a7f132a47045563ea85953b157e519f7959604d173b14c225944c8679
+
+The final privacy scan found no identifying reader biography or local filesystem paths in public files. Sharing media and metadata were checked; all static HTML media references resolve. See launch-kit-v2/privacy-and-verification.txt for scope and results.
+
+LAUNCH KIT
+launch-kit-v2/ contains two portrait graphics, a 26-second silent demonstration film, its poster, paired posts and descriptions, research notes, and the verification report. Beyond_Earth_Upgrade_Launch_Kit.zip packages that folder. The posting guide explains manual posting; the kit does not publish to an account automatically.
