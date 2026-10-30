@@ -21,7 +21,7 @@
 Requires Python 3 for the local server. No package installation, API key, database, or build step is needed.
 
 ```sh
-git clone https://github.com/christrovato2000-stack/beyond-earth.git
+git clone https://github.com/ChrisTrovato/beyond-earth.git
 cd beyond-earth
 python -m http.server 8000 --bind 127.0.0.1 --directory site
 ```
@@ -60,7 +60,7 @@ See [architecture and engineering decisions](docs/ARCHITECTURE.md), [verificatio
 
 ## Development and attribution
 
-This is a project directed and iterated by [christrovato2000-stack](https://github.com/christrovato2000-stack), developed with substantial OpenAI Codex assistance for implementation, research, writing, visuals, and verification. The repository records the resulting work transparently; it is not a claim that every line was written manually.
+This is a project directed and iterated by [Chris Trovato](https://github.com/ChrisTrovato), developed with substantial OpenAI Codex assistance for implementation, research, writing, visuals, and verification. The repository records the resulting work transparently; it is not a claim that every line was written manually.
 
 Engineering sources are linked in the lessons and field guide. The cinematic artwork and two launch illustrations were AI-generated; the simulation graphics are code-rendered and the launch film captures actual site interactions. Third-party talks are linked or embedded from their publishers, not copied into this repository. See [sources and media](docs/ATTRIBUTION.md).
 
